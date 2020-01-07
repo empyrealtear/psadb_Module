@@ -1,0 +1,99 @@
+{
+	// public element
+	"Controls": {
+		"scope": "xml,ps1xml",
+		"prefix": "Controls",
+		"body": "<Controls>\n\t$0\n</Controls>",
+		"description": "控件样式集"
+	},
+	"EntrySelectedBy": {
+		"scope": "xml,ps1xml",
+		"prefix": "EntrySelectedBy",
+		"body": "<EntrySelectedBy>\n\t$0\n</EntrySelectedBy>",
+		"description": "条目选择依据"
+	},
+	"TypeName": {
+		"scope": "xml,ps1xml",
+		"prefix": "TypeName",
+		"body": "<TypeName>${0:Nameof.NetType}</TypeName>",
+		"description": "对象类型"
+	},
+	"SelectionSetName": {
+		"scope": "xml,ps1xml",
+		"prefix": "SelectionSetName",
+		"body": "<SelectionSetName>${0:NameofSelectionSet}</SelectionSetName>",
+		"description": "选项集名称"
+	},
+	"PropertyName": {
+		"scope": "xml,ps1xml",
+		"prefix": "PropertyName",
+		"body": "<PropertyName>${0:.NetTypeProperty}</PropertyName>",
+		"description": "属性名称"
+	},
+	"ScriptBlock": {
+		"scope": "xml,ps1xml",
+		"prefix": "ScriptBlock",
+		"body": "<ScriptBlock>${0:ScriptToEvaluate}</ScriptBlock>",
+		"description": "脚本块"
+	},
+	"Name": {
+		"scope": "xml,ps1xml",
+		"prefix": "Name",
+		"body": "<Name>${0:SetName,ViewName,ContorlName}</Name>",
+		"description": "元素名称"
+	},
+	"CustomControl": {
+		"scope": "xml,ps1xml",
+		"prefix": "CustomControl",
+		"body": "<CustomControl>\n\t$0\n</CustomControl>",
+		"description": "自定义控件"
+	},
+	"CustomItem": {
+		"scope": "xml,ps1xml",
+		"prefix": "CustomItem",
+		"body": "<CustomItem>\n\t$0\n</CustomItem>",
+		"description": "自定义项目"
+	},
+	"CustomControlName": {
+		"scope": "xml,ps1xml",
+		"prefix": "CustomControlName",
+		"body": "<CustomControlName>${0:ControlName}</CustomControlName>",
+		"description": "自定义控件的名称"
+	},
+	"ItemSelectionCondition": {
+		"scope": "xml,ps1xml",
+		"prefix": "ItemSelectionCondition",
+		"body": "<ItemSelectionCondition>\n\t$0\n</ItemSelectionCondition>",
+		"description": "项目选择条件"
+	},
+	"Control": {
+		"scope": "xml,ps1xml",
+		"prefix": "Control",
+		"body": "<Control>\n\t$0\n</Control>",
+		"description": "控件"
+	},
+	"Label": {
+		"scope": "xml,ps1xml",
+		"prefix": "Label",
+		"body": "<Label>${0:Label for displayed value}</Label>",
+		"description": "标签"
+	},
+	"AutoSize": {
+		"scope": "xml,ps1xml",
+		"prefix": "AutoSize",
+		"body": "<AutoSize/>",
+		"description": "自动对齐, 与 ColumnNumber 冲突"
+	},
+	"Alignment": {
+		"scope": "xml,ps1xml",
+		"prefix": "Alignment",
+		"body": "<Alignment>${1:Left|Center|Right}</Alignment>",
+		"description": "左对齐, 居中, 右对齐"
+	},
+	"FormatString": {
+		"scope": "xml,ps1xml",
+		"prefix": "FormatString",
+		"body": "<FormatString>${0:PropertyPattern}</FormatString>",
+		"description": "字符串格式化输出"
+	},
+}

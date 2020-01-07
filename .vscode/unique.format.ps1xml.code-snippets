@@ -1,0 +1,304 @@
+{
+	// 视图元素
+	// Reference: https://docs.microsoft.com/zh-cn/powershell/scripting/developer/format/format-schema-xml-reference
+	// 顶级元素
+	"ps.xml": {
+		"scope": "xml,ps1xml",
+		"prefix": "xml",
+		"body": "<?xml version=\"1.0\" encoding=\"utf-8\" ?>\n$0",
+		"description": "xml首行声明"
+	},
+	"ps.Configuration": {
+		"scope": "xml,ps1xml",
+		"prefix": "Configuration",
+		"body": "<Configuration>\n\t$0\n</Configuration>",
+		"description": "配置"
+	},
+	// 次顶级
+	"DefaultSettings": {
+		"scope": "xml,ps1xml",
+		"prefix": "DefaultSettings",
+		"body": "<DefaultSettings>\n\t$0\n</DefaultSettings>",
+		"description": "默认样式集"
+	},
+	"SelectionSets": {
+		"scope": "xml,ps1xml",
+		"prefix": "SelectionSets",
+		"body": "<SelectionSets>\n\t$0\n</SelectionSets>",
+		"description": "选择样式集"
+	},
+	"ViewDefinitions": {
+		"scope": "xml,ps1xml",
+		"prefix": "ViewDefinitions",
+		"body": "<ViewDefinitions>\n\t$0\n</ViewDefinitions>",
+		"description": "视图定义集",
+	},
+	// DefaultSettings elements
+	"ShowError": {
+		"scope": "xml,ps1xml",
+		"prefix": "ShowError",
+		"body": "<ShowError/>",
+		"description": "显示完整出错记录"
+	},
+	"DisplayError": {
+		"scope": "xml,ps1xml",
+		"prefix": "DisplayError",
+		"body": "<DisplayError/>",
+		"description": "若出错，返回#ERR"
+	},
+	"WrapTable": {
+		"scope": "xml,ps1xml",
+		"prefix": "WrapTable",
+		"body": "<WrapTable/>",
+		"description": "适应列宽自动换行, 仅用于 DefaultSettings"
+	},
+	"PropertyCountForTable": {
+		"scope": "xml,ps1xml",
+		"prefix": "PropertyCountForTable",
+		"body": "<PropertyCountForTable>${0:NumberOfProperties}</PropertyCountForTable>",
+		"description": "表格视图中显示对象必须包含的属性的最小数目"
+	},
+	"EnumerableExpansions": {
+		"scope": "xml,ps1xml",
+		"prefix": "EnumerableExpansions",
+		"body": "<EnumerableExpansions>\n\t$0\n</EnumerableExpansions>",
+		"description": "在视图中时, 定义对象的不同显示方式"
+	},
+	"EnumerableExpansion": {
+		"scope": "xml,ps1xml",
+		"prefix": "EnumerableExpansion",
+		"body": "<EnumerableExpansion>\n\t$0\n</EnumerableExpansion>",
+		"description": "定义特定集合对象，这些对象在视图中显示时展开"
+	},
+	"Expand": {
+		"scope": "xml,ps1xml",
+		"prefix": "Expand",
+		"body": "<Expand>${1:EnumOnly,CoreOnly,Both}</Expand>",
+		"description": "展开集合对象的方式"
+	},
+	"SelectionCondition": {
+		"scope": "xml,ps1xml",
+		"prefix": "SelectionCondition",
+		"body": "<SelectionCondition>\n\t$0\n</SelectionCondition>",
+		"description": "选中条件"
+	},
+	// SelectionSets elements
+	"SelectionSet": {
+		"scope": "xml,ps1xml",
+		"prefix": "SelectionSet",
+		"body": "<SelectionSet>\n\t$0\n</SelectionSet>",
+		"description": "定义一组可由样式集名称引用的 .NET 对象"
+	},
+	"Type": {
+		"scope": "xml,ps1xml",
+		"prefix": "Type",
+		"body": "<Type>\n\t$0\n</Type>",
+		"description": "定义选择集中的对象"
+	},
+	// Controls elements
+	"CustomEntries": {
+		"scope": "xml,ps1xml",
+		"prefix": "CustomEntries",
+		"body": "<CustomEntries>\n\t$0\n</CustomEntries>",
+		"description": "自定义控件的条目集"
+	},
+	"CustomEntry": {
+		"scope": "xml,ps1xml",
+		"prefix": "CustomEntry",
+		"body": "<CustomEntry>\n\t$0\n</CustomEntry>",
+		"description": "自定义控件的条目"
+	},
+	"NewLine": {
+		"scope": "xml,ps1xml",
+		"prefix": "NewLine",
+		"body": "<NewLine/>",
+		"description": "换行"
+	},
+	"Text": {
+		"scope": "xml,ps1xml",
+		"prefix": "Text",
+		"body": "<Text>${0:TextToDisplay}</Text>",
+		"description": "文本"
+	},
+	"ExpressionBinding": {
+		"scope": "xml,ps1xml",
+		"prefix": "ExpressionBinding",
+		"body": "<ExpressionBinding>\n\t$0\n</ExpressionBinding>",
+		"description": "绑定表达式"
+	},
+	"EnumerateCollection": {
+		"scope": "xml,ps1xml",
+		"prefix": "EnumerateCollection",
+		"body": "<EnumerateCollection/>",
+		"description": "指定控件所显示的集合元素"
+	},
+	"Frame": {
+		"scope": "xml,ps1xml",
+		"prefix": "Frame",
+		"body": "<Frame>\n\t$0\n</Frame>",
+		"description": "框架元素, 定义数据的缩进方式"
+	},
+	"LeftIndent": {
+		"scope": "xml,ps1xml",
+		"prefix": "LeftIndent",
+		"body": "<LeftIndent>${0:NumberOfCharactersToShift}</LeftIndent>",
+		"description": "左缩进"
+	},
+	"RightIndent": {
+		"scope": "xml,ps1xml",
+		"prefix": "RightIndent",
+		"body": "<RightIndent>${0:NumberOfCharactersToShift}</RightIndent>",
+		"description": "右缩进"
+	},
+	"FirstLineHanging": {
+		"scope": "xml,ps1xml",
+		"prefix": "FirstLineHanging",
+		"body": "<FirstLineHanging>${0:NumberOfCharactersToShift}</FirstLineHanging>",
+		"description": "首行悬挂缩进"
+	},
+	"FirstLineIndent": {
+		"scope": "xml,ps1xml",
+		"prefix": "FirstLineIndent",
+		"body": "<FirstLineIndent>${0:NumberOfCharactersToShift}</FirstLineIndent>",
+		"description": "首行缩进"
+	},
+	// ViewDefinitions elements
+	"View": {
+		"scope": "xml,ps1xml",
+		"prefix": "View",
+		"body": "<View>\n\t$0\n</View>",
+		"description": "视图"
+	},
+	"ViewSelectedBy": {
+		"scope": "xml,ps1xml",
+		"prefix": "ViewSelectedBy",
+		"body": "<ViewSelectedBy>\n\t$0\n</ViewSelectedBy>",
+		"description": "视图选择显示的依据"
+	},
+	"GroupBy": {
+		"scope": "xml,ps1xml",
+		"prefix": "GroupBy",
+		"body": "<GroupBy>\n\t$0\n</GroupBy>",
+		"description": "分组"
+	},
+	"TableControl": {
+		"scope": "xml,ps1xml",
+		"prefix": "TableControl",
+		"body": "<TableControl>\n\t$0\n</TableControl>",
+		"description": "表格控件"
+	},
+	"HideTableHeaders": {
+		"scope": "xml,ps1xml",
+		"prefix": "HideTableHeaders",
+		"body": "<HideTableHeaders/>",
+		"description": "隐藏表头"
+	},
+	"TableHeaders": {
+		"scope": "xml,ps1xml",
+		"prefix": "TableHeaders",
+		"body": "<TableHeaders>\n\t$0\n</TableHeaders>",
+		"description": "表头集"
+	},
+	"TableColumnHeader": {
+		"scope": "xml,ps1xml",
+		"prefix": "TableColumnHeader",
+		"body": "<TableColumnHeader>\n\t$0\n</TableColumnHeader>",
+		"description": "表头"
+	},
+	"Width": {
+		"scope": "xml,ps1xml",
+		"prefix": "Width",
+		"body": "<Width>${0:NumberOfCharacters}</Width>",
+		"description": "列宽"
+	},
+	"TableRowEntries": {
+		"scope": "xml,ps1xml",
+		"prefix": "TableRowEntries",
+		"body": "<TableRowEntries>\n\t$0\n</TableRowEntries>",
+		"description": "表格视图行条目集"
+	},
+	"TableRowEntry": {
+		"scope": "xml,ps1xml",
+		"prefix": "TableRowEntry",
+		"body": "<TableRowEntry>\n\t$0\n</TableRowEntry>",
+		"description": "表格视图行条目"
+	},
+	"Wrap": {
+		"scope": "xml,ps1xml",
+		"prefix": "Wrap",
+		"body": "<Wrap/>",
+		"description": "适应列宽自动换行, 仅用于 TableRowEntry"
+	},
+	"TableColumnItems": {
+		"scope": "xml,ps1xml",
+		"prefix": "TableColumnItems",
+		"body": "<TableColumnItems>\n\t$0\n</TableColumnItems>",
+		"description": "表格视图列项目集"
+	},
+	"TableColumnItem": {
+		"scope": "xml,ps1xml",
+		"prefix": "TableColumnItem",
+		"body": "<TableColumnItem>\n\t$0\n</TableColumnItem>",
+		"description": "表格视图列项目"
+	},
+	"ListControl": {
+		"scope": "xml,ps1xml",
+		"prefix": "ListControl",
+		"body": "<ListControl>\n\t$0\n</ListControl>",
+		"description": "列表控件"
+	},
+	"ListEntries": {
+		"scope": "xml,ps1xml",
+		"prefix": "ListEntries",
+		"body": "<ListEntries>\n\t$0\n</ListEntries>",
+		"description": "列表条目集"
+	},
+	"ListEntry": {
+		"scope": "xml,ps1xml",
+		"prefix": "ListEntry",
+		"body": "<ListEntry>\n\t$0\n</ListEntry>",
+		"description": "列表条目"
+	},
+	"ListItems": {
+		"scope": "xml,ps1xml",
+		"prefix": "ListItems",
+		"body": "<ListItems>\n\t$0\n</ListItems>",
+		"description": "列表项目集"
+	},
+	"ListItem": {
+		"scope": "xml,ps1xml",
+		"prefix": "ListItem",
+		"body": "<ListItem>\n\t$0\n</ListItem>",
+		"description": "列表项目"
+	},
+	"WideControl": {
+		"scope": "xml,ps1xml",
+		"prefix": "WideControl",
+		"body": "<WideControl>\n\t$0\n</WideControl>",
+		"description": "宽列表控件"
+	},
+	"ColumnNumber": {
+		"scope": "xml,ps1xml",
+		"prefix": "ColumnNumber",
+		"body": "<ColumnNumber>${0:PositiveInteger}</ColumnNumber>",
+		"description": "列数, 与 AutoSize 冲突"
+	},
+	"WideEntries": {
+		"scope": "xml,ps1xml",
+		"prefix": "WideEntries",
+		"body": "<WideEntries>\n\t$0\n</WideEntries>",
+		"description": "宽列表条目集"
+	},
+	"WideEntry": {
+		"scope": "xml,ps1xml",
+		"prefix": "WideEntry",
+		"body": "<WideEntry>\n\t$0\n</WideEntry>",
+		"description": "宽列表条目"
+	},
+	"WideItem": {
+		"scope": "xml,ps1xml",
+		"prefix": "WideItem",
+		"body": "<WideItem>\n\t$0\n</WideItem>",
+		"description": "宽列表项目"
+	},
+}

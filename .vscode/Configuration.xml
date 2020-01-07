@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Configuration>
+    <!-- 子元素 DefaultSettings -->
+    <!-- 子元素 SelectionSets -->
+    <!-- 子元素 Controls -->
+    <ViewDefinitions>
+        <!-- 子元素 View -->
+    </ViewDefinitions>
+</Configuration>
+
+<DefaultSettings>
+    <!-- <ShowError/> -->
+    <!-- <DisplayError/> -->
+    <!-- <PropertyCountForTable>Int</PropertyCountForTable> -->
+    <!-- <WrapTable/> -->
+    <EnumerableExpansions>
+        <!-- 子元素 EnumerableExpansion -->
+    </EnumerableExpansions>
+</DefaultSettings>
+
+<EnumerableExpansion>
+    <!-- <Expand>EnumOnly,CoreOnly,Both</Expand> -->
+    <!-- 子元素 EntrySelectedBy -->
+</EnumerableExpansion>
+
+<EntrySelectedBy>
+    <!-- <TypeName>Nameof.NetType</TypeName> -->
+    <!-- <SelectionSetName>NameofSelectionSet</SelectionSetName> -->
+    <!-- 可选 SelectionCondition -->
+</EntrySelectedBy>
+
+<SelectionCondition>
+    <!-- <TypeName>Nameof.NetType</TypeName> -->
+    <!-- <SelectionSetName>NameofSelectionSet</SelectionSetName> -->
+    <!-- <PropertyName>.NetTypeProperty</PropertyName> -->
+    <!-- <<ScriptBlock>ScriptToEvaluate</ScriptBlock>> -->
+</SelectionCondition>
+
+<SelectionSets>
+    <SelectionSet>
+        <Name>SetName</Name>
+        <Type>
+            <TypeName>Nameof.NetType</TypeName>
+        </Type>
+    </SelectionSet>
+</SelectionSets>
+
+<Controls>
+    <Control>
+        <Name>ControlName</Name>
+        <CustomControl>
+            <CustomEntries>
+                <!-- 子元素 CustomEntry -->
+            </CustomEntries>
+        </CustomControl>
+    </Control>
+</Controls>
+
+<CustomControl>
+    <CustomEntries>
+        <!-- 子元素 CustomEntry -->
+    </CustomEntries>
+</CustomControl>
+
+<CustomEntry>
+    <!-- 子元素 EntrySelectedBy -->
+    <CustomItem>
+        <!-- 子元素 ExpressionBinding -->
+        <!-- <NewLine/> -->
+        <!-- <Text>TextToDisplay</Text> -->
+        <!-- 子元素 Frame -->
+    </CustomItem>
+</CustomEntry>
+
+<ExpressionBinding>
+    <!-- 子元素 CustomControl -->
+    <!-- <CustomControlName>ControlName</CustomControlName> -->
+    <!-- <EnumerateCollection/> -->
+    <!-- <PropertyName>.NetTypeProperty</PropertyName> -->
+    <!-- <ScriptBlock>ScriptToEvaluate</ScriptBlock> -->
+    <!-- 子元素 ItemSelectionCondition -->
+</ExpressionBinding>
+
+<ItemSelectionCondition>
+    <!-- <PropertyName>.NetTypeProperty</PropertyName> -->
+    <!-- <ScriptBlock>ScriptToEvaluate</ScriptBlock> -->
+</ItemSelectionCondition>
+
+<Frame>
+    <!-- <LeftIndent>NumberOfCharactersToShift</LeftIndent> -->
+    <!-- <RightIndent>NumberOfCharactersToShift</RightIndent> -->
+    <!-- <FirstLineHanging>NumberOfCharactersToShift</FirstLineHanging> -->
+    <!-- <FirstLineIndent>NumberOfCharactersToShift</FirstLineIndent> -->
+    <CustomControl>
+        <!-- 子元素 ExpressionBinding -->
+        <!-- <NewLine/> -->
+        <!-- <Text>TextToDisplay</Text> -->
+        <!-- 子元素 Frame -->
+    </CustomControl>
+</Frame>
+
+<View>
+    <Name>ViewName</Name>
+    <ViewSelectedBy>
+        <!-- <TypeName>Nameof.NetType</TypeName> -->
+        <!-- <SelectionSetName>NameofSelectionSet</SelectionSetName> -->
+    </ViewSelectedBy>
+    <!-- 子元素 Controls -->
+    <!-- 子元素 GroupBy -->
+    <!-- 子元素 TableControl -->
+    <!-- 子元素 ListControl -->
+    <!-- 子元素 WideControl -->
+    <!-- 子元素 CustomControl -->
+</View>
+
+<GroupBy>
+    <!-- <PropertyName>.NetTypeProperty</PropertyName> -->
+    <!-- <ScriptBlock>ScriptToEvaluate</ScriptBlock> -->
+    <!-- <Label>Label for displayed value</Label> -->
+    <!-- <CustomControlName>ControlName</CustomControlName> -->
+    <!-- 子元素 CustomControl -->
+</GroupBy>
+
+<TableControl>
+    <!-- <AutoSize/> -->
+    <!-- <HideTableHeaders/> -->
+    <TableHeaders>
+        <!-- 子元素 TableColumnHeader -->
+    </TableHeaders>
+    <TableRowEntries>
+        <!-- 子元素 TableRowEntry -->
+    </TableRowEntries>
+</TableControl>
+
+<TableColumnHeader>
+    <!-- <Label>Label for displayed value</Label> -->
+    <!-- <Width>NumberOfCharacters</Width> -->
+    <!-- <Alignment>Left|Center|Right</Alignment> -->
+</TableColumnHeader>
+
+<TableRowEntry>
+    <!-- <Wrap/> -->
+    <!-- 子元素 EntrySelectedBy -->
+    <TableColumnItems>
+        <!-- 子元素 TableColumnItem -->
+    </TableColumnItems>
+</TableRowEntry>
+
+<TableColumnItem>
+    <!-- <Alignment>Left|Center|Right</Alignment> -->
+    <!-- <FormatString>PropertyPattern</FormatString> -->
+    <!-- <PropertyName>.NetTypeProperty</PropertyName> -->
+    <!-- <ScriptBlock>ScriptToEvaluate</ScriptBlock> -->
+</TableColumnItem>
+
+<ListControl>
+    <ListEntries>
+        <!-- 子元素 ListEntry -->
+    </ListEntries>
+</ListControl>
+
+<ListEntry>
+    <!-- 子元素 EntrySelectedBy -->
+    <ListItems>
+        <!-- 子元素 ListItem -->
+    </ListItems>
+</ListEntry>
+
+<ListItem>
+    <!-- <PropertyName>.NetTypeProperty</PropertyName> -->
+    <!-- <ScriptBlock>ScriptToEvaluate</ScriptBlock> -->
+    <!-- <Label>Label for displayed value</Label> -->
+    <!-- <FormatString>PropertyPattern</FormatString> -->
+    <!-- 子元素 ItemSelectionCondition -->
+</ListItem>
+
+<WideControl>
+    <!-- <AutoSize/> -->
+    <!-- <ColumnNumber>PositiveInteger</ColumnNumber> -->
+    <WideEntries>
+        <!-- 子元素 <EntrySelectedBy> -->
+        <!-- 子元素 <WideItem> -->
+    </WideEntries>
+</WideControl>
+
+<WideItem>
+    <!-- <PropertyName>.NetTypeProperty</PropertyName> -->
+    <!-- <ScriptBlock>ScriptToEvaluate</ScriptBlock> -->
+    <!-- <FormatString>PropertyPattern</FormatString> -->
+</WideItem>

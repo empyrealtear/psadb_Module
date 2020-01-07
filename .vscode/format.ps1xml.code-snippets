@@ -1,0 +1,321 @@
+{
+	// 视图框架
+	// Reference: https://docs.microsoft.com/zh-cn/powershell/scripting/developer/format/writing-a-powershell-formatting-file
+	// https://docs.microsoft.com/zh-cn/powershell/scripting/developer/format/configuration-element-format?view=powershell-6
+	"ps-xml": {
+		"scope": "xml,ps1xml",
+		"prefix": "ps-xml",
+		"body": [
+			"<?xml version=\"1.0\" encoding=\"utf-8\" ?>",
+			"<Configuration>",
+			"\t<!-- 子元素 DefaultSettings -->",
+			"\t<!-- 子元素 SelectionSets -->",
+			"\t<!-- 子元素 Controls -->",
+			"\t<ViewDefinitions>",
+			"\t\t<!-- 子元素 View -->",
+			"\t</ViewDefinitions>",
+			"</Configuration>\n"
+		],
+		"description": "总框架"
+	},
+	"ps-DefaultSettings": {
+		"scope": "xml,ps1xml",
+		"prefix": "ps-DefaultSettings",
+		"body": [
+			"<DefaultSettings>",
+			"\t<!-- <ShowError/> -->",
+			"\t<!-- <DisplayError/> -->",
+			"\t<!-- <PropertyCountForTable>Int</PropertyCountForTable> -->",
+			"\t<!-- <WrapTable/> -->",
+			"\t<EnumerableExpansions>",
+			"\t\t<!-- 子元素 EnumerableExpansion -->",
+			"\t</EnumerableExpansions>",
+			"</DefaultSettings>"
+		],
+		"description": "默认设置框架"
+	},
+	"ps-EnumerableExpansion": {
+		"scope": "xml,ps1xml",
+		"prefix": "ps-EnumerableExpansion",
+		"body": [
+			"<EnumerableExpansion>",
+			"\t<!-- <Expand>EnumOnly,CoreOnly,Both</Expand> -->",
+			"\t<!-- 子元素 EntrySelectedBy -->",
+			"</EnumerableExpansion>",
+		],
+		"description": "集合展开框架"
+	},
+	"ps-EntrySelectedBy": {
+		"scope": "xml,ps1xml",
+		"prefix": "ps-EntrySelectedBy",
+		"body": [
+			"<EntrySelectedBy>",
+			"\t<!-- <TypeName>Nameof.NetType</TypeName> -->",
+			"\t<!-- <SelectionSetName>NameofSelectionSet</SelectionSetName> -->",
+			"\t<!-- 可选 SelectionCondition -->",
+			"</EntrySelectedBy>",
+		],
+		"description": "条目选择框架"
+	},
+	"ps-SelectionCondition": {
+		"scope": "xml,ps1xml",
+		"prefix": "ps-SelectionCondition",
+		"body": [
+			"<SelectionCondition>",
+			"\t<!-- <TypeName>Nameof.NetType</TypeName> -->",
+			"\t<!-- <SelectionSetName>NameofSelectionSet</SelectionSetName> -->",
+			"\t<!-- <PropertyName>.NetTypeProperty</PropertyName> -->",
+			"\t<!-- <<ScriptBlock>ScriptToEvaluate</ScriptBlock>> -->",
+			"</SelectionCondition>",
+		],
+		"description": "选择条件框架"
+	},
+	"ps-SelectionSets": {
+		"scope": "xml,ps1xml",
+		"prefix": "ps-SelectionSets",
+		"body": [
+			"<SelectionSets>",
+			"\t<SelectionSet>",
+			"\t\t<Name>SetName</Name>",
+			"\t\t<Type>",
+			"\t\t\t<TypeName>Nameof.NetType</TypeName>",
+			"\t\t</Type>",
+			"\t</SelectionSet>",
+			"</SelectionSets>",
+		],
+		"description": "选择样式集框架"
+	},
+	"ps-Controls": {
+		"scope": "xml,ps1xml",
+		"prefix": "ps-Controls",
+		"body": [
+			"<Controls>",
+			"\t<Control>",
+			"\t\t<Name>ControlName</Name>",
+			"\t\t<CustomControl>",
+			"\t\t\t<CustomEntries>",
+			"\t\t\t\t<!-- 子元素 CustomEntry -->",
+			"\t\t\t</CustomEntries>",
+			"\t\t</CustomControl>",
+			"\t</Control>",
+			"</Controls>",
+		],
+		"description": "控件样式集框架"
+	},
+	"ps-CustomControl": {
+		"scope": "xml,ps1xml",
+		"prefix": "ps-CustomControl",
+		"body": [
+			"<CustomControl>",
+			"\t<CustomEntries>",
+			"\t\t<!-- 子元素 CustomEntry -->",
+			"\t</CustomEntries>",
+			"</CustomControl>",
+		],
+		"description": "自定义控件框架"
+	},
+	"ps-CustomEntry": {
+		"scope": "xml,ps1xml",
+		"prefix": "ps-CustomEntry",
+		"body": [
+			"<CustomEntry>",
+			"\t<!-- 子元素 EntrySelectedBy -->",
+			"\t<CustomItem>",
+			"\t\t<!-- 子元素 ExpressionBinding -->",
+			"\t\t<!-- <NewLine/> -->",
+			"\t\t<!-- <Text>TextToDisplay</Text> -->",
+			"\t\t<!-- 子元素 Frame -->",
+			"\t</CustomItem>",
+			"</CustomEntry>",
+		],
+		"description": "选择样式集框架"
+	},
+	"ps-ExpressionBinding": {
+		"scope": "xml,ps1xml",
+		"prefix": "ps-ExpressionBinding",
+		"body": [
+			"<ExpressionBinding>",
+			"\t<!-- 子元素 CustomControl -->",
+			"\t<!-- <CustomControlName>ControlName</CustomControlName> -->",
+			"\t<!-- <EnumerateCollection/> -->",
+			"\t<!-- <PropertyName>.NetTypeProperty</PropertyName> -->",
+			"\t<!-- <ScriptBlock>ScriptToEvaluate</ScriptBlock> -->",
+			"\t<!-- 子元素 ItemSelectionCondition -->",
+			"</ExpressionBinding>",
+		],
+		"description": "选择样式集框架"
+	},
+	"ps-ItemSelectionCondition": {
+		"scope": "xml,ps1xml",
+		"prefix": "ps-ItemSelectionCondition",
+		"body": [
+			"<ItemSelectionCondition>",
+			"\t<!-- <PropertyName>.NetTypeProperty</PropertyName> -->",
+			"\t<!-- <ScriptBlock>ScriptToEvaluate</ScriptBlock> -->",
+			"</ItemSelectionCondition>",
+		],
+		"description": "选择样式集框架"
+	},
+	"ps-Frame": {
+		"scope": "xml,ps1xml",
+		"prefix": "ps-Frame",
+		"body": [
+			"<Frame>",
+			"\t<!-- <LeftIndent>NumberOfCharactersToShift</LeftIndent> -->",
+			"\t<!-- <RightIndent>NumberOfCharactersToShift</RightIndent> -->",
+			"\t<!-- <FirstLineHanging>NumberOfCharactersToShift</FirstLineHanging> -->",
+			"\t<!-- <FirstLineIndent>NumberOfCharactersToShift</FirstLineIndent> -->",
+			"\t<CustomControl>",
+			"\t\t<!-- 子元素 ExpressionBinding -->",
+			"\t\t<!-- <NewLine/> -->",
+			"\t\t<!-- <Text>TextToDisplay</Text> -->",
+			"\t\t<!-- 子元素 Frame -->",
+			"\t</CustomControl>",
+			"</Frame>",
+		],
+		"description": "选择样式集框架"
+	},
+	"ps-View": {
+		"scope": "xml,ps1xml",
+		"prefix": "ps-View",
+		"body": [
+			"<View>",
+			"\t<Name>ViewName</Name>",
+			"\t<ViewSelectedBy>",
+			"\t\t<!-- <TypeName>Nameof.NetType</TypeName> -->",
+			"\t\t<!-- <SelectionSetName>NameofSelectionSet</SelectionSetName> -->",
+			"\t</ViewSelectedBy>",
+			"\t<!-- 子元素 Controls -->",
+			"\t<!-- 子元素 GroupBy -->",
+			"\t<!-- 子元素 TableControl -->",
+			"\t<!-- 子元素 ListControl -->",
+			"\t<!-- 子元素 WideControl -->",
+			"\t<!-- 子元素 CustomControl -->",
+			"</View>",
+		],
+		"description": "选择样式集框架"
+	},
+	"ps-GroupBy": {
+		"scope": "xml,ps1xml",
+		"prefix": "ps-GroupBy",
+		"body": [
+			"<GroupBy>",
+			"\t<!-- <PropertyName>.NetTypeProperty</PropertyName> -->",
+			"\t<!-- <ScriptBlock>ScriptToEvaluate</ScriptBlock> -->",
+			"\t<!-- <Label>Label for displayed value</Label> -->",
+			"\t<!-- <CustomControlName>ControlName</CustomControlName> -->",
+			"\t<!-- 子元素 CustomControl -->",
+			"</GroupBy>",
+		],
+		"description": "选择样式集框架"
+	},
+	"ps-TableControl": {
+		"scope": "xml,ps1xml",
+		"prefix": "ps-TableControl",
+		"body": [
+			"<TableControl>",
+			"\t<!-- <AutoSize/> -->",
+			"\t<!-- <HideTableHeaders/> -->",
+			"\t<TableHeaders>",
+			"\t\t<!-- 子元素 TableColumnHeader -->",
+			"\t</TableHeaders>",
+			"\t<TableRowEntries>",
+			"\t\t<!-- 子元素 TableRowEntry -->",
+			"\t</TableRowEntries>",
+			"</TableControl>",
+		],
+		"description": "选择样式集框架"
+	},
+	"ps-TableColumnHeader": {
+		"scope": "xml,ps1xml",
+		"prefix": "ps-TableColumnHeader",
+		"body": [
+			"<TableColumnHeader>",
+			"\t<!-- <Label>Label for displayed value</Label> -->",
+			"\t<!-- <Width>NumberOfCharacters</Width> -->",
+			"\t<!-- <Alignment>Left|Center|Right</Alignment> -->",
+			"</TableColumnHeader>",
+		],
+		"description": "选择样式集框架"
+	},
+	"ps-TableRowEntry": {
+		"scope": "xml,ps1xml",
+		"prefix": "ps-TableRowEntry",
+		"body": [
+			"<TableRowEntry>",
+			"\t<!-- <Wrap/> -->",
+			"\t<!-- 子元素 EntrySelectedBy -->",
+			"\t<TableColumnItems>",
+			"\t\t<!-- 子元素 TableColumnItem -->",
+			"\t</TableColumnItems>",
+			"</TableRowEntry>",
+		],
+		"description": "选择样式集框架"
+	},
+	"ps-TableColumnItem": {
+		"scope": "xml,ps1xml",
+		"prefix": "ps-TableColumnItem",
+		"body": [
+			"<TableColumnItem>",
+			"\t<!-- <Alignment>Left|Center|Right</Alignment> -->",
+			"\t<!-- <FormatString>PropertyPattern</FormatString> -->",
+			"\t<!-- <PropertyName>.NetTypeProperty</PropertyName> -->",
+			"\t<!-- <ScriptBlock>ScriptToEvaluate</ScriptBlock> -->",
+			"</TableColumnItem>",
+		],
+		"description": "选择样式集框架"
+	},
+	"ps-ListControl": {
+		"scope": "xml,ps1xml",
+		"prefix": "ps-ListControl",
+		"body": [
+			"<ListControl>",
+			"\t<ListEntries>",
+			"\t\t<!-- 子元素 ListEntry -->",
+			"\t</ListEntries>",
+			"</ListControl>",
+		],
+		"description": "选择样式集框架"
+	},
+	"ps-ListItem": {
+		"scope": "xml,ps1xml",
+		"prefix": "ps-ListItem",
+		"body": [
+			"<ListItem>",
+			"\t<!-- <PropertyName>.NetTypeProperty</PropertyName> -->",
+			"\t<!-- <ScriptBlock>ScriptToEvaluate</ScriptBlock> -->",
+			"\t<!-- <Label>Label for displayed value</Label> -->",
+			"\t<!-- <FormatString>PropertyPattern</FormatString> -->",
+			"\t<!-- 子元素 ItemSelectionCondition -->",
+			"</ListItem>",
+		],
+		"description": "选择样式集框架"
+	},
+	"ps-WideControl": {
+		"scope": "xml,ps1xml",
+		"prefix": "ps-WideControl",
+		"body": [
+			"<WideControl>",
+			"\t<!-- <AutoSize/> -->",
+			"\t<!-- <ColumnNumber>PositiveInteger</ColumnNumber> -->",
+			"\t<WideEntries>",
+			"\t\t<!-- 子元素 <EntrySelectedBy> -->",
+			"\t\t<!-- 子元素 <WideItem> -->",
+			"\t</WideEntries>",
+			"</WideControl>",
+		],
+		"description": "选择样式集框架"
+	},
+	"ps-WideItem": {
+		"scope": "xml,ps1xml",
+		"prefix": "ps-WideItem",
+		"body": [
+			"<WideItem>",
+			"\t<!-- <PropertyName>.NetTypeProperty</PropertyName> -->",
+			"\t<!-- <ScriptBlock>ScriptToEvaluate</ScriptBlock> -->",
+			"\t<!-- <FormatString>PropertyPattern</FormatString> -->",
+			"</WideItem>",
+		],
+		"description": "选择样式集框架"
+	},
+}
