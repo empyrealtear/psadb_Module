@@ -56,23 +56,26 @@ Move-ADBItem          | 移动设备文件
 Remove-ADBItem        | 移除设备文件
 Rename-ADBItem        | 重命名设备文件
 Read-ADBFile          | 读取设备文件
-Out-ADBFile           | 输出到设备文件
+Out-ADBFile           | 输出设备文件
 Save-ADBScreenCapture | 保存当前截图
 Save-ADBScreenRecoder | 保存当前录屏
 Send-ADBTap           | 发送点击事件
 Send-ADBSwipe         | 发送滑动事件
 Send-ADBKeyEvent      | 发送按键事件
-Get-ADBEvent          | 获取设备触屏事件
+Get-ADBEvent          | 获取触屏事件
 New-ADBEvent          | 新建触屏事件
 Send-ADBEvent         | 发送触屏事件
-Get-ADBDumpsysXml     | 获取设备布局文件
-Resolve-ADBUI         | 直接解析返回布局对象
-Find-ADBUI            | 查找设备布局中指定内容
+Get-ADBDumpsysXml     | 获取布局文件
+Resolve-ADBUI         | 解析布局对象
+Find-ADBUI            | 查找指定布局
+
 Get-ADBPackages       | 列出设备应用
 Start-ADBActivity     | 启动指定应用
 Stop-ADBActivity      | 关闭指定应用
+
 Install-ADBApk        | 安装PC端apk
 Uninstall-ADBApk      | 卸载设备应用
+
 Use-ADB               | utf-8下运行adb命令
 
 ## 待优化

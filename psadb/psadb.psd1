@@ -3,7 +3,7 @@
 #
 # 生成者: Empyrealtear
 #
-# 生成时间: 2020/1/7
+# 生成时间: 2020/1/27
 #
 
 @{
@@ -12,13 +12,13 @@
 RootModule = 'psadb.dll'
 
 # 此模块的版本号。
-ModuleVersion = '1.0'
+ModuleVersion = '1.0.1'
 
 # 支持的 PSEditions
 # CompatiblePSEditions = @()
 
 # 用于唯一标识此模块的 ID
-GUID = '2c1993f7-246a-4673-b2b8-556a3d0c9015'
+GUID = 'fd94d1b4-378d-4405-b76c-582a5c47ea3b'
 
 # 此模块的作者
 Author = 'Empyrealtear'
@@ -98,7 +98,8 @@ AliasesToExport = 'adbls', 'adbmk', 'adbcopy', 'adbmove', 'adbrm', 'adbrn', 'adb
 # ModuleList = @()
 
 # 与此模块一起打包的所有文件的列表
-FileList = 'csadb.dll', 'psadb.dll', 'psadb.format.ps1xml'
+FileList = 'csadb.dll', 'psadb.dll', 'psadb.dll-Help.xml', 'psadb.format.ps1xml', 
+               'psadb.psd1'
 
 # 要传递到 RootModule/ModuleToProcess 中指定的模块的专用数据。这还可能包含 PSData 哈希表以及 PowerShell 使用的其他模块元数据。
 PrivateData = @{
