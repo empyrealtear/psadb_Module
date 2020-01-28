@@ -68,7 +68,7 @@
 		"body": [
 			"<helpItems xmlns=\"http://msh\" schema=\"maml\">",
 			"\t${0:<!-- help-command -->}",
-			"</helpItem>"
+			"</helpItems>"
 		],
 		"description": "帮助总节点，导入命名空间maml"
 	},

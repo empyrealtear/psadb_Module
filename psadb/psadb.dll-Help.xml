@@ -1,2 +1,83 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-
+<helpItems xmlns="http://msh" schema="maml">
+  <!-- verb-nonu -->
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10"
+    xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10"
+    xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+    <!-- help-details -->
+    <command:details>
+      <command:name>verb-nonu</command:name>
+      <maml:description>
+        <maml:para>desc</maml:para>
+      </maml:description>
+      <maml:copyright>
+        <maml:para/>
+      </maml:copyright>
+      <command:verb>verb</command:verb>
+      <command:noun>nonu</command:noun>
+      <dev:version/>
+    </command:details>
+    <!-- help-description -->
+    <maml:description>
+      <maml:para>desc</maml:para>
+    </maml:description>
+    <!-- help-syntax -->
+    <command:syntax>
+      <!-- help-syntaxItem -->
+      <command:syntaxItem>
+        <maml:name>verb-nonu</maml:name>
+        <!-- help-parameter -->
+        <command:parameter required="true|false" variableLength="true" globbing="false"
+          pipelineInput="false" position="Int32,named">
+          <maml:name>param-name</maml:name>
+          <maml:description/>
+          <command:parameterValue required="true" variableLength="false">param-type</command:parameterValue>
+          <dev:type>
+            <maml:name>param-type</maml:name>
+            <maml:uri/>
+          </dev:type>
+          <dev:defaultValue>default</dev:defaultValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <!-- help-parameters -->
+    <command:parameters>
+      <!-- help-parameter -->
+    </command:parameters>
+    <!-- help-inputTypes -->
+    <command:inputTypes/>
+    <!-- help-returnValues -->
+    <command:returnValues/>
+    <command:terminatingErrors/>
+    <command:nonTerminatingErrors/>
+    <!-- help-examples -->
+    <command:examples>
+      <!-- help-example -->
+      <command:example>
+        <maml:title>Example Int32: synopsis</maml:title>
+        <maml:introduction>
+          <maml:para>PS C:\></maml:para>
+        </maml:introduction>
+        <dev:code>verb-nonu</dev:code>
+        <dev:remarks>
+          <maml:para>output</maml:para>
+          <maml:para/>
+          <maml:para/>
+          <maml:para>desc</maml:para>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <!-- help-relatedLinks -->
+    <maml:relatedLinks>
+      <maml:navigationLink>
+        <maml:linkText>github</maml:linkText>
+        <maml:uri>https://github.com/empyrealtear/psadb_Module</maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>verb-nonu</maml:linkText>
+        <maml:uri/>
+      </maml:navigationLink>
+    </maml:relatedLinks>
+  </command:command>
+      
+</helpItems>
