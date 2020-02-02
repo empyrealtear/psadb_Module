@@ -1,0 +1,4629 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<helpItems xmlns="http://msh" schema="maml">
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10"
+    xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10"
+    xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+    <command:details>
+      <command:name>Start-ADBServer</command:name>
+      <maml:description>
+        <maml:para>启动adb服务</maml:para>
+      </maml:description>
+      <maml:copyright>
+        <maml:para />
+      </maml:copyright>
+        <command:verb>Start</command:verb>
+        <command:noun>ADBServer</command:noun>
+      <dev:version />
+    </command:details>
+    <maml:description>
+      <maml:para>启动adb服务</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Start-ADBServer</maml:name>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters />
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>None</maml:name>
+          <maml:uri />
+        </dev:type>
+        <maml:description />
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>string</maml:name>
+          <maml:uri />
+        </dev:type>
+        <maml:description>
+          <maml:para>调用 adb start-server 的返回值</maml:para>
+        </maml:description>
+      </command:returnValue>
+    </command:returnValues>
+    <command:terminatingErrors/>
+    <command:nonTerminatingErrors/>
+    <command:examples>
+      <command:example>
+        <maml:title>Example 1: 启动adb服务</maml:title>
+        <maml:introduction>
+          <maml:para>PS C:\> </maml:para>
+        </maml:introduction>
+        <dev:code>Start-ADBServer</dev:code>
+        <dev:remarks>
+          <maml:para>* daemon not running; starting now at tcp:5037</maml:para>
+          <maml:para>* daemon started successfully</maml:para>
+          <maml:para />
+          <maml:para>运行 adb start-server</maml:para>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <maml:relatedLinks>
+      <maml:navigationLink>
+        <maml:linkText>github</maml:linkText>
+        <maml:uri>https://github.com/empyrealtear/psadb_Module</maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Stop-ADBServer</maml:linkText>
+        <maml:uri />
+      </maml:navigationLink>
+    </maml:relatedLinks>
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10"
+    xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10"
+    xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+    <command:details>
+      <command:name>Stop-ADBServer</command:name>
+      <maml:description>
+        <maml:para>断开adb服务</maml:para>
+      </maml:description>
+      <maml:copyright>
+        <maml:para />
+      </maml:copyright>
+        <command:verb>Stop</command:verb>
+        <command:noun>ADBServer</command:noun>
+      <dev:version />
+    </command:details>
+    <maml:description>
+      <maml:para>断开adb服务</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Stop-ADBServer</maml:name>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters />
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>None</maml:name>
+          <maml:uri />
+        </dev:type>
+        <maml:description />
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>None</maml:name>
+          <maml:uri />
+        </dev:type>
+        <maml:description />
+      </command:returnValue>
+    </command:returnValues>
+    <command:terminatingErrors/>
+    <command:nonTerminatingErrors/>
+    <command:examples>
+      <command:example>
+        <maml:title>Example 1: 断开adb服务</maml:title>
+        <maml:introduction>
+          <maml:para>PS C:\> </maml:para>
+        </maml:introduction>
+        <dev:code>Stop-ADBServer</dev:code>
+        <dev:remarks>
+          <maml:para>运行 adb kill-server</maml:para>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <maml:relatedLinks>
+      <maml:navigationLink>
+        <maml:linkText>github</maml:linkText>
+        <maml:uri>https://github.com/empyrealtear/psadb_Module</maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Start-ADBServer</maml:linkText>
+        <maml:uri />
+      </maml:navigationLink>
+    </maml:relatedLinks>
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10"
+    xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10"
+    xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+    <command:details>
+      <command:name>Get-ADBDevices</command:name>
+      <maml:description>
+        <maml:para>列出当前设备</maml:para>
+      </maml:description>
+      <maml:copyright>
+        <maml:para />
+      </maml:copyright>
+        <command:verb>Get</command:verb>
+        <command:noun>ADBDevices</command:noun>
+      <dev:version />
+    </command:details>
+    <maml:description>
+      <maml:para>列出当前设备</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Get-ADBDevices</maml:name>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters />
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>None</maml:name>
+          <maml:uri />
+        </dev:type>
+        <maml:description />
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>CSADB.DeviceInfo[]</maml:name>
+          <maml:uri />
+        </dev:type>
+        <maml:description>
+          <maml:para>设备信息类数组</maml:para>
+        </maml:description>
+      </command:returnValue>
+    </command:returnValues>
+    <command:terminatingErrors/>
+    <command:nonTerminatingErrors/>
+    <command:examples>
+      <command:example>
+        <maml:title>Example 1: 列出当前设备</maml:title>
+        <maml:introduction>
+          <maml:para>PS C:\> </maml:para>
+        </maml:introduction>
+        <dev:code>Get-ADBDevices</dev:code>
+        <dev:remarks>
+          <maml:para>SerialNumber State</maml:para>
+          <maml:para>------------ -----</maml:para>
+          <maml:para>fe535b05     device</maml:para>
+          <maml:para />
+          <maml:para>运行 adb devices -l 列出已连接设备的序列号和状态等信息</maml:para>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <maml:relatedLinks>
+      <maml:navigationLink>
+        <maml:linkText>github</maml:linkText>
+        <maml:uri>https://github.com/empyrealtear/psadb_Module</maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Connect-ADBDevice</maml:linkText>
+        <maml:uri />
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Disconnect-ADBDevice</maml:linkText>
+        <maml:uri />
+      </maml:navigationLink>
+    </maml:relatedLinks>
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10"
+    xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10"
+    xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+    <command:details>
+      <command:name>Connect-ADBDevice</command:name>
+      <maml:description>
+        <maml:para>连接指定设备</maml:para>
+      </maml:description>
+      <maml:copyright>
+        <maml:para />
+      </maml:copyright>
+        <command:verb>Connect</command:verb>
+        <command:noun>ADBDevice</command:noun>
+      <dev:version />
+    </command:details>
+    <maml:description>
+      <maml:para>连接指定设备</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Connect-ADBDevice</maml:name>
+        <command:parameter required="false">
+          <maml:name>IP</maml:name>
+          <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false">
+          <maml:name>EndPoint</maml:name>
+          <command:parameterValue required="true" variableLength="false">int</command:parameterValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="false" variableLength="true" globbing="false"
+        pipelineInput="false" position="0">
+        <maml:name>IP</maml:name>
+        <maml:description>
+          <maml:para>Get-ADBNets wlan0</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+        <dev:type>
+          <maml:name>string</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="true" globbing="false"
+        pipelineInput="false" position="1">
+        <maml:name>EndPoint</maml:name>
+        <maml:description>
+          <maml:para>监控端口, 默认为 5555</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">int</command:parameterValue>
+        <dev:type>
+          <maml:name>int</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>5555</dev:defaultValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>string</maml:name>
+          <maml:uri />
+        </dev:type>
+        <maml:description>
+          <maml:para>指定的IP地址</maml:para>
+        </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>string</maml:name>
+          <maml:uri />
+        </dev:type>
+        <maml:description>
+          <maml:para>adb connect &lt;IP:EndPoint&gt; 的返回值</maml:para>
+        </maml:description>
+      </command:returnValue>
+    </command:returnValues>
+    <command:terminatingErrors/>
+    <command:nonTerminatingErrors/>
+    <command:examples>
+      <command:example>
+        <maml:title>Example 1: 连接指定设备</maml:title>
+        <maml:introduction>
+          <maml:para>PS C:\> </maml:para>
+        </maml:introduction>
+        <dev:code>Connect-ADBDevice -IP 192.168.2.1 -EndPoint 5555</dev:code>
+        <dev:remarks>
+          <maml:para>connected to 192.168.2.1:5555</maml:para>
+          <maml:para />
+          <maml:para>运行 adb tcpip 5555</maml:para>
+          <maml:para>运行 adb connect 192.168.2.1:5555</maml:para>
+        </dev:remarks>
+        <maml:introduction>
+          <maml:para>PS C:\> </maml:para>
+        </maml:introduction>
+        <dev:code>Connect-ADBDevice</dev:code>
+        <dev:remarks>
+          <maml:para>connected to 192.168.2.1:5555</maml:para>
+          <maml:para />
+          <maml:para>运行 adb tcpip 5555</maml:para>
+          <maml:para>运行 adb connect 192.168.2.1:5555</maml:para>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <maml:relatedLinks>
+      <maml:navigationLink>
+        <maml:linkText>github</maml:linkText>
+        <maml:uri>https://github.com/empyrealtear/psadb_Module</maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Get-ADBDevices</maml:linkText>
+        <maml:uri />
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Disconnect-ADBDevice</maml:linkText>
+        <maml:uri />
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Set-ADBTCPIP</maml:linkText>
+        <maml:uri />
+      </maml:navigationLink>
+    </maml:relatedLinks>
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10"
+    xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10"
+    xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+    <command:details>
+      <command:name>Disconnect-ADBDevice</command:name>
+      <maml:description>
+        <maml:para>断开指定设备</maml:para>
+      </maml:description>
+      <maml:copyright>
+        <maml:para />
+      </maml:copyright>
+        <command:verb>Disconnect</command:verb>
+        <command:noun>ADBDevice</command:noun>
+      <dev:version />
+    </command:details>
+    <maml:description>
+      <maml:para>断开指定设备</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Disconnect-ADBDevice</maml:name>
+        <command:parameter required="false">
+          <maml:name>Serial</maml:name>
+          <command:parameterValue required="true" variableLength="false">string[]</command:parameterValue>
+        </command:parameter>
+      </command:syntaxItem>
+      <command:syntaxItem>
+        <maml:name>Disconnect-ADBDevice</maml:name>
+        <command:parameter required="false">
+          <maml:name>Reconnect</maml:name>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="false" variableLength="true" globbing="false"
+        pipelineInput="false" position="0">
+        <maml:name>Serial</maml:name>
+        <maml:description>
+          <maml:para>指定设备序列号</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">string[]</command:parameterValue>
+        <dev:type>
+          <maml:name>string[]</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="true" globbing="false"
+        pipelineInput="false" position="named">
+        <maml:name>Reconnect</maml:name>
+        <maml:description>
+          <maml:para>重连所有设备</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">SwitchParameter</command:parameterValue>
+        <dev:type>
+          <maml:name>SwitchParameter</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>False</dev:defaultValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>string[]</maml:name>
+          <maml:uri />
+        </dev:type>
+        <maml:description>
+          <maml:para>序列号数组</maml:para>
+        </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>string</maml:name>
+          <maml:uri />
+        </dev:type>
+        <maml:description>
+          <maml:para>adb disconnect 的返回值</maml:para>
+        </maml:description>
+      </command:returnValue>
+    </command:returnValues>
+    <command:terminatingErrors/>
+    <command:nonTerminatingErrors/>
+    <command:examples>
+      <command:example>
+        <maml:title>Example 1: 断开指定设备</maml:title>
+        <maml:introduction>
+          <maml:para>PS C:\> </maml:para>
+        </maml:introduction>
+        <dev:code>Disconnect-ADBDevice -Serial 192.168.0.102:5555</dev:code>
+        <dev:remarks>
+          <maml:para>disconnected 192.168.0.102:5555</maml:para>
+          <maml:para />
+          <maml:para>运行 adb disconnect &lt;Serial&gt;</maml:para>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <maml:relatedLinks>
+      <maml:navigationLink>
+        <maml:linkText>github</maml:linkText>
+        <maml:uri>https://github.com/empyrealtear/psadb_Module</maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Get-ADBDevices</maml:linkText>
+        <maml:uri />
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Connect-ADBDevice</maml:linkText>
+        <maml:uri />
+      </maml:navigationLink>
+    </maml:relatedLinks>
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10"
+    xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10"
+    xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+    <command:details>
+      <command:name>Set-ADBTCPIP</command:name>
+      <maml:description>
+        <maml:para>设置tcpip端口</maml:para>
+      </maml:description>
+      <maml:copyright>
+        <maml:para />
+      </maml:copyright>
+        <command:verb>Set</command:verb>
+        <command:noun>ADBTCPIP</command:noun>
+      <dev:version />
+    </command:details>
+    <maml:description>
+      <maml:para>设置tcpip端口</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Set-ADBTCPIP</maml:name>
+        <command:parameter required="false">
+          <maml:name>EndPoint</maml:name>
+          <command:parameterValue required="true" variableLength="false">int</command:parameterValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="false" variableLength="true" globbing="false"
+        pipelineInput="false" position="0">
+        <maml:name>EndPoint</maml:name>
+        <maml:description>
+          <maml:para>监控的端口</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">int</command:parameterValue>
+        <dev:type>
+          <maml:name>int</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>5555</dev:defaultValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>int</maml:name>
+          <maml:uri />
+        </dev:type>
+        <maml:description>
+          <maml:para>监控的端口</maml:para>
+        </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>string</maml:name>
+          <maml:uri />
+        </dev:type>
+        <maml:description>
+          <maml:para>adb tcpip &lt;EndPoint&gt; 的返回值</maml:para>
+        </maml:description>
+      </command:returnValue>
+    </command:returnValues>
+    <command:terminatingErrors/>
+    <command:nonTerminatingErrors/>
+    <command:examples>
+      <command:example>
+        <maml:title>Example 1: 设置tcpip端口</maml:title>
+        <maml:introduction>
+          <maml:para>PS C:\> </maml:para>
+        </maml:introduction>
+        <dev:code>Set-ADBTCPIP -EndPoint 5555</dev:code>
+        <dev:remarks>
+          <maml:para>restarting in TCP mode port: 5555</maml:para>
+          <maml:para />
+          <maml:para>运行 adb tcpip 5555</maml:para>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <maml:relatedLinks>
+      <maml:navigationLink>
+        <maml:linkText>github</maml:linkText>
+        <maml:uri>https://github.com/empyrealtear/psadb_Module</maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Connect-ADBDevice</maml:linkText>
+        <maml:uri />
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Get-ADBNets</maml:linkText>
+        <maml:uri />
+      </maml:navigationLink>
+    </maml:relatedLinks>
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10"
+    xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10"
+    xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+    <command:details>
+      <command:name>Reset-ADBUSB</command:name>
+      <maml:description>
+        <maml:para>重置设备usb端口</maml:para>
+      </maml:description>
+      <maml:copyright>
+        <maml:para />
+      </maml:copyright>
+        <command:verb>Reset</command:verb>
+        <command:noun>ADBUSB</command:noun>
+      <dev:version />
+    </command:details>
+    <maml:description>
+      <maml:para>重置设备usb端口</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Reset-ADBUSB</maml:name>
+        <command:parameter required="false">
+          <maml:name>Serial</maml:name>
+          <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="false" variableLength="true" globbing="false"
+        pipelineInput="false" position="0">
+        <maml:name>Serial</maml:name>
+        <maml:description>
+          <maml:para>指定序列号</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+        <dev:type>
+          <maml:name>string</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>string</maml:name>
+          <maml:uri />
+        </dev:type>
+        <maml:description>
+          <maml:para>序列号</maml:para>
+        </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>None</maml:name>
+          <maml:uri />
+        </dev:type>
+        <maml:description />
+      </command:returnValue>
+    </command:returnValues>
+    <command:terminatingErrors/>
+    <command:nonTerminatingErrors/>
+    <command:examples>
+      <command:example>
+        <maml:title>Example 1: 重置设备usb端口</maml:title>
+        <maml:introduction>
+          <maml:para>PS C:\> </maml:para>
+        </maml:introduction>
+        <dev:code>Reset-ADBUSB</dev:code>
+        <dev:remarks>
+          <maml:para>运行 adb usb</maml:para>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <maml:relatedLinks>
+      <maml:navigationLink>
+        <maml:linkText>github</maml:linkText>
+        <maml:uri>https://github.com/empyrealtear/psadb_Module</maml:uri>
+      </maml:navigationLink>
+    </maml:relatedLinks>
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10"
+    xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10"
+    xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+    <command:details>
+      <command:name>Get-ADBProperty</command:name>
+      <maml:description>
+        <maml:para>列出设备属性</maml:para>
+      </maml:description>
+      <maml:copyright>
+        <maml:para />
+      </maml:copyright>
+        <command:verb>Get</command:verb>
+        <command:noun>ADBProperty</command:noun>
+      <dev:version />
+    </command:details>
+    <maml:description>
+      <maml:para>列出设备属性</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Get-ADBProperty</maml:name>
+        <command:parameter required="false">
+          <maml:name>Filter</maml:name>
+          <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="false" variableLength="true" globbing="false"
+        pipelineInput="false" position="0">
+        <maml:name>Filter</maml:name>
+        <maml:description>
+          <maml:para>过滤条件</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+        <dev:type>
+          <maml:name>string</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>string</maml:name>
+          <maml:uri />
+        </dev:type>
+        <maml:description>
+          <maml:para>通配符过滤条件</maml:para>
+        </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>hashtable</maml:name>
+          <maml:uri />
+        </dev:type>
+        <maml:description>
+          <maml:para>属性键值对</maml:para>
+        </maml:description>
+      </command:returnValue>
+    </command:returnValues>
+    <command:terminatingErrors/>
+    <command:nonTerminatingErrors/>
+    <command:examples>
+      <command:example>
+        <maml:title>Example 1: 列出指定条件的设备属性</maml:title>
+        <maml:introduction>
+          <maml:para>PS C:\> </maml:para>
+        </maml:introduction>
+        <dev:code>Get-ADBProperty -Filter ro*date*</dev:code>
+        <dev:remarks>
+          <maml:para>Name                           Value</maml:para>
+          <maml:para>----                           -----</maml:para>
+          <maml:para>ro.build.date.utc              1567588151</maml:para>
+          <maml:para>ro.com.android.dateformat      MM-dd-yyyy</maml:para>
+          <maml:para>ro.build.date                  2019年09月04日星期三17</maml:para>
+          <maml:para />
+          <maml:para>运行 adb shell getprop</maml:para>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <maml:relatedLinks>
+      <maml:navigationLink>
+        <maml:linkText>github</maml:linkText>
+        <maml:uri>https://github.com/empyrealtear/psadb_Module</maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Get-ADBNets</maml:linkText>
+        <maml:uri />
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Get-ADBProcess</maml:linkText>
+        <maml:uri />
+      </maml:navigationLink>
+    </maml:relatedLinks>
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10"
+    xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10"
+    xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+    <command:details>
+      <command:name>Get-ADBNets</command:name>
+      <maml:description>
+        <maml:para>列出设备网络</maml:para>
+      </maml:description>
+      <maml:copyright>
+        <maml:para />
+      </maml:copyright>
+        <command:verb>Get</command:verb>
+        <command:noun>ADBNets</command:noun>
+      <dev:version />
+    </command:details>
+    <maml:description>
+      <maml:para>列出设备网络</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Get-ADBNets</maml:name>
+        <command:parameter required="false">
+          <maml:name>Filter</maml:name>
+          <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="false" variableLength="true" globbing="false"
+        pipelineInput="false" position="0">
+        <maml:name>Filter</maml:name>
+        <maml:description>
+          <maml:para>正则过滤条件</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+        <dev:type>
+          <maml:name>string</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>string</maml:name>
+          <maml:uri />
+        </dev:type>
+        <maml:description>
+          <maml:para>正则过滤条件</maml:para>
+        </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>CSADB.NetInfo[]</maml:name>
+          <maml:uri />
+        </dev:type>
+        <maml:description>
+          <maml:para>设备网络信息类数组</maml:para>
+        </maml:description>
+      </command:returnValue>
+    </command:returnValues>
+    <command:terminatingErrors/>
+    <command:nonTerminatingErrors/>
+    <command:examples>
+      <command:example>
+        <maml:title>Example 1: 列出设备网络</maml:title>
+        <maml:introduction>
+          <maml:para>PS C:\> </maml:para>
+        </maml:introduction>
+        <dev:code>Get-ADBNets wlan</dev:code>
+        <dev:remarks>
+          <maml:para>Interface Action        IPAddress Hex        MacAddress</maml:para>
+          <maml:para>--------- ------        --------- ---        ----------</maml:para>
+          <maml:para>wlan0     UP     192.168.0.102/24 0x00001043 3c:b6:b7:a4:1e:41</maml:para>
+          <maml:para />
+          <maml:para>运行 adb shell netcfg</maml:para>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <maml:relatedLinks>
+      <maml:navigationLink>
+        <maml:linkText>github</maml:linkText>
+        <maml:uri>https://github.com/empyrealtear/psadb_Module</maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Get-ADBProperty</maml:linkText>
+        <maml:uri />
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Get-ADBProcess</maml:linkText>
+        <maml:uri />
+      </maml:navigationLink>
+    </maml:relatedLinks>
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10"
+    xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10"
+    xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+    <command:details>
+      <command:name>Get-ADBProcess</command:name>
+      <maml:description>
+        <maml:para>列出设备进程</maml:para>
+      </maml:description>
+      <maml:copyright>
+        <maml:para />
+      </maml:copyright>
+        <command:verb>Get</command:verb>
+        <command:noun>ADBProcess</command:noun>
+      <dev:version />
+    </command:details>
+    <maml:description>
+      <maml:para>列出设备进程</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Get-ADBProcess</maml:name>
+        <command:parameter required="false">
+          <maml:name>Filter</maml:name>
+          <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="false" variableLength="true" globbing="false"
+        pipelineInput="false" position="0">
+        <maml:name>Filter</maml:name>
+        <maml:description>
+          <maml:para>正则过滤条件</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+        <dev:type>
+          <maml:name>string</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>string</maml:name>
+          <maml:uri />
+        </dev:type>
+        <maml:description>
+          <maml:para>正则过滤条件</maml:para>
+        </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>CSADB.ProcessInfo[]</maml:name>
+          <maml:uri />
+        </dev:type>
+        <maml:description>
+          <maml:para>设备进程信息类数组</maml:para>
+        </maml:description>
+      </command:returnValue>
+    </command:returnValues>
+    <command:terminatingErrors/>
+    <command:nonTerminatingErrors/>
+    <command:examples>
+      <command:example>
+        <maml:title>Example 1: 列出设备进程</maml:title>
+        <maml:introduction>
+          <maml:para>PS C:\> </maml:para>
+        </maml:introduction>
+        <dev:code>Get-ADBProcess ^shell.*ps$</dev:code>
+        <dev:remarks>
+          <maml:para>User    PID Virtual Mem Resident Mem Status Name</maml:para>
+          <maml:para>----    --- ----------- ------------ ------ ----</maml:para>
+          <maml:para>shell 12860        5000         1376   R    ps</maml:para>
+          <maml:para />
+          <maml:para>运行 adb shell ps</maml:para>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <maml:relatedLinks>
+      <maml:navigationLink>
+        <maml:linkText>github</maml:linkText>
+        <maml:uri>https://github.com/empyrealtear/psadb_Module</maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Get-ADBProperty</maml:linkText>
+        <maml:uri />
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Get-ADBNets</maml:linkText>
+        <maml:uri />
+      </maml:navigationLink>
+    </maml:relatedLinks>
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10"
+    xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10"
+    xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+    <command:details>
+      <command:name>Test-ADBPath</command:name>
+      <maml:description>
+        <maml:para>测试设备路径</maml:para>
+      </maml:description>
+      <maml:copyright>
+        <maml:para />
+      </maml:copyright>
+        <command:verb>Test</command:verb>
+        <command:noun>ADBPath</command:noun>
+      <dev:version />
+    </command:details>
+    <maml:description>
+      <maml:para>测试设备路径</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Test-ADBPath</maml:name>
+        <command:parameter required="true">
+          <maml:name>Path</maml:name>
+          <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="true" variableLength="true" globbing="false"
+        pipelineInput="false" position="0">
+        <maml:name>Path</maml:name>
+        <maml:description>
+          <maml:para>linux 路径格式</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+        <dev:type>
+          <maml:name>string</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>string</maml:name>
+          <maml:uri />
+        </dev:type>
+        <maml:description>
+          <maml:para>linux 路径格式</maml:para>
+        </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>bool</maml:name>
+          <maml:uri />
+        </dev:type>
+        <maml:description>
+          <maml:para>是否存在该路径</maml:para>
+        </maml:description>
+      </command:returnValue>
+    </command:returnValues>
+    <command:terminatingErrors/>
+    <command:nonTerminatingErrors/>
+    <command:examples>
+      <command:example>
+        <maml:title>Example 1: 测试路径是否存在</maml:title>
+        <maml:introduction>
+          <maml:para>PS C:\> </maml:para>
+        </maml:introduction>
+        <dev:code>Test-ADBPath /sdcard/Download</dev:code>
+        <dev:remarks>
+          <maml:para>True</maml:para>
+          <maml:para />
+          <maml:para>运行 adb shell ls &lt;ParentPath&gt; 查看是否存在该路径</maml:para>
+          <maml:para />
+        </dev:remarks>
+        <maml:introduction>
+          <maml:para>PS C:\> </maml:para>
+        </maml:introduction>
+        <dev:code>Test-ADBPath /sdcard/Download/test.sh</dev:code>
+        <dev:remarks>
+          <maml:para>True</maml:para>
+          <maml:para />
+          <maml:para>运行 adb shell ls &lt;ParentPath&gt; 查看是否存在该路径</maml:para>
+          <maml:para />
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <maml:relatedLinks>
+      <maml:navigationLink>
+        <maml:linkText>github</maml:linkText>
+        <maml:uri>https://github.com/empyrealtear/psadb_Module</maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Split-ADBPath</maml:linkText>
+        <maml:uri />
+      </maml:navigationLink>
+    </maml:relatedLinks>
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10"
+    xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10"
+    xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+    <command:details>
+      <command:name>Split-ADBPath</command:name>
+      <maml:description>
+        <maml:para>分割设备路径</maml:para>
+      </maml:description>
+      <maml:copyright>
+        <maml:para />
+      </maml:copyright>
+        <command:verb>Split</command:verb>
+        <command:noun>ADBPath</command:noun>
+      <dev:version />
+    </command:details>
+    <maml:description>
+      <maml:para>分割设备路径</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Split-ADBPath</maml:name>
+        <command:parameter required="true">
+          <maml:name>Path</maml:name>
+          <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false">
+          <maml:name>Leaf</maml:name>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="true" variableLength="true" globbing="false"
+        pipelineInput="false" position="0">
+        <maml:name>Path</maml:name>
+        <maml:description>
+          <maml:para>linux 路径格式</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+        <dev:type>
+          <maml:name>string</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="true" globbing="false"
+        pipelineInput="false" position="named">
+        <maml:name>Leaf</maml:name>
+        <maml:description>
+          <maml:para>分割路径最后一项</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">SwitchParameter</command:parameterValue>
+        <dev:type>
+          <maml:name>SwitchParameter</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>False</dev:defaultValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>string</maml:name>
+          <maml:uri />
+        </dev:type>
+        <maml:description>
+          <maml:para>linux 路径格式</maml:para>
+        </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>string</maml:name>
+          <maml:uri />
+        </dev:type>
+        <maml:description>
+          <maml:para>分割后的路径, 默认为父级路径</maml:para>
+          <maml:para>若使用 Leaf 开关, 输出路径最后一项</maml:para>
+        </maml:description>
+      </command:returnValue>
+    </command:returnValues>
+    <command:terminatingErrors/>
+    <command:nonTerminatingErrors/>
+    <command:examples>
+      <command:example>
+        <maml:title>Example 1: 分割设备路径</maml:title>
+        <maml:introduction>
+          <maml:para>PS C:\> </maml:para>
+        </maml:introduction>
+        <dev:code>Split-ADBPath /sdcard/Download/test.sh</dev:code>
+        <dev:remarks>
+          <maml:para>/sdcard/Download</maml:para>
+          <maml:para />
+          <maml:para>字符串分割拼接</maml:para>
+          <maml:para />
+        </dev:remarks>
+        <maml:introduction>
+          <maml:para>PS C:\> </maml:para>
+        </maml:introduction>
+        <dev:code>Split-ADBPath /sdcard/Download/test.sh -Leaf</dev:code>
+        <dev:remarks>
+          <maml:para>/sdcard/Download</maml:para>
+          <maml:para />
+          <maml:para>字符串分割拼接</maml:para>
+          <maml:para />
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <maml:relatedLinks>
+      <maml:navigationLink>
+        <maml:linkText>github</maml:linkText>
+        <maml:uri>https://github.com/empyrealtear/psadb_Module</maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Test-ADBPath</maml:linkText>
+        <maml:uri />
+      </maml:navigationLink>
+    </maml:relatedLinks>
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10"
+    xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10"
+    xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+    <command:details>
+      <command:name>Get-ADBItem</command:name>
+      <maml:description>
+        <maml:para>列出设备文件</maml:para>
+      </maml:description>
+      <maml:copyright>
+        <maml:para />
+      </maml:copyright>
+        <command:verb>Get</command:verb>
+        <command:noun>ADBItem</command:noun>
+      <dev:version />
+    </command:details>
+    <maml:description>
+      <maml:para>列出设备文件</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Get-ADBItem</maml:name>
+        <command:parameter required="false">
+          <maml:name>Path</maml:name>
+          <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="false" variableLength="true" globbing="false"
+        pipelineInput="false" position="0">
+        <maml:name>Path</maml:name>
+        <maml:description>
+          <maml:para>linux 格式路径</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+        <dev:type>
+          <maml:name>string</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>string.Empty</dev:defaultValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>string</maml:name>
+          <maml:uri />
+        </dev:type>
+        <maml:description>
+          <maml:para>linux 格式路径</maml:para>
+        </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>CSADB.AndroidFileInfo[]</maml:name>
+          <maml:uri />
+        </dev:type>
+        <maml:description>
+          <maml:para>设备文件信息类数组</maml:para>
+        </maml:description>
+      </command:returnValue>
+    </command:returnValues>
+    <command:terminatingErrors/>
+    <command:nonTerminatingErrors/>
+    <command:examples>
+      <command:example>
+        <maml:title>Example 1: 列出设备路径</maml:title>
+        <maml:introduction>
+          <maml:para>PS C:\> </maml:para>
+        </maml:introduction>
+        <dev:code>Get-ADBItem /sdcard/Download</dev:code>
+        <dev:remarks>
+          <maml:para>Mode              LastWriteTime   Length Name</maml:para>
+          <maml:para>----              -------------   ------ ----</maml:para>
+          <maml:para>drwxrwx---  2020/1/31      7:51          ADBEvents</maml:para>
+          <maml:para>-rwxrwx---  2019/9/15     12:20    32789 ADBEvents_NoWindows.zip</maml:para>
+          <maml:para>drwxrwx---   2020/1/7      8:10          QQMail</maml:para>
+          <maml:para>-rwxrwx---   2020/1/5     23:46       94 test.sh</maml:para>
+          <maml:para />
+          <maml:para>运行 adb shell ls /sdcard/Download -l</maml:para>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <maml:relatedLinks>
+      <maml:navigationLink>
+        <maml:linkText>github</maml:linkText>
+        <maml:uri>https://github.com/empyrealtear/psadb_Module</maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>New-ADBItem</maml:linkText>
+        <maml:uri />
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Copy-ADBItem</maml:linkText>
+        <maml:uri />
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Move-ADBItem</maml:linkText>
+        <maml:uri />
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Remove-ADBItem</maml:linkText>
+        <maml:uri />
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Rename-ADBItem</maml:linkText>
+        <maml:uri />
+      </maml:navigationLink>
+    </maml:relatedLinks>
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10"
+    xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10"
+    xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+    <command:details>
+      <command:name>New-ADBItem</command:name>
+      <maml:description>
+        <maml:para>新建设备文件</maml:para>
+      </maml:description>
+      <maml:copyright>
+        <maml:para />
+      </maml:copyright>
+        <command:verb>New</command:verb>
+        <command:noun>ADBItem</command:noun>
+      <dev:version />
+    </command:details>
+    <maml:description>
+      <maml:para>新建设备文件</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>New-ADBItem</maml:name>
+        <command:parameter required="true">
+          <maml:name>Path</maml:name>
+          <command:parameterValue required="true" variableLength="false">string[]</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false">
+          <maml:name>Directory</maml:name>
+        </command:parameter>
+        <command:parameter required="false">
+          <maml:name>PassThru</maml:name>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="true" variableLength="true" globbing="false"
+        pipelineInput="false" position="0">
+        <maml:name>Path</maml:name>
+        <maml:description>
+          <maml:para>需要新建的文件路径</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">string[]</command:parameterValue>
+        <dev:type>
+          <maml:name>string[]</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="true" globbing="false"
+        pipelineInput="false" position="named">
+        <maml:name>Directory</maml:name>
+        <maml:description>
+          <maml:para>是否新建目录</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">SwitchParameter</command:parameterValue>
+        <dev:type>
+          <maml:name>SwitchParameter</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>False</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="true" globbing="false"
+        pipelineInput="false" position="named">
+        <maml:name>PassThru</maml:name>
+        <maml:description>
+          <maml:para>是否返回文件信息</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">SwitchParameter</command:parameterValue>
+        <dev:type>
+          <maml:name>SwitchParameter</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>False</dev:defaultValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>string[]</maml:name>
+          <maml:uri />
+        </dev:type>
+        <maml:description>
+          <maml:para>linux 格式路径数组</maml:para>
+        </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>None, CSADB.AndroidFileInfo[]</maml:name>
+          <maml:uri />
+        </dev:type>
+        <maml:description>
+          <maml:para>无输出或输出新建的设备文件信息</maml:para>
+        </maml:description>
+      </command:returnValue>
+    </command:returnValues>
+    <command:terminatingErrors/>
+    <command:nonTerminatingErrors/>
+    <command:examples>
+      <command:example>
+        <maml:title>Example 1: 新建设备文件</maml:title>
+        <maml:introduction>
+          <maml:para>PS C:\> </maml:para>
+        </maml:introduction>
+        <dev:code>New-ADBItem /sdcard/Download/demo.sh -PassThru</dev:code>
+        <dev:remarks>
+          <maml:para>Mode              LastWriteTime Length Name</maml:para>
+          <maml:para>----              ------------- ------ ----</maml:para>
+          <maml:para>-rwxrwx---  2020/1/31     22:11      0 demo.sh</maml:para>
+          <maml:para />
+          <maml:para>运行 adb shell touch /sdcard/Download/demo.sh</maml:para>
+          <maml:para />
+        </dev:remarks>
+      </command:example>
+      <command:example>
+        <maml:title>Example 2: 新建设备目录</maml:title>
+        <maml:introduction>
+          <maml:para>PS C:\> </maml:para>
+        </maml:introduction>
+        <dev:code>New-ADBItem /sdcard/Download/demo -Directory -PassThru</dev:code>
+        <dev:remarks>
+          <maml:para>运行 adb shell touch /sdcard/Download/demo</maml:para>
+          <maml:para />
+          <maml:para>PS C:\&gt; New-ADBItem /sdcard/Download/demo -Directory -PassThru</maml:para>
+          <maml:para>运行 adb shell touch /sdcard/Download/demo</maml:para>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <maml:relatedLinks>
+      <maml:navigationLink>
+        <maml:linkText>github</maml:linkText>
+        <maml:uri>https://github.com/empyrealtear/psadb_Module</maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Get-ADBItem</maml:linkText>
+        <maml:uri />
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Copy-ADBItem</maml:linkText>
+        <maml:uri />
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Move-ADBItem</maml:linkText>
+        <maml:uri />
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Remove-ADBItem</maml:linkText>
+        <maml:uri />
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Rename-ADBItem</maml:linkText>
+        <maml:uri />
+      </maml:navigationLink>
+    </maml:relatedLinks>
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10"
+    xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10"
+    xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+    <command:details>
+      <command:name>Copy-ADBItem</command:name>
+      <maml:description>
+        <maml:para>复制设备文件</maml:para>
+      </maml:description>
+      <maml:copyright>
+        <maml:para />
+      </maml:copyright>
+        <command:verb>Copy</command:verb>
+        <command:noun>ADBItem</command:noun>
+      <dev:version />
+    </command:details>
+    <maml:description>
+      <maml:para>复制设备文件</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Copy-ADBItem</maml:name>
+        <command:parameter required="true">
+          <maml:name>Path</maml:name>
+          <command:parameterValue required="true" variableLength="false">string[]</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="true">
+          <maml:name>Destination</maml:name>
+          <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+        </command:parameter>
+      </command:syntaxItem>
+      <command:syntaxItem>
+        <maml:name>Copy-ADBItem</maml:name>
+        <command:parameter required="true">
+          <maml:name>Path</maml:name>
+          <command:parameterValue required="true" variableLength="false">string[]</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="true">
+          <maml:name>Destination</maml:name>
+          <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false">
+          <maml:name>ToLocal</maml:name>
+        </command:parameter>
+      </command:syntaxItem>
+      <command:syntaxItem>
+        <maml:name>Copy-ADBItem</maml:name>
+        <command:parameter required="true">
+          <maml:name>Path</maml:name>
+          <command:parameterValue required="true" variableLength="false">string[]</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="true">
+          <maml:name>Destination</maml:name>
+          <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false">
+          <maml:name>FromLocal</maml:name>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="true" variableLength="true" globbing="false"
+        pipelineInput="false" position="0">
+        <maml:name>Path</maml:name>
+        <maml:description>
+          <maml:para>需要复制的文件路径</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">string[]</command:parameterValue>
+        <dev:type>
+          <maml:name>string[]</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="true" globbing="false"
+        pipelineInput="false" position="1">
+        <maml:name>Destination</maml:name>
+        <maml:description>
+          <maml:para>复制到的文件夹路径</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+        <dev:type>
+          <maml:name>string</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="true" globbing="false"
+        pipelineInput="false" position="named">
+        <maml:name>ToLocal</maml:name>
+        <maml:description>
+          <maml:para>从设备复制到本地</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">SwitchParameter</command:parameterValue>
+        <dev:type>
+          <maml:name>SwitchParameter</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>False</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="true" globbing="false"
+        pipelineInput="false" position="named">
+        <maml:name>FromLocal</maml:name>
+        <maml:description>
+          <maml:para>从本地复制到设备</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">SwirchParameter</command:parameterValue>
+        <dev:type>
+          <maml:name>SwirchParameter</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>False</dev:defaultValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>string</maml:name>
+          <maml:uri />
+        </dev:type>
+        <maml:description>
+          <maml:para>复制路径与目标路径</maml:para>
+        </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>None</maml:name>
+          <maml:uri />
+        </dev:type>
+        <maml:description />
+      </command:returnValue>
+    </command:returnValues>
+    <command:terminatingErrors/>
+    <command:nonTerminatingErrors/>
+    <command:examples>
+      <command:example>
+        <maml:title>Example 1: 设备内文件复制</maml:title>
+        <maml:introduction>
+          <maml:para>PS C:\> </maml:para>
+        </maml:introduction>
+        <dev:code>Copy-ADBItem /sdcard/Download/demo.sh -Destination /sdcard/Download/demo; Get-ADBItem /sdcard/Download/demo</dev:code>
+        <dev:remarks>
+          <maml:para>Mode              LastWriteTime Length Name</maml:para>
+          <maml:para>----              ------------- ------ ----</maml:para>
+          <maml:para>-rwxrwx---  2020/1/31     22:16      0 demo.sh</maml:para>
+          <maml:para />
+          <maml:para>运行 adb shell cp &lt;SourcePath&gt; &lt;DestPath&gt;</maml:para>
+          <maml:para />
+        </dev:remarks>
+      </command:example>
+      <command:example>
+        <maml:title>Example 2: 从设备复制文件到本地</maml:title>
+        <maml:introduction>
+          <maml:para>PS C:\> </maml:para>
+        </maml:introduction>
+        <dev:code>Copy-ADBItem /sdcard/Download/demo.sh -Destination D:\Files -ToLocal; ls D:\Files\*.sh</dev:code>
+        <dev:remarks>
+          <maml:para />
+          <maml:para>运行 adb shell push &lt;Remote&gt; &lt;Local&gt;</maml:para>
+          <maml:para />
+          <maml:para>-a----        2020/1/31     22:27              0 demo.sh</maml:para>
+          <maml:para>----                -------------         ------ ----</maml:para>
+          <maml:para>Mode                LastWriteTime         Length Name</maml:para>
+          <maml:para />
+          <maml:para>目录: D:\Files</maml:para>
+          <maml:para>PS C:\&gt; Copy-ADBItem /sdcard/Download/demo.sh -Destination D:\Files -ToLocal; ls D:\Files\*.sh</maml:para>
+          <maml:para />
+        </dev:remarks>
+      </command:example>
+      <command:example>
+        <maml:title>Example 3: 从本地复制文件到设备</maml:title>
+        <maml:introduction>
+          <maml:para>PS C:\> </maml:para>
+        </maml:introduction>
+        <dev:code>Copy-ADBItem D:\Files\demo.sh -Destination /sdcard/Download/demo -FromLocal; Get-ADBItem /sdcard/Download/demo</dev:code>
+        <dev:remarks>
+          <maml:para>Mode              LastWriteTime Length Name</maml:para>
+          <maml:para>PS C:\&gt; Copy-ADBItem D:\Files\demo.sh -Destination /sdcard/Download/demo -FromLocal; Get-ADBItem /sdcard/Download/demo</maml:para>
+          <maml:para>运行 adb shell pull &lt;Local&gt; &lt;Remote&gt;</maml:para>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <maml:relatedLinks>
+      <maml:navigationLink>
+        <maml:linkText>github</maml:linkText>
+        <maml:uri>https://github.com/empyrealtear/psadb_Module</maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Get-ADBItem</maml:linkText>
+        <maml:uri />
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>New-ADBItem</maml:linkText>
+        <maml:uri />
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Move-ADBItem</maml:linkText>
+        <maml:uri />
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Remove-ADBItem</maml:linkText>
+        <maml:uri />
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Rename-ADBItem</maml:linkText>
+        <maml:uri />
+      </maml:navigationLink>
+    </maml:relatedLinks>
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10"
+    xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10"
+    xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+    <command:details>
+      <command:name>Move-ADBItem</command:name>
+      <maml:description>
+        <maml:para>移动设备文件</maml:para>
+      </maml:description>
+      <maml:copyright>
+        <maml:para />
+      </maml:copyright>
+        <command:verb>Move</command:verb>
+        <command:noun>ADBItem</command:noun>
+      <dev:version />
+    </command:details>
+    <maml:description>
+      <maml:para>移动设备文件</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Move-ADBItem</maml:name>
+        <command:parameter required="true">
+          <maml:name>Path</maml:name>
+          <command:parameterValue required="true" variableLength="false">string[]</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="true">
+          <maml:name>Destination</maml:name>
+          <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+        </command:parameter>
+      </command:syntaxItem>
+      <command:syntaxItem>
+        <maml:name>Move-ADBItem</maml:name>
+        <command:parameter required="true">
+          <maml:name>Path</maml:name>
+          <command:parameterValue required="true" variableLength="false">string[]</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="true">
+          <maml:name>Destination</maml:name>
+          <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false">
+          <maml:name>ToLocal</maml:name>
+        </command:parameter>
+      </command:syntaxItem>
+      <command:syntaxItem>
+        <maml:name>Move-ADBItem</maml:name>
+        <command:parameter required="true">
+          <maml:name>Path</maml:name>
+          <command:parameterValue required="true" variableLength="false">string[]</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="true">
+          <maml:name>Destination</maml:name>
+          <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false">
+          <maml:name>FromLocal</maml:name>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="true" variableLength="true" globbing="false"
+        pipelineInput="false" position="0">
+        <maml:name>Path</maml:name>
+        <maml:description>
+          <maml:para>需要移动的文件路径</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">string[]</command:parameterValue>
+        <dev:type>
+          <maml:name>string[]</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="true" globbing="false"
+        pipelineInput="false" position="1">
+        <maml:name>Destination</maml:name>
+        <maml:description>
+          <maml:para>移动到的文件夹路径</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+        <dev:type>
+          <maml:name>string</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="true" globbing="false"
+        pipelineInput="false" position="named">
+        <maml:name>ToLocal</maml:name>
+        <maml:description>
+          <maml:para>从设备移动到本地</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">SwitchParameter</command:parameterValue>
+        <dev:type>
+          <maml:name>SwitchParameter</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>False</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="true" globbing="false"
+        pipelineInput="false" position="named">
+        <maml:name>FromLocal</maml:name>
+        <maml:description>
+          <maml:para>从本地移动到设备</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">SwirchParameter</command:parameterValue>
+        <dev:type>
+          <maml:name>SwirchParameter</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>False</dev:defaultValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>string</maml:name>
+          <maml:uri />
+        </dev:type>
+        <maml:description>
+          <maml:para>移动路径与目标路径</maml:para>
+        </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>None</maml:name>
+          <maml:uri />
+        </dev:type>
+        <maml:description />
+      </command:returnValue>
+    </command:returnValues>
+    <command:terminatingErrors/>
+    <command:nonTerminatingErrors/>
+    <command:examples>
+      <command:example>
+        <maml:title>Example 1: 设备内移动文件</maml:title>
+        <maml:introduction>
+          <maml:para>PS C:\> </maml:para>
+        </maml:introduction>
+        <dev:code>Move-ADBItem /sdcard/Download/demo/demo.sh -Destination /sdcard/Download; Get-ADBItem /sdcard/Download/demo*</dev:code>
+        <dev:remarks>
+          <maml:para>Mode              LastWriteTime Length Name</maml:para>
+          <maml:para>----              ------------- ------ ----</maml:para>
+          <maml:para>-rwxrwx---  2020/1/31     22:33      0 demo.sh</maml:para>
+          <maml:para />
+          <maml:para>运行 adb shell mv &lt;SourcePath&gt; &lt;DestPath&gt;</maml:para>
+          <maml:para />
+        </dev:remarks>
+      </command:example>
+      <command:example>
+        <maml:title>Example 2: 从设备移动文件到本地</maml:title>
+        <maml:introduction>
+          <maml:para>PS C:\> </maml:para>
+        </maml:introduction>
+        <dev:code>Move-ADBItem /sdcard/Download/demo.sh -Destination D:\Files -ToLocal; ls D:\Files\*.sh</dev:code>
+        <dev:remarks>
+          <maml:para />
+          <maml:para>然后删除设备文件</maml:para>
+          <maml:para>运行 adb push &lt;Remote&gt; &lt;Local&gt;</maml:para>
+          <maml:para />
+          <maml:para>-a----         2020/2/1      6:37              0 demo.sh</maml:para>
+          <maml:para>----                -------------         ------ ----</maml:para>
+          <maml:para>Mode                LastWriteTime         Length Name</maml:para>
+          <maml:para />
+          <maml:para>目录: D:\Files</maml:para>
+          <maml:para>PS C:\&gt; Move-ADBItem /sdcard/Download/demo.sh -Destination D:\Files -ToLocal; ls D:\Files\*.sh</maml:para>
+          <maml:para />
+        </dev:remarks>
+      </command:example>
+      <command:example>
+        <maml:title>Example 3: 从本地移动文件到设备</maml:title>
+        <maml:introduction>
+          <maml:para>PS C:\> </maml:para>
+        </maml:introduction>
+        <dev:code>Move-ADBItem D:\Files\demo.sh -Destination /sdcard/Download -FromLocal; Get-ADBItem /sdcard/Download/*.sh</dev:code>
+        <dev:remarks>
+          <maml:para>Mode              LastWriteTime Length Name</maml:para>
+          <maml:para>PS C:\&gt; Move-ADBItem D:\Files\demo.sh -Destination /sdcard/Download -FromLocal; Get-ADBItem /sdcard/Download/*.sh</maml:para>
+          <maml:para>然后删除本地文件</maml:para>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <maml:relatedLinks>
+      <maml:navigationLink>
+        <maml:linkText>github</maml:linkText>
+        <maml:uri>https://github.com/empyrealtear/psadb_Module</maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Get-ADBItem</maml:linkText>
+        <maml:uri />
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>New-ADBItem</maml:linkText>
+        <maml:uri />
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Copy-ADBItem</maml:linkText>
+        <maml:uri />
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Remove-ADBItem</maml:linkText>
+        <maml:uri />
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Rename-ADBItem</maml:linkText>
+        <maml:uri />
+      </maml:navigationLink>
+    </maml:relatedLinks>
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10"
+    xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10"
+    xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+    <command:details>
+      <command:name>Remove-ADBItem</command:name>
+      <maml:description>
+        <maml:para>移除设备文件</maml:para>
+      </maml:description>
+      <maml:copyright>
+        <maml:para />
+      </maml:copyright>
+        <command:verb>Remove</command:verb>
+        <command:noun>ADBItem</command:noun>
+      <dev:version />
+    </command:details>
+    <maml:description>
+      <maml:para>移除设备文件</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Remove-ADBItem</maml:name>
+        <command:parameter required="true">
+          <maml:name>Path</maml:name>
+          <command:parameterValue required="true" variableLength="false">string[]</command:parameterValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="true" variableLength="true" globbing="false"
+        pipelineInput="false" position="0">
+        <maml:name>Path</maml:name>
+        <maml:description>
+          <maml:para>需要移除的路径</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">string[]</command:parameterValue>
+        <dev:type>
+          <maml:name>string[]</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>string</maml:name>
+          <maml:uri />
+        </dev:type>
+        <maml:description>
+          <maml:para>需要移除的路径</maml:para>
+        </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>None</maml:name>
+          <maml:uri />
+        </dev:type>
+        <maml:description />
+      </command:returnValue>
+    </command:returnValues>
+    <command:terminatingErrors/>
+    <command:nonTerminatingErrors/>
+    <command:examples>
+      <command:example>
+        <maml:title>Example 1: 移除设备文件</maml:title>
+        <maml:introduction>
+          <maml:para>PS C:\> </maml:para>
+        </maml:introduction>
+        <dev:code>Remove-ADBItem /sdcard/Download/demo</dev:code>
+        <dev:remarks>
+          <maml:para>运行 adb shell rm &lt;Path&gt;</maml:para>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <maml:relatedLinks>
+      <maml:navigationLink>
+        <maml:linkText>github</maml:linkText>
+        <maml:uri>https://github.com/empyrealtear/psadb_Module</maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Get-ADBItem</maml:linkText>
+        <maml:uri />
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>New-ADBItem</maml:linkText>
+        <maml:uri />
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Copy-ADBItem</maml:linkText>
+        <maml:uri />
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Move-ADBItem</maml:linkText>
+        <maml:uri />
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Rename-ADBItem</maml:linkText>
+        <maml:uri />
+      </maml:navigationLink>
+    </maml:relatedLinks>
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10"
+    xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10"
+    xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+    <command:details>
+      <command:name>Rename-ADBItem</command:name>
+      <maml:description>
+        <maml:para>重命名设备文件</maml:para>
+      </maml:description>
+      <maml:copyright>
+        <maml:para />
+      </maml:copyright>
+        <command:verb>Rename</command:verb>
+        <command:noun>ADBItem</command:noun>
+      <dev:version />
+    </command:details>
+    <maml:description>
+      <maml:para>重命名设备文件</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Rename-ADBItem</maml:name>
+        <command:parameter required="true">
+          <maml:name>Path</maml:name>
+          <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="true">
+          <maml:name>NewName</maml:name>
+          <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="true" variableLength="true" globbing="false"
+        pipelineInput="false" position="0">
+        <maml:name>Path</maml:name>
+        <maml:description>
+          <maml:para>原文件路径</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+        <dev:type>
+          <maml:name>string</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="true" variableLength="true" globbing="false"
+        pipelineInput="false" position="1">
+        <maml:name>NewName</maml:name>
+        <maml:description>
+          <maml:para>新文件名</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+        <dev:type>
+          <maml:name>string</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>string</maml:name>
+          <maml:uri />
+        </dev:type>
+        <maml:description>
+          <maml:para>原文件路径与新文件名</maml:para>
+        </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>None</maml:name>
+          <maml:uri />
+        </dev:type>
+        <maml:description />
+      </command:returnValue>
+    </command:returnValues>
+    <command:terminatingErrors/>
+    <command:nonTerminatingErrors/>
+    <command:examples>
+      <command:example>
+        <maml:title>Example 1: 重命名设备文件</maml:title>
+        <maml:introduction>
+          <maml:para>PS C:\> </maml:para>
+        </maml:introduction>
+        <dev:code>Rename-ADBItem /sdcard/Download/test.sh -NewName demo.sh; Get-ADBItem /sdcard/Download/*.sh</dev:code>
+        <dev:remarks>
+          <maml:para>Mode              LastWriteTime Length Name</maml:para>
+          <maml:para>----              ------------- ------ ----</maml:para>
+          <maml:para>-rwxrwx---   2020/1/5     23:46     94 demo.sh</maml:para>
+          <maml:para />
+          <maml:para>运行 adb cp &lt;SourcePath&gt; &lt;DestPath&gt;</maml:para>
+          <maml:para>运行 adb rm &lt;SourcePath&gt;</maml:para>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <maml:relatedLinks>
+      <maml:navigationLink>
+        <maml:linkText>github</maml:linkText>
+        <maml:uri>https://github.com/empyrealtear/psadb_Module</maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Get-ADBItem</maml:linkText>
+        <maml:uri />
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>New-ADBItem</maml:linkText>
+        <maml:uri />
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Copy-ADBItem</maml:linkText>
+        <maml:uri />
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Move-ADBItem</maml:linkText>
+        <maml:uri />
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Remove-ADBItem</maml:linkText>
+        <maml:uri />
+      </maml:navigationLink>
+    </maml:relatedLinks>
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10"
+    xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10"
+    xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+    <command:details>
+      <command:name>Read-ADBFile</command:name>
+      <maml:description>
+        <maml:para>读取设备文件</maml:para>
+      </maml:description>
+      <maml:copyright>
+        <maml:para />
+      </maml:copyright>
+        <command:verb>Read</command:verb>
+        <command:noun>ADBFile</command:noun>
+      <dev:version />
+    </command:details>
+    <maml:description>
+      <maml:para>读取设备文件</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Read-ADBFile</maml:name>
+        <command:parameter required="true">
+          <maml:name>Path</maml:name>
+          <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false">
+          <maml:name>Encoding</maml:name>
+          <command:parameterValue required="true" variableLength="false">Encoding</command:parameterValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="true" variableLength="true" globbing="false"
+        pipelineInput="false" position="0">
+        <maml:name>Path</maml:name>
+        <maml:description>
+          <maml:para>需要读取的文件路径</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+        <dev:type>
+          <maml:name>string</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="true" globbing="false"
+        pipelineInput="false" position="1">
+        <maml:name>Encoding</maml:name>
+        <maml:description>
+          <maml:para>文件编码格式</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">Encoding</command:parameterValue>
+        <dev:type>
+          <maml:name>Encoding</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>Encoding.UTF8</dev:defaultValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>string</maml:name>
+          <maml:uri />
+        </dev:type>
+        <maml:description>
+          <maml:para>需要读取的文件路径</maml:para>
+        </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>string</maml:name>
+          <maml:uri />
+        </dev:type>
+        <maml:description>
+          <maml:para>文件内容</maml:para>
+        </maml:description>
+      </command:returnValue>
+    </command:returnValues>
+    <command:terminatingErrors/>
+    <command:nonTerminatingErrors/>
+    <command:examples>
+      <command:example>
+        <maml:title>Example 1: 读取设备文件</maml:title>
+        <maml:introduction>
+          <maml:para>PS C:\> </maml:para>
+        </maml:introduction>
+        <dev:code>Read-ADBFile /sdcard/Download/test.sh</dev:code>
+        <dev:remarks>
+          <maml:para>echo It's a test</maml:para>
+          <maml:para />
+          <maml:para>运行 adb shell cat /sdcard/Download/test.sh</maml:para>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <maml:relatedLinks>
+      <maml:navigationLink>
+        <maml:linkText>github</maml:linkText>
+        <maml:uri>https://github.com/empyrealtear/psadb_Module</maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Out-ADBFile</maml:linkText>
+        <maml:uri />
+      </maml:navigationLink>
+    </maml:relatedLinks>
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10"
+    xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10"
+    xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+    <command:details>
+      <command:name>Out-ADBFile</command:name>
+      <maml:description>
+        <maml:para>输出设备文件</maml:para>
+      </maml:description>
+      <maml:copyright>
+        <maml:para />
+      </maml:copyright>
+        <command:verb>Out</command:verb>
+        <command:noun>ADBFile</command:noun>
+      <dev:version />
+    </command:details>
+    <maml:description>
+      <maml:para>输出设备文件</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Out-ADBFile</maml:name>
+        <command:parameter required="true">
+          <maml:name>InputObject</maml:name>
+          <command:parameterValue required="true" variableLength="false">string[]</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="true">
+          <maml:name>Path</maml:name>
+          <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false">
+          <maml:name>Encoding</maml:name>
+          <command:parameterValue required="true" variableLength="false">Encoding</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false">
+          <maml:name>Append</maml:name>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="true" variableLength="true" globbing="false"
+        pipelineInput="false" position="0">
+        <maml:name>InputObject</maml:name>
+        <maml:description>
+          <maml:para>输入内容</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">string[]</command:parameterValue>
+        <dev:type>
+          <maml:name>string[]</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="true" globbing="false"
+        pipelineInput="false" position="1">
+        <maml:name>Path</maml:name>
+        <maml:description>
+          <maml:para>目标路径</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+        <dev:type>
+          <maml:name>string</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="true" globbing="false"
+        pipelineInput="false" position="2">
+        <maml:name>Encoding</maml:name>
+        <maml:description>
+          <maml:para>编码格式</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">Encoding</command:parameterValue>
+        <dev:type>
+          <maml:name>Encoding</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>System.Text.Encoding.UTF8</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="true" globbing="false"
+        pipelineInput="false" position="named">
+        <maml:name>Append</maml:name>
+        <maml:description>
+          <maml:para>追加</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">SwitchParameter</command:parameterValue>
+        <dev:type>
+          <maml:name>SwitchParameter</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>False</dev:defaultValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>None</maml:name>
+          <maml:uri />
+        </dev:type>
+        <maml:description />
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>None</maml:name>
+          <maml:uri />
+        </dev:type>
+        <maml:description />
+      </command:returnValue>
+    </command:returnValues>
+    <command:terminatingErrors/>
+    <command:nonTerminatingErrors/>
+    <command:examples>
+      <command:example>
+        <maml:title>Example 1: 输出设备文件</maml:title>
+        <maml:introduction>
+          <maml:para>PS C:\> </maml:para>
+        </maml:introduction>
+        <dev:code>'echo "It is a test" | Out-ADBFile -Path /sdcard/Download/test.sh; Read-ADBFile /sdcard/Download/test.sh</dev:code>
+        <dev:remarks>
+          <maml:para>echo It is a test</maml:para>
+          <maml:para />
+          <maml:para>运行 adb shell '&lt;string&gt; &gt; &lt;Path&gt;'</maml:para>
+          <maml:para />
+        </dev:remarks>
+      </command:example>
+      <command:example>
+        <maml:title>Example 2: 追加内容到设备文件</maml:title>
+        <maml:introduction>
+          <maml:para>PS C:\> </maml:para>
+        </maml:introduction>
+        <dev:code>"echo 'It is a another test'" | Out-ADBFile -Path /sdcard/Download/test.sh -Append; Read-ADBFile /sdcard/Download/test.sh</dev:code>
+        <dev:remarks>
+          <maml:para>运行 adb shell '&lt;string&gt; &gt;&gt; &lt;Path&gt;'</maml:para>
+          <maml:para />
+          <maml:para>echo It is a another test</maml:para>
+          <maml:para>echo It is a test</maml:para>
+          <maml:para>PS C:\&gt; "echo 'It is a another test'" | Out-ADBFile -Path /sdcard/Download/test.sh -Append; Read-ADBFile /sdcard/Download/test.sh</maml:para>
+          <maml:para>运行 adb shell '&lt;string&gt; &gt;&gt; &lt;Path&gt;'</maml:para>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <maml:relatedLinks>
+      <maml:navigationLink>
+        <maml:linkText>github</maml:linkText>
+        <maml:uri>https://github.com/empyrealtear/psadb_Module</maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Read-ADBFile</maml:linkText>
+        <maml:uri />
+      </maml:navigationLink>
+    </maml:relatedLinks>
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10"
+    xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10"
+    xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+    <command:details>
+      <command:name>Save-ADBScreenCapture</command:name>
+      <maml:description>
+        <maml:para>保存当前截图</maml:para>
+      </maml:description>
+      <maml:copyright>
+        <maml:para />
+      </maml:copyright>
+        <command:verb>Save</command:verb>
+        <command:noun>ADBScreenCapture</command:noun>
+      <dev:version />
+    </command:details>
+    <maml:description>
+      <maml:para>保存当前截图</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Save-ADBScreenCapture</maml:name>
+        <command:parameter required="false">
+          <maml:name>Path</maml:name>
+          <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="false" variableLength="true" globbing="false"
+        pipelineInput="false" position="0">
+        <maml:name>Path</maml:name>
+        <maml:description>
+          <maml:para>图片保存路径</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+        <dev:type>
+          <maml:name>string</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>string</maml:name>
+          <maml:uri />
+        </dev:type>
+        <maml:description>
+          <maml:para>图片保存到的本地路径</maml:para>
+        </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>None</maml:name>
+          <maml:uri />
+        </dev:type>
+        <maml:description />
+      </command:returnValue>
+    </command:returnValues>
+    <command:terminatingErrors/>
+    <command:nonTerminatingErrors/>
+    <command:examples>
+      <command:example>
+        <maml:title>Example 1: 保存当前截图</maml:title>
+        <maml:introduction>
+          <maml:para>PS C:\> </maml:para>
+        </maml:introduction>
+        <dev:code>Save-ADBScreenCapture -Path .\</dev:code>
+        <dev:remarks>
+          <maml:para>运行 adb shell screencap &lt;Path&gt;</maml:para>
+          <maml:para>运行 adb shell push &lt;Remote&gt; &lt;Local&gt;</maml:para>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <maml:relatedLinks>
+      <maml:navigationLink>
+        <maml:linkText>github</maml:linkText>
+        <maml:uri>https://github.com/empyrealtear/psadb_Module</maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Save-ADBScreenRecoder</maml:linkText>
+        <maml:uri />
+      </maml:navigationLink>
+    </maml:relatedLinks>
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10"
+    xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10"
+    xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+    <command:details>
+      <command:name>Save-ADBScreenRecoder</command:name>
+      <maml:description>
+        <maml:para>保存当前录屏</maml:para>
+      </maml:description>
+      <maml:copyright>
+        <maml:para />
+      </maml:copyright>
+        <command:verb>Save</command:verb>
+        <command:noun>ADBScreenRecoder</command:noun>
+      <dev:version />
+    </command:details>
+    <maml:description>
+      <maml:para>保存当前录屏</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Save-ADBScreenRecoder</maml:name>
+        <command:parameter required="false">
+          <maml:name>Path</maml:name>
+          <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false">
+          <maml:name>TimeLimit</maml:name>
+          <command:parameterValue required="true" variableLength="false">int</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false">
+          <maml:name>BitRate</maml:name>
+          <command:parameterValue required="true" variableLength="false">int</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false">
+          <maml:name>Size</maml:name>
+          <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="false" variableLength="true" globbing="false"
+        pipelineInput="false" position="0">
+        <maml:name>Path</maml:name>
+        <maml:description>
+          <maml:para>录屏保存路径</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+        <dev:type>
+          <maml:name>string</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="true" globbing="false"
+        pipelineInput="false" position="1">
+        <maml:name>TimeLimit</maml:name>
+        <maml:description>
+          <maml:para>录屏时间</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">int</command:parameterValue>
+        <dev:type>
+          <maml:name>int</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>0</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="true" globbing="false"
+        pipelineInput="false" position="2">
+        <maml:name>BitRate</maml:name>
+        <maml:description>
+          <maml:para>比特率</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">int</command:parameterValue>
+        <dev:type>
+          <maml:name>int</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>0</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="true" globbing="false"
+        pipelineInput="false" position="3">
+        <maml:name>Size</maml:name>
+        <maml:description>
+          <maml:para>录屏尺寸</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+        <dev:type>
+          <maml:name>string</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>string</maml:name>
+          <maml:uri />
+        </dev:type>
+        <maml:description>
+          <maml:para>录屏保存地址</maml:para>
+        </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>None</maml:name>
+          <maml:uri />
+        </dev:type>
+        <maml:description />
+      </command:returnValue>
+    </command:returnValues>
+    <command:terminatingErrors/>
+    <command:nonTerminatingErrors/>
+    <command:examples>
+      <command:example>
+        <maml:title>Example 1: 保存当前录屏</maml:title>
+        <maml:introduction>
+          <maml:para>PS C:\> </maml:para>
+        </maml:introduction>
+        <dev:code>Save-ADBScreenRecoder -TimeLimit 5 -Path .\</dev:code>
+        <dev:remarks>
+          <maml:para>运行 adb shell screenrecoder --time-limit 5 &lt;Path&gt;</maml:para>
+          <maml:para>运行 adb shell push &lt;Remote&gt; &lt;Local&gt;</maml:para>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <maml:relatedLinks>
+      <maml:navigationLink>
+        <maml:linkText>github</maml:linkText>
+        <maml:uri>https://github.com/empyrealtear/psadb_Module</maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Save-ADBScreenRecoder</maml:linkText>
+        <maml:uri />
+      </maml:navigationLink>
+    </maml:relatedLinks>
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10"
+    xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10"
+    xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+    <command:details>
+      <command:name>Send-ADBTap</command:name>
+      <maml:description>
+        <maml:para>发送点击事件</maml:para>
+      </maml:description>
+      <maml:copyright>
+        <maml:para />
+      </maml:copyright>
+        <command:verb>Send</command:verb>
+        <command:noun>ADBTap</command:noun>
+      <dev:version />
+    </command:details>
+    <maml:description>
+      <maml:para>发送点击事件</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Send-ADBTap</maml:name>
+        <command:parameter required="true">
+          <maml:name>Left</maml:name>
+          <command:parameterValue required="true" variableLength="false">int</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="true">
+          <maml:name>Top</maml:name>
+          <command:parameterValue required="true" variableLength="false">int</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false">
+          <maml:name>Count</maml:name>
+          <command:parameterValue required="true" variableLength="false">int</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false">
+          <maml:name>Sleep</maml:name>
+          <command:parameterValue required="true" variableLength="false">int</command:parameterValue>
+        </command:parameter>
+      </command:syntaxItem>
+      <command:syntaxItem>
+        <maml:name>Send-ADBTap</maml:name>
+        <command:parameter required="true">
+          <maml:name>Pos</maml:name>
+          <command:parameterValue required="true" variableLength="false">Pos</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false">
+          <maml:name>Count</maml:name>
+          <command:parameterValue required="true" variableLength="false">int</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false">
+          <maml:name>Sleep</maml:name>
+          <command:parameterValue required="true" variableLength="false">int</command:parameterValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="true" variableLength="true" globbing="false"
+        pipelineInput="false" position="0">
+        <maml:name>Left</maml:name>
+        <maml:description>
+          <maml:para>横坐标</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">int</command:parameterValue>
+        <dev:type>
+          <maml:name>int</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>0</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="true" variableLength="true" globbing="false"
+        pipelineInput="false" position="1">
+        <maml:name>Top</maml:name>
+        <maml:description>
+          <maml:para>纵坐标</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">int</command:parameterValue>
+        <dev:type>
+          <maml:name>int</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="true" variableLength="true" globbing="false"
+        pipelineInput="false" position="0">
+        <maml:name>Pos</maml:name>
+        <maml:description>
+          <maml:para>设备坐标类</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">CSADB.Pos</command:parameterValue>
+        <dev:type>
+          <maml:name>CSADB.Pos</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>0</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="true" globbing="false"
+        pipelineInput="false" position="named">
+        <maml:name>Count</maml:name>
+        <maml:description>
+          <maml:para>重复点击次数</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">int</command:parameterValue>
+        <dev:type>
+          <maml:name>int</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>1</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="true" globbing="false"
+        pipelineInput="false" position="named">
+        <maml:name>Sleep</maml:name>
+        <maml:description>
+          <maml:para>点击后暂停时间</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">int</command:parameterValue>
+        <dev:type>
+          <maml:name>int</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>0</dev:defaultValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>None</maml:name>
+          <maml:uri />
+        </dev:type>
+        <maml:description />
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>None</maml:name>
+          <maml:uri />
+        </dev:type>
+        <maml:description />
+      </command:returnValue>
+    </command:returnValues>
+    <command:terminatingErrors/>
+    <command:nonTerminatingErrors/>
+    <command:examples>
+      <command:example>
+        <maml:title>Example 1: 发送点击事件</maml:title>
+        <maml:introduction>
+          <maml:para>PS C:\> </maml:para>
+        </maml:introduction>
+        <dev:code>Send-ADBTap 500 500</dev:code>
+        <dev:remarks>
+          <maml:para>运行 adb shell input tap &lt;x&gt; &lt;y&gt;</maml:para>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <maml:relatedLinks>
+      <maml:navigationLink>
+        <maml:linkText>github</maml:linkText>
+        <maml:uri>https://github.com/empyrealtear/psadb_Module</maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Send-ADBSwipe</maml:linkText>
+        <maml:uri />
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Send-ADBKeyEvent</maml:linkText>
+        <maml:uri />
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Send-ADBEvent</maml:linkText>
+        <maml:uri />
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Find-ADBUI</maml:linkText>
+        <maml:uri />
+      </maml:navigationLink>
+    </maml:relatedLinks>
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10"
+    xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10"
+    xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+    <command:details>
+      <command:name>Send-ADBSwipe</command:name>
+      <maml:description>
+        <maml:para>发送滑动事件</maml:para>
+      </maml:description>
+      <maml:copyright>
+        <maml:para />
+      </maml:copyright>
+        <command:verb>Send</command:verb>
+        <command:noun>ADBSwipe</command:noun>
+      <dev:version />
+    </command:details>
+    <maml:description>
+      <maml:para>发送滑动事件</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Send-ADBSwipe</maml:name>
+        <command:parameter required="true">
+          <maml:name>X1</maml:name>
+          <command:parameterValue required="true" variableLength="false">int</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="true">
+          <maml:name>Y1</maml:name>
+          <command:parameterValue required="true" variableLength="false">int</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="true">
+          <maml:name>X2</maml:name>
+          <command:parameterValue required="true" variableLength="false">int</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="true">
+          <maml:name>Y2</maml:name>
+          <command:parameterValue required="true" variableLength="false">int</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false">
+          <maml:name>MilliSeconds</maml:name>
+          <command:parameterValue required="true" variableLength="false">int</command:parameterValue>
+        </command:parameter>
+      </command:syntaxItem>
+      <command:syntaxItem>
+        <maml:name>Send-ADBSwipe</maml:name>
+        <command:parameter required="true">
+          <maml:name>X1</maml:name>
+          <command:parameterValue required="true" variableLength="false">int</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="true">
+          <maml:name>Y1</maml:name>
+          <command:parameterValue required="true" variableLength="false">int</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="true">
+          <maml:name>Degree</maml:name>
+          <command:parameterValue required="true" variableLength="false">double</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="true">
+          <maml:name>Radius</maml:name>
+          <command:parameterValue required="true" variableLength="false">double</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false">
+          <maml:name>MilliSeconds</maml:name>
+          <command:parameterValue required="true" variableLength="false">int</command:parameterValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="true" variableLength="true" globbing="false"
+        pipelineInput="false" position="0">
+        <maml:name>X1</maml:name>
+        <maml:description>
+          <maml:para>起点横坐标</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">int</command:parameterValue>
+        <dev:type>
+          <maml:name>int</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>0</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="true" variableLength="true" globbing="false"
+        pipelineInput="false" position="1">
+        <maml:name>Y1</maml:name>
+        <maml:description>
+          <maml:para>起点纵坐标</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">int</command:parameterValue>
+        <dev:type>
+          <maml:name>int</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>0</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="true" variableLength="true" globbing="false"
+        pipelineInput="false" position="2">
+        <maml:name>X2</maml:name>
+        <maml:description>
+          <maml:para>终点横坐标</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">int</command:parameterValue>
+        <dev:type>
+          <maml:name>int</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>0</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="true" variableLength="true" globbing="false"
+        pipelineInput="false" position="3">
+        <maml:name>Y2</maml:name>
+        <maml:description>
+          <maml:para>终点纵坐标</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">int</command:parameterValue>
+        <dev:type>
+          <maml:name>int</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>0</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="true" variableLength="true" globbing="false"
+        pipelineInput="false" position="2">
+        <maml:name>Degree</maml:name>
+        <maml:description>
+          <maml:para>滑动角度</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">double</command:parameterValue>
+        <dev:type>
+          <maml:name>double</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>0</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="true" variableLength="true" globbing="false"
+        pipelineInput="false" position="3">
+        <maml:name>Radius</maml:name>
+        <maml:description>
+          <maml:para>滑动半径</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">double</command:parameterValue>
+        <dev:type>
+          <maml:name>double</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>0</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="true" globbing="false"
+        pipelineInput="false" position="0">
+        <maml:name>MilliSeconds</maml:name>
+        <maml:description>
+          <maml:para>滑动时长</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">int</command:parameterValue>
+        <dev:type>
+          <maml:name>int</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>0</dev:defaultValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>None</maml:name>
+          <maml:uri />
+        </dev:type>
+        <maml:description />
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>None</maml:name>
+          <maml:uri />
+        </dev:type>
+        <maml:description />
+      </command:returnValue>
+    </command:returnValues>
+    <command:terminatingErrors/>
+    <command:nonTerminatingErrors/>
+    <command:examples>
+      <command:example>
+        <maml:title>Example 1: 直角坐标式滑动事件</maml:title>
+        <maml:introduction>
+          <maml:para>PS C:\> </maml:para>
+        </maml:introduction>
+        <dev:code>Send-ADBSwipe 500 500 600 600</dev:code>
+        <dev:remarks>
+          <maml:para>运行 adb shell input swipe &lt;x1&gt; &lt;y1&gt; &lt;x2&gt; &lt;y2&gt;</maml:para>
+          <maml:para />
+        </dev:remarks>
+      </command:example>
+      <command:example>
+        <maml:title>Example 2: 极坐标式滑动事件</maml:title>
+        <maml:introduction>
+          <maml:para>PS C:\> </maml:para>
+        </maml:introduction>
+        <dev:code>Send-ADBSwipe 500 500 -Degree 90 -Radius 100</dev:code>
+        <dev:remarks>
+          <maml:para>以第一个坐标为原点, 通过角度和半径发送点击事件</maml:para>
+          <maml:para>运行 adb shell input swipe &lt;x1&gt; &lt;y1&gt; &lt;x2&gt; &lt;y2&gt;</maml:para>
+          <maml:para>PS C:\&gt; Send-ADBSwipe 500 500 -Degree 90 -Radius 100</maml:para>
+          <maml:para>以第一个坐标为原点, 通过角度和半径发送点击事件</maml:para>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <maml:relatedLinks>
+      <maml:navigationLink>
+        <maml:linkText>github</maml:linkText>
+        <maml:uri>https://github.com/empyrealtear/psadb_Module</maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Send-ADBTap</maml:linkText>
+        <maml:uri />
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Send-ADBKeyEvent</maml:linkText>
+        <maml:uri />
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Send-ADBEvent</maml:linkText>
+        <maml:uri />
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Find-ADBUI</maml:linkText>
+        <maml:uri />
+      </maml:navigationLink>
+    </maml:relatedLinks>
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10"
+    xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10"
+    xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+    <command:details>
+      <command:name>Send-ADBKeyEvent</command:name>
+      <maml:description>
+        <maml:para>发送按键事件</maml:para>
+      </maml:description>
+      <maml:copyright>
+        <maml:para />
+      </maml:copyright>
+        <command:verb>Send</command:verb>
+        <command:noun>ADBKeyEvent</command:noun>
+      <dev:version />
+    </command:details>
+    <maml:description>
+      <maml:para>发送按键事件</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Send-ADBKeyEvent</maml:name>
+        <command:parameter required="true">
+          <maml:name>KeyName</maml:name>
+          <command:parameterValueGroup>
+            <command:parameterValue required="true" variableLength="false">KEYCODE_UNKNOWN</command:parameterValue>
+            <command:parameterValue required="true" variableLength="false">KEYCODE_MENU</command:parameterValue>
+            <command:parameterValue required="true" variableLength="false">...</command:parameterValue>
+          </command:parameterValueGroup>
+        </command:parameter>
+        <command:parameter required="false">
+          <maml:name>LongPress</maml:name>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="true" variableLength="true" globbing="false"
+        pipelineInput="false" position="0">
+        <maml:name>KeyName</maml:name>
+        <maml:description>
+          <maml:para>按键名称</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">CSADB.KeyCode</command:parameterValue>
+        <dev:type>
+          <maml:name>CSADB.KeyCode</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="true" globbing="false"
+        pipelineInput="false" position="named">
+        <maml:name>LongPress</maml:name>
+        <maml:description>
+          <maml:para>是否长按</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">SwitchParameter</command:parameterValue>
+        <dev:type>
+          <maml:name>SwitchParameter</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>False</dev:defaultValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>None</maml:name>
+          <maml:uri />
+        </dev:type>
+        <maml:description />
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>None</maml:name>
+          <maml:uri />
+        </dev:type>
+        <maml:description />
+      </command:returnValue>
+    </command:returnValues>
+    <command:terminatingErrors/>
+    <command:nonTerminatingErrors/>
+    <command:examples>
+      <command:example>
+        <maml:title>Example 1: 发送返回按键</maml:title>
+        <maml:introduction>
+          <maml:para>PS C:\> </maml:para>
+        </maml:introduction>
+        <dev:code>Send-ADBKeyEvent KEYCODE_BACK</dev:code>
+        <dev:remarks>
+          <maml:para>运行 adb shell input keyevent &lt;KeyName&gt;</maml:para>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <maml:relatedLinks>
+      <maml:navigationLink>
+        <maml:linkText>github</maml:linkText>
+        <maml:uri>https://github.com/empyrealtear/psadb_Module</maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Send-ADBTap</maml:linkText>
+        <maml:uri />
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Send-ADBSwipe</maml:linkText>
+        <maml:uri />
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Send-ADBEvent</maml:linkText>
+        <maml:uri />
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Find-ADBUI</maml:linkText>
+        <maml:uri />
+      </maml:navigationLink>
+    </maml:relatedLinks>
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10"
+    xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10"
+    xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+    <command:details>
+      <command:name>Get-ADBEvent</command:name>
+      <maml:description>
+        <maml:para>获取触屏事件</maml:para>
+      </maml:description>
+      <maml:copyright>
+        <maml:para />
+      </maml:copyright>
+        <command:verb>Get</command:verb>
+        <command:noun>ADBEvent</command:noun>
+      <dev:version />
+    </command:details>
+    <maml:description>
+      <maml:para>获取触屏事件</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Get-ADBEvent</maml:name>
+        <command:parameter required="false">
+          <maml:name>ToHex</maml:name>
+        </command:parameter>
+        <command:parameter required="false">
+          <maml:name>CN</maml:name>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="false" variableLength="true" globbing="false"
+        pipelineInput="false" position="named">
+        <maml:name>ToHex</maml:name>
+        <maml:description>
+          <maml:para>转为十进制</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">SwitchParameter</command:parameterValue>
+        <dev:type>
+          <maml:name>SwitchParameter</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>False</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="true" globbing="false"
+        pipelineInput="false" position="named">
+        <maml:name>CN</maml:name>
+        <maml:description>
+          <maml:para>使用中文注释</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">SwitchParameter</command:parameterValue>
+        <dev:type>
+          <maml:name>SwitchParameter</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>False</dev:defaultValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>None</maml:name>
+          <maml:uri />
+        </dev:type>
+        <maml:description />
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>None</maml:name>
+          <maml:uri />
+        </dev:type>
+        <maml:description />
+      </command:returnValue>
+    </command:returnValues>
+    <command:terminatingErrors/>
+    <command:nonTerminatingErrors/>
+    <command:examples>
+      <command:example>
+        <maml:title>Example 1: 获取触屏事件</maml:title>
+        <maml:introduction>
+          <maml:para>PS C:\> </maml:para>
+        </maml:introduction>
+        <dev:code>Get-ADBEvent -ToHex</dev:code>
+        <dev:remarks>
+          <maml:para>Press Ctrl-C Exit</maml:para>
+          <maml:para>sendevent /dev/input/event0 3 57 11738  # Tracking_ID 11738</maml:para>
+          <maml:para>sendevent /dev/input/event0 1 330 1     # Touch Down</maml:para>
+          <maml:para>sendevent /dev/input/event0 1 325 1     # Finger Down</maml:para>
+          <maml:para>sendevent /dev/input/event0 3 53 518    # Position_X  518</maml:para>
+          <maml:para>sendevent /dev/input/event0 3 54 1171   # Position_Y  1171</maml:para>
+          <maml:para>sendevent /dev/input/event0 3 48 5      # Touch_Major 5</maml:para>
+          <maml:para>sendevent /dev/input/event0 3 49 5      # Touch_Minor 5</maml:para>
+          <maml:para>sendevent /dev/input/event0 0 0 0       # Syn_Report</maml:para>
+          <maml:para>sendevent /dev/input/event0 3 48 6      # Touch_Major 6</maml:para>
+          <maml:para>sendevent /dev/input/event0 0 0 0       # Syn_Report</maml:para>
+          <maml:para />
+          <maml:para>运行 adb shell getevent</maml:para>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <maml:relatedLinks>
+      <maml:navigationLink>
+        <maml:linkText>github</maml:linkText>
+        <maml:uri>https://github.com/empyrealtear/psadb_Module</maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>New-ADBEvent</maml:linkText>
+        <maml:uri />
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Send-ADBEvent</maml:linkText>
+        <maml:uri />
+      </maml:navigationLink>
+    </maml:relatedLinks>
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10"
+    xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10"
+    xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+    <command:details>
+      <command:name>New-ADBEvent</command:name>
+      <maml:description>
+        <maml:para>新建触屏事件</maml:para>
+      </maml:description>
+      <maml:copyright>
+        <maml:para />
+      </maml:copyright>
+        <command:verb>New</command:verb>
+        <command:noun>ADBEvent</command:noun>
+      <dev:version />
+    </command:details>
+    <maml:description>
+      <maml:para>新建触屏事件</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>New-ADBEvent</maml:name>
+        <command:parameter required="true">
+          <maml:name>PosList</maml:name>
+          <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false">
+          <maml:name>Sleep</maml:name>
+          <command:parameterValue required="true" variableLength="false">int</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false">
+          <maml:name>WriteDefaultBash</maml:name>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="true" variableLength="true" globbing="false"
+        pipelineInput="false" position="0">
+        <maml:name>PosList</maml:name>
+        <maml:description>
+          <maml:para>坐标列表</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+        <dev:type>
+          <maml:name>string</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="true" globbing="false"
+        pipelineInput="false" position="1">
+        <maml:name>Sleep</maml:name>
+        <maml:description>
+          <maml:para>暂停时间</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">int</command:parameterValue>
+        <dev:type>
+          <maml:name>int</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>0</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="true" globbing="false"
+        pipelineInput="false" position="named">
+        <maml:name>WriteDefaultBash</maml:name>
+        <maml:description>
+          <maml:para>是否直接写入默认的bash脚本</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">SwitchParameter</command:parameterValue>
+        <dev:type>
+          <maml:name>SwitchParameter</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>False</dev:defaultValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>None</maml:name>
+          <maml:uri />
+        </dev:type>
+        <maml:description />
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>None</maml:name>
+          <maml:uri />
+        </dev:type>
+        <maml:description />
+      </command:returnValue>
+    </command:returnValues>
+    <command:terminatingErrors/>
+    <command:nonTerminatingErrors/>
+    <command:examples>
+      <command:example>
+        <maml:title>Example 1: 新建触屏事件</maml:title>
+        <maml:introduction>
+          <maml:para>PS C:\> </maml:para>
+        </maml:introduction>
+        <dev:code>New-ADBEvent '500,500->600,700'</dev:code>
+        <dev:remarks>
+          <maml:para>sendevent /dev/input/event0 3 57 317 # ID 317</maml:para>
+          <maml:para>sendevent /dev/input/event0 1 330 1 # Press Down</maml:para>
+          <maml:para>sendevent /dev/input/event0 3 53 500</maml:para>
+          <maml:para>sendevent /dev/input/event0 3 54 500</maml:para>
+          <maml:para>sendevent /dev/input/event0 0 0 0 # Move to [500,500]</maml:para>
+          <maml:para>sendevent /dev/input/event0 3 53 600</maml:para>
+          <maml:para>sendevent /dev/input/event0 3 54 700</maml:para>
+          <maml:para>sendevent /dev/input/event0 0 0 0 # Move to [600,700]</maml:para>
+          <maml:para>sendevent /dev/input/event0 3 57 -1</maml:para>
+          <maml:para>sendevent /dev/input/event0 1 330 0 # Press UP</maml:para>
+          <maml:para>sendevent /dev/input/event0 0 0 0</maml:para>
+          <maml:para />
+          <maml:para>生成命令 adb shell sendevent &lt;Event&gt; &lt;Type&gt; &lt;Key&gt; &lt;Value&gt;</maml:para>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <maml:relatedLinks>
+      <maml:navigationLink>
+        <maml:linkText>github</maml:linkText>
+        <maml:uri>https://github.com/empyrealtear/psadb_Module</maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Get-ADBEvent</maml:linkText>
+        <maml:uri />
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Send-ADBEvent</maml:linkText>
+        <maml:uri />
+      </maml:navigationLink>
+    </maml:relatedLinks>
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10"
+    xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10"
+    xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+    <command:details>
+      <command:name>Send-ADBEvent</command:name>
+      <maml:description>
+        <maml:para>发送触屏事件</maml:para>
+      </maml:description>
+      <maml:copyright>
+        <maml:para />
+      </maml:copyright>
+        <command:verb>Send</command:verb>
+        <command:noun>ADBEvent</command:noun>
+      <dev:version />
+    </command:details>
+    <maml:description>
+      <maml:para>发送触屏事件</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Send-ADBEvent</maml:name>
+        <command:parameter required="true">
+          <maml:name>PosList</maml:name>
+          <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false">
+          <maml:name>Sleep</maml:name>
+          <command:parameterValue required="true" variableLength="false">int</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false">
+          <maml:name>Count</maml:name>
+          <command:parameterValue required="true" variableLength="false">int</command:parameterValue>
+        </command:parameter>
+      </command:syntaxItem>
+      <command:syntaxItem>
+        <maml:name>Send-ADBEvent</maml:name>
+        <command:parameter required="false">
+          <maml:name>Sleep</maml:name>
+          <command:parameterValue required="true" variableLength="false">int</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false">
+          <maml:name>Count</maml:name>
+          <command:parameterValue required="true" variableLength="false">int</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false">
+          <maml:name>RunDefaultBash</maml:name>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="true" variableLength="true" globbing="false"
+        pipelineInput="false" position="0">
+        <maml:name>PosList</maml:name>
+        <maml:description>
+          <maml:para>坐标列表</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+        <dev:type>
+          <maml:name>string</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="true" globbing="false"
+        pipelineInput="false" position="named">
+        <maml:name>Sleep</maml:name>
+        <maml:description>
+          <maml:para>暂停时长</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">int</command:parameterValue>
+        <dev:type>
+          <maml:name>int</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>0</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="true" globbing="false"
+        pipelineInput="false" position="named">
+        <maml:name>Count</maml:name>
+        <maml:description>
+          <maml:para>重复次数</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">int</command:parameterValue>
+        <dev:type>
+          <maml:name>int</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>1</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="true" globbing="false"
+        pipelineInput="false" position="named">
+        <maml:name>RunDefaultBash</maml:name>
+        <maml:description>
+          <maml:para>是否运行默认bash脚本</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">SwitchParameter</command:parameterValue>
+        <dev:type>
+          <maml:name>SwitchParameter</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>False</dev:defaultValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>None</maml:name>
+          <maml:uri />
+        </dev:type>
+        <maml:description />
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>None</maml:name>
+          <maml:uri />
+        </dev:type>
+        <maml:description />
+      </command:returnValue>
+    </command:returnValues>
+    <command:terminatingErrors/>
+    <command:nonTerminatingErrors/>
+    <command:examples>
+      <command:example>
+        <maml:title>Example 1: 发送触屏事件</maml:title>
+        <maml:introduction>
+          <maml:para>PS C:\> </maml:para>
+        </maml:introduction>
+        <dev:code>Send-ADBEvent '500,500->600,700->500,700'</dev:code>
+        <dev:remarks>
+          <maml:para>运行 adb shell sendevent &lt;Event&gt; &lt;Type&gt; &lt;Key&gt; &lt;Value&gt;</maml:para>
+          <maml:para />
+        </dev:remarks>
+      </command:example>
+      <command:example>
+        <maml:title>Example 2: 运行之前已编辑好的触屏事件脚本</maml:title>
+        <maml:introduction>
+          <maml:para>PS C:\> </maml:para>
+        </maml:introduction>
+        <dev:code>New-ADBEvent '500,500->600,700->500,700' -WriteDefaultBash; Send-ADBEvent -RunDefaultBash</dev:code>
+        <dev:remarks>
+          <maml:para>运行 adb shell sendevent &lt;Event&gt; &lt;Type&gt; &lt;Key&gt; &lt;Value&gt;</maml:para>
+          <maml:para>PS C:\&gt; New-ADBEvent '500,500-&gt;600,700-&gt;500,700' -WriteDefaultBash; Send-ADBEvent -RunDefaultBash</maml:para>
+          <maml:para>运行 adb shell sendevent &lt;Event&gt; &lt;Type&gt; &lt;Key&gt; &lt;Value&gt;</maml:para>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <maml:relatedLinks>
+      <maml:navigationLink>
+        <maml:linkText>github</maml:linkText>
+        <maml:uri>https://github.com/empyrealtear/psadb_Module</maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Get-ADBEvent</maml:linkText>
+        <maml:uri />
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>New-ADBEvent</maml:linkText>
+        <maml:uri />
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Send-ADBTap</maml:linkText>
+        <maml:uri />
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Send-ADBSwipe</maml:linkText>
+        <maml:uri />
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Send-ADBKeyEvent</maml:linkText>
+        <maml:uri />
+      </maml:navigationLink>
+    </maml:relatedLinks>
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10"
+    xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10"
+    xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+    <command:details>
+      <command:name>Get-ADBDumpsysXml</command:name>
+      <maml:description>
+        <maml:para>获取布局文件</maml:para>
+      </maml:description>
+      <maml:copyright>
+        <maml:para />
+      </maml:copyright>
+        <command:verb>Get</command:verb>
+        <command:noun>ADBDumpsysXml</command:noun>
+      <dev:version />
+    </command:details>
+    <maml:description>
+      <maml:para>获取布局文件</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Get-ADBDumpsysXml</maml:name>
+        <command:parameter required="false">
+          <maml:name>Path</maml:name>
+          <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false">
+          <maml:name>Compress</maml:name>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="false" variableLength="true" globbing="false"
+        pipelineInput="false" position="0">
+        <maml:name>Path</maml:name>
+        <maml:description>
+          <maml:para>布局文件保存路径</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+        <dev:type>
+          <maml:name>string</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="true" globbing="false"
+        pipelineInput="false" position="named">
+        <maml:name>Compress</maml:name>
+        <maml:description>
+          <maml:para>是否获取压缩布局文件</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">SwitchParameter</command:parameterValue>
+        <dev:type>
+          <maml:name>SwitchParameter</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>None</maml:name>
+          <maml:uri />
+        </dev:type>
+        <maml:description />
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>None</maml:name>
+          <maml:uri />
+        </dev:type>
+        <maml:description />
+      </command:returnValue>
+    </command:returnValues>
+    <command:terminatingErrors/>
+    <command:nonTerminatingErrors/>
+    <command:examples>
+      <command:example>
+        <maml:title>Example 1: 获取布局文件</maml:title>
+        <maml:introduction>
+          <maml:para>PS C:\> </maml:para>
+        </maml:introduction>
+        <dev:code>Get-ADBDumpsysXml -Compress; Get-ADBItem /sdcard/Download/_*</dev:code>
+        <dev:remarks>
+          <maml:para>Mode              LastWriteTime  Length Name</maml:para>
+          <maml:para>----              -------------  ------ ----</maml:para>
+          <maml:para>-rwxrwx---   2020/2/2      7:17 1138235 _window_dump.xml</maml:para>
+          <maml:para />
+          <maml:para>运行 adb shell uiautomater &lt;Path&gt;</maml:para>
+          <maml:para />
+        </dev:remarks>
+        <maml:introduction>
+          <maml:para>PS C:\> </maml:para>
+        </maml:introduction>
+        <dev:code>Get-ADBDumpsysXml -Path D:\Files -Compress; ls D:\Files\_*</dev:code>
+        <dev:remarks>
+          <maml:para>Mode              LastWriteTime  Length Name</maml:para>
+          <maml:para>----              -------------  ------ ----</maml:para>
+          <maml:para>-rwxrwx---   2020/2/2      7:17 1138235 _window_dump.xml</maml:para>
+          <maml:para />
+          <maml:para>运行 adb shell uiautomater &lt;Path&gt;</maml:para>
+          <maml:para />
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <maml:relatedLinks>
+      <maml:navigationLink>
+        <maml:linkText>github</maml:linkText>
+        <maml:uri>https://github.com/empyrealtear/psadb_Module</maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Resolve-ADBUI</maml:linkText>
+        <maml:uri />
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Find-ADBUI</maml:linkText>
+        <maml:uri />
+      </maml:navigationLink>
+    </maml:relatedLinks>
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10"
+    xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10"
+    xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+    <command:details>
+      <command:name>Resolve-ADBUI</command:name>
+      <maml:description>
+        <maml:para>解析布局对象</maml:para>
+      </maml:description>
+      <maml:copyright>
+        <maml:para />
+      </maml:copyright>
+        <command:verb>Resolve</command:verb>
+        <command:noun>ADBUI</command:noun>
+      <dev:version />
+    </command:details>
+    <maml:description>
+      <maml:para>解析布局对象</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Resolve-ADBUI</maml:name>
+        <command:parameter required="false">
+          <maml:name>Compress</maml:name>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="false" variableLength="true" globbing="false"
+        pipelineInput="false" position="named">
+        <maml:name>Compress</maml:name>
+        <maml:description>
+          <maml:para>是否获取压缩布局文件</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">SwitchParameter</command:parameterValue>
+        <dev:type>
+          <maml:name>SwitchParameter</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>None</maml:name>
+          <maml:uri />
+        </dev:type>
+        <maml:description />
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>None</maml:name>
+          <maml:uri />
+        </dev:type>
+        <maml:description />
+      </command:returnValue>
+    </command:returnValues>
+    <command:terminatingErrors/>
+    <command:nonTerminatingErrors/>
+    <command:examples>
+      <command:example>
+        <maml:title>Example 1: 解析布局对象</maml:title>
+        <maml:introduction>
+          <maml:para>PS C:\> </maml:para>
+        </maml:introduction>
+        <dev:code>Resolve-ADBUI</dev:code>
+        <dev:remarks>
+          <maml:para>Bounds           Text                   IsDesc Package</maml:para>
+          <maml:para>------           ----                   ------ -------</maml:para>
+          <maml:para>[239,0][350,72]  0.2K/s                 False  com.android.systemui</maml:para>
+          <maml:para>[888,13][970,58] 98%                    False  com.android.systemui</maml:para>
+          <maml:para>[970,0][1056,72] Battery 98 percent.    True   com.android.systemui</maml:para>
+          <maml:para />
+          <maml:para>读取 adb shell uiautomator 获取的xml文件</maml:para>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <maml:relatedLinks>
+      <maml:navigationLink>
+        <maml:linkText>github</maml:linkText>
+        <maml:uri>https://github.com/empyrealtear/psadb_Module</maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Get-ADNDumpsysXml</maml:linkText>
+        <maml:uri />
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Find-ADBUI</maml:linkText>
+        <maml:uri />
+      </maml:navigationLink>
+    </maml:relatedLinks>
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10"
+    xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10"
+    xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+    <command:details>
+      <command:name>Find-ADBUI</command:name>
+      <maml:description>
+        <maml:para>查找指定布局</maml:para>
+      </maml:description>
+      <maml:copyright>
+        <maml:para />
+      </maml:copyright>
+        <command:verb>Find</command:verb>
+        <command:noun>ADBUI</command:noun>
+      <dev:version />
+    </command:details>
+    <maml:description>
+      <maml:para>查找指定布局</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Find-ADBUI</maml:name>
+        <command:parameter required="false">
+          <maml:name>Filter</maml:name>
+          <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false">
+          <maml:name>Nodes</maml:name>
+          <command:parameterValue required="true" variableLength="false">AndroidUI[]</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false">
+          <maml:name>Bias</maml:name>
+          <command:parameterValue required="true" variableLength="false">int</command:parameterValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="false" variableLength="true" globbing="false"
+        pipelineInput="false" position="0">
+        <maml:name>Filter</maml:name>
+        <maml:description>
+          <maml:para>文本正则过滤条件</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+        <dev:type>
+          <maml:name>string</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="true" globbing="false"
+        pipelineInput="false" position="1">
+        <maml:name>Nodes</maml:name>
+        <maml:description>
+          <maml:para>Resolve-ADBUI 获取的布局节点数组</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">AndroidUI[]</command:parameterValue>
+        <dev:type>
+          <maml:name>AndroidUI[]</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="true" globbing="false"
+        pipelineInput="false" position="2">
+        <maml:name>Bias</maml:name>
+        <maml:description>
+          <maml:para>布局对象的偏移下标差值</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">int</command:parameterValue>
+        <dev:type>
+          <maml:name>int</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>0</dev:defaultValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>None</maml:name>
+          <maml:uri />
+        </dev:type>
+        <maml:description />
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>None</maml:name>
+          <maml:uri />
+        </dev:type>
+        <maml:description />
+      </command:returnValue>
+    </command:returnValues>
+    <command:terminatingErrors/>
+    <command:nonTerminatingErrors/>
+    <command:examples>
+      <command:example>
+        <maml:title>Example 1: 查找指定布局</maml:title>
+        <maml:introduction>
+          <maml:para>PS C:\> </maml:para>
+        </maml:introduction>
+        <dev:code>Find-ADBUI '\d+%'</dev:code>
+        <dev:remarks>
+          <maml:para>Name                           Value</maml:para>
+          <maml:para>----                           -----</maml:para>
+          <maml:para>Success                        True</maml:para>
+          <maml:para>Pos                            [929,35]</maml:para>
+          <maml:para>Text                           98%</maml:para>
+          <maml:para />
+          <maml:para>对当前布局进行文本过滤</maml:para>
+          <maml:para />
+        </dev:remarks>
+        <maml:introduction>
+          <maml:para>PS C:\> </maml:para>
+        </maml:introduction>
+        <dev:code>$ui = Resolve-ADBUI; Find-ADBUI '\d+%' -Nodes $ui</dev:code>
+        <dev:remarks>
+          <maml:para>Name                           Value</maml:para>
+          <maml:para>----                           -----</maml:para>
+          <maml:para>Success                        True</maml:para>
+          <maml:para>Pos                            [929,35]</maml:para>
+          <maml:para>Text                           98%</maml:para>
+          <maml:para />
+          <maml:para>对当前布局进行文本过滤</maml:para>
+          <maml:para />
+        </dev:remarks>
+        <maml:introduction>
+          <maml:para>PS C:\> </maml:para>
+        </maml:introduction>
+        <dev:code>Find-ADBUI '\d+%' -Bias 1</dev:code>
+        <dev:remarks>
+          <maml:para>Name                           Value</maml:para>
+          <maml:para>----                           -----</maml:para>
+          <maml:para>Success                        True</maml:para>
+          <maml:para>Pos                            [929,35]</maml:para>
+          <maml:para>Text                           98%</maml:para>
+          <maml:para />
+          <maml:para>对当前布局进行文本过滤</maml:para>
+          <maml:para />
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <maml:relatedLinks>
+      <maml:navigationLink>
+        <maml:linkText>github</maml:linkText>
+        <maml:uri>https://github.com/empyrealtear/psadb_Module</maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Get-ADNDumpsysXml</maml:linkText>
+        <maml:uri />
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Resolve-ADBUI</maml:linkText>
+        <maml:uri />
+      </maml:navigationLink>
+    </maml:relatedLinks>
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10"
+    xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10"
+    xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+    <command:details>
+      <command:name>Get-ADBPackages</command:name>
+      <maml:description>
+        <maml:para>列出设备应用</maml:para>
+      </maml:description>
+      <maml:copyright>
+        <maml:para />
+      </maml:copyright>
+        <command:verb>Get</command:verb>
+        <command:noun>ADBPackages</command:noun>
+      <dev:version />
+    </command:details>
+    <maml:description>
+      <maml:para>列出设备应用</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Get-ADBPackages</maml:name>
+        <command:parameter required="false">
+          <maml:name>Module</maml:name>
+          <command:parameterValueGroup>
+            <command:parameterValue required="true" variableLength="false">All</command:parameterValue>
+            <command:parameterValue required="true" variableLength="false">ThirdPart</command:parameterValue>
+            <command:parameterValue required="true" variableLength="false">Enable</command:parameterValue>
+            <command:parameterValue required="true" variableLength="false">System</command:parameterValue>
+            <command:parameterValue required="true" variableLength="false">Disable</command:parameterValue>
+          </command:parameterValueGroup>
+        </command:parameter>
+        <command:parameter required="false">
+          <maml:name>Filter</maml:name>
+          <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="false" variableLength="true" globbing="false"
+        pipelineInput="false" position="0">
+        <maml:name>Module</maml:name>
+        <maml:description>
+          <maml:para>应用属性</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">CSADB.PackagerModule</command:parameterValue>
+        <dev:type>
+          <maml:name>CSADB.PackagerModule</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>PackagerModule.ThirdPart</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="true" globbing="false"
+        pipelineInput="false" position="1">
+        <maml:name>Filter</maml:name>
+        <maml:description>
+          <maml:para>正则过滤条件</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+        <dev:type>
+          <maml:name>string</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>None</maml:name>
+          <maml:uri />
+        </dev:type>
+        <maml:description />
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>None</maml:name>
+          <maml:uri />
+        </dev:type>
+        <maml:description />
+      </command:returnValue>
+    </command:returnValues>
+    <command:terminatingErrors/>
+    <command:nonTerminatingErrors/>
+    <command:examples>
+      <command:example>
+        <maml:title>Example 1: 列出设备应用</maml:title>
+        <maml:introduction>
+          <maml:para>PS C:\> </maml:para>
+        </maml:introduction>
+        <dev:code>Get-ADBPackages System -Filter 'blue'</dev:code>
+        <dev:remarks>
+          <maml:para>org.codeaurora.bluetooth</maml:para>
+          <maml:para>com.android.bluetoothsettings</maml:para>
+          <maml:para>com.android.bluetooth</maml:para>
+          <maml:para />
+          <maml:para>运行 adb shell pm [Options]</maml:para>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <maml:relatedLinks>
+      <maml:navigationLink>
+        <maml:linkText>github</maml:linkText>
+        <maml:uri>https://github.com/empyrealtear/psadb_Module</maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Start-ADBActivity</maml:linkText>
+        <maml:uri />
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Stop-ADBActivity</maml:linkText>
+        <maml:uri />
+      </maml:navigationLink>
+    </maml:relatedLinks>
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10"
+    xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10"
+    xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+    <command:details>
+      <command:name>Start-ADBActivity</command:name>
+      <maml:description>
+        <maml:para>启动指定应用</maml:para>
+      </maml:description>
+      <maml:copyright>
+        <maml:para />
+      </maml:copyright>
+        <command:verb>Start</command:verb>
+        <command:noun>ADBActivity</command:noun>
+      <dev:version />
+    </command:details>
+    <maml:description>
+      <maml:para>启动指定应用</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Start-ADBActivity</maml:name>
+        <command:parameter required="false">
+          <maml:name>NowFocusActivity</maml:name>
+        </command:parameter>
+      </command:syntaxItem>
+      <command:syntaxItem>
+        <maml:name>Start-ADBActivity</maml:name>
+        <command:parameter required="true">
+          <maml:name>Package</maml:name>
+          <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false">
+          <maml:name>Intent</maml:name>
+          <command:parameterValueGroup>
+            <command:parameterValue required="true" variableLength="false">Action</command:parameterValue>
+            <command:parameterValue required="true" variableLength="false">Category</command:parameterValue>
+            <command:parameterValue required="true" variableLength="false">Component</command:parameterValue>
+          </command:parameterValueGroup>
+        </command:parameter>
+        <command:parameter required="false">
+          <maml:name>Sleep</maml:name>
+          <command:parameterValue required="true" variableLength="false">int</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false">
+          <maml:name>Restart</maml:name>
+          <command:parameterValue required="true" variableLength="false">int</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false">
+          <maml:name>Force</maml:name>
+        </command:parameter>
+        <command:parameter required="false">
+          <maml:name>Wait</maml:name>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="false" variableLength="true" globbing="false"
+        pipelineInput="false" position="named">
+        <maml:name>NowFocusActivity</maml:name>
+        <maml:description>
+          <maml:para>是否查看当前界面应用名称</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">SwitchParameter</command:parameterValue>
+        <dev:type>
+          <maml:name>SwitchParameter</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>False</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="true" variableLength="true" globbing="false"
+        pipelineInput="false" position="0">
+        <maml:name>Package</maml:name>
+        <maml:description>
+          <maml:para>应用包启动项名称</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+        <dev:type>
+          <maml:name>string</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="true" globbing="false"
+        pipelineInput="false" position="1">
+        <maml:name>Intent</maml:name>
+        <maml:description>
+          <maml:para>启动模式</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">CSADB.Intent</command:parameterValue>
+        <dev:type>
+          <maml:name>CSADB.Intent</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>Intent.Component</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="true" globbing="false"
+        pipelineInput="false" position="2">
+        <maml:name>Sleep</maml:name>
+        <maml:description>
+          <maml:para>暂停时间</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">int</command:parameterValue>
+        <dev:type>
+          <maml:name>int</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>0</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="true" globbing="false"
+        pipelineInput="false" position="3">
+        <maml:name>Restart</maml:name>
+        <maml:description>
+          <maml:para>重启次数</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">int</command:parameterValue>
+        <dev:type>
+          <maml:name>int</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>0</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="true" globbing="false"
+        pipelineInput="false" position="named">
+        <maml:name>Force</maml:name>
+        <maml:description>
+          <maml:para>强制重启</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">SwitchParameter</command:parameterValue>
+        <dev:type>
+          <maml:name>SwitchParameter</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>False</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="true" globbing="false"
+        pipelineInput="false" position="named">
+        <maml:name>Wait</maml:name>
+        <maml:description>
+          <maml:para>是否获取启动时间</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">SwitchParameter</command:parameterValue>
+        <dev:type>
+          <maml:name>SwitchParameter</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>False</dev:defaultValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>None</maml:name>
+          <maml:uri />
+        </dev:type>
+        <maml:description />
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>None</maml:name>
+          <maml:uri />
+        </dev:type>
+        <maml:description />
+      </command:returnValue>
+    </command:returnValues>
+    <command:terminatingErrors/>
+    <command:nonTerminatingErrors/>
+    <command:examples>
+      <command:example>
+        <maml:title>Example 1: 获取当前启动项名称</maml:title>
+        <maml:introduction>
+          <maml:para>PS C:\> </maml:para>
+        </maml:introduction>
+        <dev:code>Start-ADBActivity -NowFocusActivity</dev:code>
+        <dev:remarks>
+          <maml:para>com.android.filemanager/.FileManagerActivity</maml:para>
+          <maml:para />
+          <maml:para>运行 adb shell 'dumpsys activity | grep mFoc'</maml:para>
+          <maml:para />
+        </dev:remarks>
+      </command:example>
+      <command:example>
+        <maml:title>Example 2: 启动指定应用</maml:title>
+        <maml:introduction>
+          <maml:para>PS C:\> </maml:para>
+        </maml:introduction>
+        <dev:code>Start-ADBActivity com.android.filemanager/.FileManagerActivity</dev:code>
+        <dev:remarks>
+          <maml:para>运行 adb shell am start -n &lt;Package/Launch&gt;</maml:para>
+          <maml:para />
+          <maml:para>Starting: Intent { cmp=com.android.filemanager/.FileManagerActivity }</maml:para>
+          <maml:para>PS C:\&gt; Start-ADBActivity com.android.filemanager/.FileManagerActivity</maml:para>
+          <maml:para>运行 adb shell am start -n &lt;Package/Launch&gt;</maml:para>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <maml:relatedLinks>
+      <maml:navigationLink>
+        <maml:linkText>github</maml:linkText>
+        <maml:uri>https://github.com/empyrealtear/psadb_Module</maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Get-ADBPackages</maml:linkText>
+        <maml:uri />
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Stop-ADBActivity</maml:linkText>
+        <maml:uri />
+      </maml:navigationLink>
+    </maml:relatedLinks>
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10"
+    xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10"
+    xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+    <command:details>
+      <command:name>Stop-ADBActivity</command:name>
+      <maml:description>
+        <maml:para>关闭指定应用</maml:para>
+      </maml:description>
+      <maml:copyright>
+        <maml:para />
+      </maml:copyright>
+        <command:verb>Stop</command:verb>
+        <command:noun>ADBActivity</command:noun>
+      <dev:version />
+    </command:details>
+    <maml:description>
+      <maml:para>关闭指定应用</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Stop-ADBActivity</maml:name>
+        <command:parameter required="true">
+          <maml:name>Package</maml:name>
+          <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false">
+          <maml:name>Sleep</maml:name>
+          <command:parameterValue required="true" variableLength="false">int</command:parameterValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="true" variableLength="true" globbing="false"
+        pipelineInput="false" position="0">
+        <maml:name>Package</maml:name>
+        <maml:description>
+          <maml:para>应用包名称</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+        <dev:type>
+          <maml:name>string</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="true" globbing="false"
+        pipelineInput="false" position="1">
+        <maml:name>Sleep</maml:name>
+        <maml:description>
+          <maml:para>暂停时间</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">int</command:parameterValue>
+        <dev:type>
+          <maml:name>int</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>0</dev:defaultValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>None</maml:name>
+          <maml:uri />
+        </dev:type>
+        <maml:description />
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>None</maml:name>
+          <maml:uri />
+        </dev:type>
+        <maml:description />
+      </command:returnValue>
+    </command:returnValues>
+    <command:terminatingErrors/>
+    <command:nonTerminatingErrors/>
+    <command:examples>
+      <command:example>
+        <maml:title>Example 1: 关闭指定应用</maml:title>
+        <maml:introduction>
+          <maml:para>PS C:\> </maml:para>
+        </maml:introduction>
+        <dev:code>Stop-ADBActivity com.android.filemanager/.FileManagerActivity</dev:code>
+        <dev:remarks>
+          <maml:para>运行 adb shell am force-stop &lt;Package&gt;</maml:para>
+          <maml:para>使用 Launch 项和直接使用应用包名均可</maml:para>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <maml:relatedLinks>
+      <maml:navigationLink>
+        <maml:linkText>github</maml:linkText>
+        <maml:uri>https://github.com/empyrealtear/psadb_Module</maml:uri>
+      </maml:navigationLink>
+    </maml:relatedLinks>
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10"
+    xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10"
+    xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+    <command:details>
+      <command:name>Install-ADBApk</command:name>
+      <maml:description>
+        <maml:para>安装PC端apk</maml:para>
+      </maml:description>
+      <maml:copyright>
+        <maml:para />
+      </maml:copyright>
+        <command:verb>Install</command:verb>
+        <command:noun>ADBApk</command:noun>
+      <dev:version />
+    </command:details>
+    <maml:description>
+      <maml:para>安装PC端apk</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Install-ADBApk</maml:name>
+        <command:parameter required="true">
+          <maml:name>Path</maml:name>
+          <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false">
+          <maml:name>Filter</maml:name>
+          <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false">
+          <maml:name>Replace</maml:name>
+        </command:parameter>
+        <command:parameter required="false">
+          <maml:name>ToSdcard</maml:name>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="true" variableLength="true" globbing="false"
+        pipelineInput="false" position="0">
+        <maml:name>Path</maml:name>
+        <maml:description>
+          <maml:para>apk所在路径</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+        <dev:type>
+          <maml:name>string</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="true" globbing="false"
+        pipelineInput="false" position="1">
+        <maml:name>Filter</maml:name>
+        <maml:description>
+          <maml:para>正则过滤条件</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+        <dev:type>
+          <maml:name>string</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="true" globbing="false"
+        pipelineInput="false" position="named">
+        <maml:name>Replace</maml:name>
+        <maml:description>
+          <maml:para>是否覆盖安装</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">SwitchParameter</command:parameterValue>
+        <dev:type>
+          <maml:name>SwitchParameter</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>Named</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="true" globbing="false"
+        pipelineInput="false" position="named">
+        <maml:name>ToSdcard</maml:name>
+        <maml:description>
+          <maml:para>是否安装到sd卡</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">SwitchParameter</command:parameterValue>
+        <dev:type>
+          <maml:name>SwitchParameter</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>Named</dev:defaultValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>None</maml:name>
+          <maml:uri />
+        </dev:type>
+        <maml:description />
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>None</maml:name>
+          <maml:uri />
+        </dev:type>
+        <maml:description />
+      </command:returnValue>
+    </command:returnValues>
+    <command:terminatingErrors/>
+    <command:nonTerminatingErrors/>
+    <command:examples>
+      <command:example>
+        <maml:title>Example 1: 安装指定应用</maml:title>
+        <maml:introduction>
+          <maml:para>PS C:\> </maml:para>
+        </maml:introduction>
+        <dev:code>Install-ADBApk D:\com.taptap_2.3.0.apk</dev:code>
+        <dev:remarks>
+          <maml:para>运行 adb install [Options] &lt;Path&gt;</maml:para>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <maml:relatedLinks>
+      <maml:navigationLink>
+        <maml:linkText>github</maml:linkText>
+        <maml:uri>https://github.com/empyrealtear/psadb_Module</maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Uninstall-ADBApk</maml:linkText>
+        <maml:uri />
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Get-ADBPackages</maml:linkText>
+        <maml:uri />
+      </maml:navigationLink>
+    </maml:relatedLinks>
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10"
+    xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10"
+    xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+    <command:details>
+      <command:name>Uninstall-ADBApk</command:name>
+      <maml:description>
+        <maml:para>卸载设备应用</maml:para>
+      </maml:description>
+      <maml:copyright>
+        <maml:para />
+      </maml:copyright>
+        <command:verb>Uninstall</command:verb>
+        <command:noun>ADBApk</command:noun>
+      <dev:version />
+    </command:details>
+    <maml:description>
+      <maml:para>卸载设备应用</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Uninstall-ADBApk</maml:name>
+        <command:parameter required="true">
+          <maml:name>APPName</maml:name>
+          <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="true" variableLength="true" globbing="false"
+        pipelineInput="false" position="0">
+        <maml:name>APPName</maml:name>
+        <maml:description>
+          <maml:para>应用包名</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+        <dev:type>
+          <maml:name>string</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>None</maml:name>
+          <maml:uri />
+        </dev:type>
+        <maml:description />
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>None</maml:name>
+          <maml:uri />
+        </dev:type>
+        <maml:description />
+      </command:returnValue>
+    </command:returnValues>
+    <command:terminatingErrors/>
+    <command:nonTerminatingErrors/>
+    <command:examples>
+      <command:example>
+        <maml:title>Example 1: 卸载指定应用</maml:title>
+        <maml:introduction>
+          <maml:para>PS C:\> </maml:para>
+        </maml:introduction>
+        <dev:code>Uninstall-ADBApk com.taptap</dev:code>
+        <dev:remarks>
+          <maml:para>运行 adb uninstall &lt;APPName&gt;</maml:para>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <maml:relatedLinks>
+      <maml:navigationLink>
+        <maml:linkText>github</maml:linkText>
+        <maml:uri>https://github.com/empyrealtear/psadb_Module</maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Install-ADBApk</maml:linkText>
+        <maml:uri />
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Get-ADBPackages</maml:linkText>
+        <maml:uri />
+      </maml:navigationLink>
+    </maml:relatedLinks>
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10"
+    xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10"
+    xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+    <command:details>
+      <command:name>Use-ADB</command:name>
+      <maml:description>
+        <maml:para>utf-8下运行adb命令</maml:para>
+      </maml:description>
+      <maml:copyright>
+        <maml:para />
+      </maml:copyright>
+        <command:verb>Use</command:verb>
+        <command:noun>ADB</command:noun>
+      <dev:version />
+    </command:details>
+    <maml:description>
+      <maml:para>utf-8下运行adb命令</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Use-ADB</maml:name>
+        <command:parameter required="false">
+          <maml:name>Args</maml:name>
+          <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false">
+          <maml:name>Async</maml:name>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="false" variableLength="true" globbing="false"
+        pipelineInput="false" position="0">
+        <maml:name>Args</maml:name>
+        <maml:description>
+          <maml:para>需要运行的命令参数</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+        <dev:type>
+          <maml:name>string</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="true" globbing="false"
+        pipelineInput="false" position="named">
+        <maml:name>Async</maml:name>
+        <maml:description>
+          <maml:para>是否启用控制台同步</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">SwitchParameter</command:parameterValue>
+        <dev:type>
+          <maml:name>SwitchParameter</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>Named</dev:defaultValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>None</maml:name>
+          <maml:uri />
+        </dev:type>
+        <maml:description />
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>None</maml:name>
+          <maml:uri />
+        </dev:type>
+        <maml:description />
+      </command:returnValue>
+    </command:returnValues>
+    <command:terminatingErrors/>
+    <command:nonTerminatingErrors/>
+    <command:examples>
+      <command:example>
+        <maml:title>Example 1: 运行adb命令</maml:title>
+        <maml:introduction>
+          <maml:para>PS C:\> </maml:para>
+        </maml:introduction>
+        <dev:code>Use-ADB 'shell ifconfig wlan0'</dev:code>
+        <dev:remarks>
+          <maml:para>wlan0: ip 192.168.43.1 mask 255.255.255.0 flags [up broadcast running multicast]</maml:para>
+          <maml:para />
+          <maml:para>另外启动一个控制台窗口运行该命令</maml:para>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <maml:relatedLinks>
+      <maml:navigationLink>
+        <maml:linkText>github</maml:linkText>
+        <maml:uri>https://github.com/empyrealtear/psadb_Module</maml:uri>
+      </maml:navigationLink>
+    </maml:relatedLinks>
+  </command:command>
+</helpItems>

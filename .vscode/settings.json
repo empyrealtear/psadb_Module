@@ -1,0 +1,20 @@
+{
+    "xml.fileAssociations": [
+        {
+            // "systemId": "https://raw.githubusercontent.com/PowerShell/PowerShell/master/src/Schemas/Format.xsd",
+            "systemId": "D:\\Files\\Program\\VS2019\\psadb\\psadb_Module\\.vscode\\xsd\\Format.xsd",
+            "pattern": "*.format.ps1xml"
+        },
+        {
+            // "systemId": "https://raw.githubusercontent.com/PowerShell/PowerShell/master/src/Schemas/Types.xsd",
+            "systemId": "D:\\Files\\Program\\VS2019\\psadb\\psadb_Module\\.vscode\\xsd\\Types.xsd",
+            "pattern": "*.Types.ps1xml"
+        },
+        // {
+        //     "systemId": "C:/Windows/System32/WindowsPowershell/V1.0/Schemas/*.xsd",
+        //     "pattern": "**/*-Help.xml"
+        // }
+    ],
+    "xmlLang.javaHome": "C:\\Program Files\\Java\\jdk1.8.0_231",
+    "xmlLang.xmlCatalogFiles": ".\\.vscode\\xsd\\Format.xsd;.\\.vscode\\xsd\\Type.xsd"
+}

@@ -89,3 +89,5 @@ New-ADBEvent "500,500->600,700->500,700" -WriteDefaultBash
 Send-ADBEvent -RunDefaultBash
 Send-ADBEvent "500,500->600,700->500,700"
 #endregion
+
+https://www.powershellgallery.com/packages/AzureRM.Storage/6.0.1-preview/Content/Microsoft.Azure.Commands.Management.Storage.dll-Help.xml
