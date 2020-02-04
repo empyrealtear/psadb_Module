@@ -1,11 +1,19 @@
-﻿Push-Location
-Set-Location $(Split-Path $MyInvocation.MyCommand.Definition)
-New-Item .\psadb -ItemType Directory -Force | Out-Null
+﻿#Requires -Module CmdletHelp
 
-# Copy-Item ..\bin\Release\netstandard2.0\*.dll -Destination .\psadb -Force
-# "复制到 $(Resolve-Path psadb)"
+[CmdletBinding()]
+Param(
+    [Parameter()]
+    [switch]$Release
+)
 
+$ParentPath = Split-Path $MyInvocation.MyCommand.Definition
+$Leaf = Split-Path $ParentPath -Leaf
+Push-Location
+Set-Location $ParentPath
+
+# 新建 psd1
 New-ModuleManifest .\psadb\psadb.psd1 `
+    -Guid "8398b5e0-9d10-4e6c-b7db-0f8f431380f9" `
     -ModuleVersion "1.0.1" `
     -RootModule "psadb.dll" `
     -NestedModules "csadb.dll" `
@@ -19,15 +27,23 @@ New-ModuleManifest .\psadb\psadb.psd1 `
     -LicenseUri "https://github.com/empyrealtear/psadb_Module/blob/master/LICENSE" `
     -ReleaseNotes "https://github.com/empyrealtear/psadb_Module/CHANGELOG.md" `
     -Tags @("adb.exe", "psadb")
-
 Update-ModuleManifest -Path .\psadb\psadb.psd1
+Write-Verbose "Build psadb.psd1"
 
-$countent = Get-Content .\psadb\psadb.psd1
-$countent | Out-File .\psadb\psadb.psd1 -Encoding utf8
+# 生成类似注释的帮助
+Import-Module CmdletHelp
+Convert-CmdletHelpXml -Path .\psadb.dll-Help.ps1 | Out-File .\psadb.dll-Help.xml -Encoding utf8
+Remove-Module CmdletHelp
+Write-Verbose "Build psadb.dll-Help.xml"
 
-# 复制到 Module 文件夹下
-Copy-Item .\psadb -Destination "$($HOME)\Documents\WindowsPowerShell\Modules" -Recurse -Force
 Pop-Location
+
+if ($Release) {
+    $DestPath = "$($HOME)\Documents\WindowsPowerShell\Modules"
+    Remove-Item "$DestPath\$Leaf" -Recurse -Force
+    Copy-Item $ParentPath -Destination $DestPath -Recurse -Force
+    Write-Verbose "Copy to $DestPath\$Leaf"
+}
 
 exit
 

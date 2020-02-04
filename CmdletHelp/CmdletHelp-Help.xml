@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<helpItems xmlns="http://msh" schema="maml">
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10"
+    xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10"
+    xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+    <command:details>
+      <command:name>Convert-CmdletHelpXml</command:name>
+      <maml:description>
+        <maml:para>转化指定语法帮助为 Help.xml</maml:para>
+      </maml:description>
+      <maml:copyright>
+        <maml:para />
+      </maml:copyright>
+        <command:verb>Convert</command:verb>
+        <command:noun>CmdletHelpXml</command:noun>
+      <dev:version />
+    </command:details>
+    <maml:description>
+      <maml:para>转化指定语法帮助为 Help.xml</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Convert-CmdletHelpXml</maml:name>
+        <command:parameter required="true" position="0">
+          <maml:name>Path</maml:name>
+          <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+        </command:parameter>
+      </command:syntaxItem>
+      <command:syntaxItem>
+        <maml:name></maml:name>
+        <command:parameter required="false" position="0">
+          <maml:name>Encoding</maml:name>
+          <command:parameterValueGroup>
+            <command:parameterValue required="true" variableLength="false">Unknown</command:parameterValue>
+            <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+            <command:parameterValue required="true" variableLength="false">Unicode</command:parameterValue>
+            <command:parameterValue required="true" variableLength="false">Byte</command:parameterValue>
+            <command:parameterValue required="true" variableLength="false">BigEndianUnicode</command:parameterValue>
+            <command:parameterValue required="true" variableLength="false">UTF8</command:parameterValue>
+            <command:parameterValue required="true" variableLength="false">UTF7</command:parameterValue>
+            <command:parameterValue required="true" variableLength="false">UTF32</command:parameterValue>
+            <command:parameterValue required="true" variableLength="false">Ascii</command:parameterValue>
+            <command:parameterValue required="true" variableLength="false">Default</command:parameterValue>
+            <command:parameterValue required="true" variableLength="false">Oem</command:parameterValue>
+            <command:parameterValue required="true" variableLength="false">BigEndianUTF32</command:parameterValue>
+          </command:parameterValueGroup>
+        </command:parameter>
+      </command:syntaxItem>
+      <command:syntaxItem>
+        <maml:name>Convert-CmdletHelpXml</maml:name>
+        <command:parameter required="true" position="0">
+          <maml:name>Text</maml:name>
+          <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="true" variableLength="true" globbing="false"
+        pipelineInput="false" position="0">
+        <maml:name>Path</maml:name>
+        <maml:description>
+          <maml:para>支持 Get-Content -Raw 输入</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+        <dev:type>
+          <maml:name>String</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="true" globbing="false"
+        pipelineInput="false" position="1">
+        <maml:name>Encoding</maml:name>
+        <maml:description>
+          <maml:para>powershell支持编码的枚举器</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">Microsoft.PowerShell.Commands.FileSystemCmdletProviderEncoding</command:parameterValue>
+        <dev:type>
+          <maml:name>Microsoft.PowerShell.Commands.FileSystemCmdletProviderEncoding</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>Microsoft.PowerShell.Commands.FileSystemCmdletProviderEncoding.Default</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="true" variableLength="true" globbing="false"
+        pipelineInput="false" position="0">
+        <maml:name>Text</maml:name>
+        <maml:description>
+          <maml:para>帮助文本字符串</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+        <dev:type>
+          <maml:name>string</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>None</maml:name>
+          <maml:uri />
+        </dev:type>
+        <maml:description />
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>None</maml:name>
+          <maml:uri />
+        </dev:type>
+        <maml:description />
+      </command:returnValue>
+    </command:returnValues>
+    <command:terminatingErrors/>
+    <command:nonTerminatingErrors/>
+    <command:examples>
+      <command:example>
+        <maml:title>Example 1: 文本字符串输入</maml:title>
+        <maml:introduction>
+          <maml:para>PS C:\> </maml:para>
+        </maml:introduction>
+        <dev:code>Convert-CmdletHelpXml -Text $(Get-Content .\CmdletHelp-Help.txt -Raw)</dev:code>
+        <dev:remarks>
+          <maml:para>将帮助文本作为字符串整体进行重构</maml:para>
+          <maml:para />
+        </dev:remarks>
+      </command:example>
+      <command:example>
+        <maml:title>Example 2: Help.ps1 文件输入</maml:title>
+        <maml:introduction>
+          <maml:para>PS C:\> </maml:para>
+        </maml:introduction>
+        <dev:code>Convert-CmdletHelpXml -Path .\CmdletHelp-Help.ps1</dev:code>
+        <dev:remarks>
+          <maml:para>https://docs.microsoft.com/zh-cn/powershell/scripting/developer/help/placing-comment-based-help-in-scripts</maml:para>
+          <maml:para>在 ps1 中编写好易读的帮助文档, 语法格式参考脚本帮助的编写方式</maml:para>
+          <maml:para>PS C:\&gt; Convert-CmdletHelpXml -Path .\CmdletHelp-Help.ps1</maml:para>
+          <maml:para>https://docs.microsoft.com/zh-cn/powershell/scripting/developer/help/placing-comment-based-help-in-scripts</maml:para>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <maml:relatedLinks>
+      <maml:navigationLink>
+        <maml:linkText>github</maml:linkText>
+        <maml:uri>https://github.com/empyrealtear/psadb_Module</maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Convert-CmdletFormatXml</maml:linkText>
+        <maml:uri />
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Convert-CmdletTypeXml</maml:linkText>
+        <maml:uri />
+      </maml:navigationLink>
+    </maml:relatedLinks>
+  </command:command>
+</helpItems>

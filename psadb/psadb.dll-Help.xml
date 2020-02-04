@@ -237,11 +237,11 @@
     <command:syntax>
       <command:syntaxItem>
         <maml:name>Connect-ADBDevice</maml:name>
-        <command:parameter required="false">
+        <command:parameter required="false" position="named">
           <maml:name>IP</maml:name>
           <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
         </command:parameter>
-        <command:parameter required="false">
+        <command:parameter required="false" position="named">
           <maml:name>EndPoint</maml:name>
           <command:parameterValue required="true" variableLength="false">int</command:parameterValue>
         </command:parameter>
@@ -364,14 +364,14 @@
     <command:syntax>
       <command:syntaxItem>
         <maml:name>Disconnect-ADBDevice</maml:name>
-        <command:parameter required="false">
+        <command:parameter required="false" position="named">
           <maml:name>Serial</maml:name>
-          <command:parameterValue required="true" variableLength="false">string[]</command:parameterValue>
+          <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
         </command:parameter>
       </command:syntaxItem>
       <command:syntaxItem>
         <maml:name>Disconnect-ADBDevice</maml:name>
-        <command:parameter required="false">
+        <command:parameter required="true" position="0">
           <maml:name>Reconnect</maml:name>
         </command:parameter>
       </command:syntaxItem>
@@ -478,7 +478,7 @@
     <command:syntax>
       <command:syntaxItem>
         <maml:name>Set-ADBTCPIP</maml:name>
-        <command:parameter required="false">
+        <command:parameter required="false" position="named">
           <maml:name>EndPoint</maml:name>
           <command:parameterValue required="true" variableLength="false">int</command:parameterValue>
         </command:parameter>
@@ -573,7 +573,7 @@
     <command:syntax>
       <command:syntaxItem>
         <maml:name>Reset-ADBUSB</maml:name>
-        <command:parameter required="false">
+        <command:parameter required="false" position="named">
           <maml:name>Serial</maml:name>
           <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
         </command:parameter>
@@ -656,7 +656,7 @@
     <command:syntax>
       <command:syntaxItem>
         <maml:name>Get-ADBProperty</maml:name>
-        <command:parameter required="false">
+        <command:parameter required="false" position="named">
           <maml:name>Filter</maml:name>
           <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
         </command:parameter>
@@ -755,7 +755,7 @@
     <command:syntax>
       <command:syntaxItem>
         <maml:name>Get-ADBNets</maml:name>
-        <command:parameter required="false">
+        <command:parameter required="false" position="named">
           <maml:name>Filter</maml:name>
           <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
         </command:parameter>
@@ -852,7 +852,7 @@
     <command:syntax>
       <command:syntaxItem>
         <maml:name>Get-ADBProcess</maml:name>
-        <command:parameter required="false">
+        <command:parameter required="false" position="named">
           <maml:name>Filter</maml:name>
           <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
         </command:parameter>
@@ -949,7 +949,7 @@
     <command:syntax>
       <command:syntaxItem>
         <maml:name>Test-ADBPath</maml:name>
-        <command:parameter required="true">
+        <command:parameter required="true" position="0">
           <maml:name>Path</maml:name>
           <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
         </command:parameter>
@@ -1051,11 +1051,11 @@
     <command:syntax>
       <command:syntaxItem>
         <maml:name>Split-ADBPath</maml:name>
-        <command:parameter required="true">
+        <command:parameter required="true" position="0">
           <maml:name>Path</maml:name>
           <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
         </command:parameter>
-        <command:parameter required="false">
+        <command:parameter required="true" position="1">
           <maml:name>Leaf</maml:name>
         </command:parameter>
       </command:syntaxItem>
@@ -1170,7 +1170,7 @@
     <command:syntax>
       <command:syntaxItem>
         <maml:name>Get-ADBItem</maml:name>
-        <command:parameter required="false">
+        <command:parameter required="false" position="named">
           <maml:name>Path</maml:name>
           <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
         </command:parameter>
@@ -1282,14 +1282,14 @@
     <command:syntax>
       <command:syntaxItem>
         <maml:name>New-ADBItem</maml:name>
-        <command:parameter required="true">
+        <command:parameter required="true" position="0">
           <maml:name>Path</maml:name>
-          <command:parameterValue required="true" variableLength="false">string[]</command:parameterValue>
+          <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
         </command:parameter>
-        <command:parameter required="false">
+        <command:parameter required="true" position="1">
           <maml:name>Directory</maml:name>
         </command:parameter>
-        <command:parameter required="false">
+        <command:parameter required="true" position="2">
           <maml:name>PassThru</maml:name>
         </command:parameter>
       </command:syntaxItem>
@@ -1437,40 +1437,41 @@
     <command:syntax>
       <command:syntaxItem>
         <maml:name>Copy-ADBItem</maml:name>
-        <command:parameter required="true">
+        <command:parameter required="true" position="0">
           <maml:name>Path</maml:name>
-          <command:parameterValue required="true" variableLength="false">string[]</command:parameterValue>
+          <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
         </command:parameter>
-        <command:parameter required="true">
+        <command:parameter required="true" position="1">
           <maml:name>Destination</maml:name>
           <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
         </command:parameter>
       </command:syntaxItem>
       <command:syntaxItem>
         <maml:name>Copy-ADBItem</maml:name>
-        <command:parameter required="true">
+        <command:parameter required="true" position="0">
           <maml:name>Path</maml:name>
-          <command:parameterValue required="true" variableLength="false">string[]</command:parameterValue>
+          <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
         </command:parameter>
-        <command:parameter required="true">
+        <command:parameter required="true" position="1">
           <maml:name>Destination</maml:name>
           <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
         </command:parameter>
-        <command:parameter required="false">
+        <command:parameter required="true" position="2">
           <maml:name>ToLocal</maml:name>
+          <command:parameterValue required="true" variableLength="false"></command:parameterValue>
         </command:parameter>
       </command:syntaxItem>
       <command:syntaxItem>
         <maml:name>Copy-ADBItem</maml:name>
-        <command:parameter required="true">
+        <command:parameter required="true" position="0">
           <maml:name>Path</maml:name>
-          <command:parameterValue required="true" variableLength="false">string[]</command:parameterValue>
+          <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
         </command:parameter>
-        <command:parameter required="true">
+        <command:parameter required="true" position="1">
           <maml:name>Destination</maml:name>
           <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
         </command:parameter>
-        <command:parameter required="false">
+        <command:parameter required="true" position="2">
           <maml:name>FromLocal</maml:name>
         </command:parameter>
       </command:syntaxItem>
@@ -1647,40 +1648,41 @@
     <command:syntax>
       <command:syntaxItem>
         <maml:name>Move-ADBItem</maml:name>
-        <command:parameter required="true">
+        <command:parameter required="true" position="0">
           <maml:name>Path</maml:name>
-          <command:parameterValue required="true" variableLength="false">string[]</command:parameterValue>
+          <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
         </command:parameter>
-        <command:parameter required="true">
+        <command:parameter required="true" position="1">
           <maml:name>Destination</maml:name>
           <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
         </command:parameter>
       </command:syntaxItem>
       <command:syntaxItem>
         <maml:name>Move-ADBItem</maml:name>
-        <command:parameter required="true">
+        <command:parameter required="true" position="0">
           <maml:name>Path</maml:name>
-          <command:parameterValue required="true" variableLength="false">string[]</command:parameterValue>
+          <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
         </command:parameter>
-        <command:parameter required="true">
+        <command:parameter required="true" position="1">
           <maml:name>Destination</maml:name>
           <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
         </command:parameter>
-        <command:parameter required="false">
+        <command:parameter required="true" position="2">
           <maml:name>ToLocal</maml:name>
+          <command:parameterValue required="true" variableLength="false"></command:parameterValue>
         </command:parameter>
       </command:syntaxItem>
       <command:syntaxItem>
         <maml:name>Move-ADBItem</maml:name>
-        <command:parameter required="true">
+        <command:parameter required="true" position="0">
           <maml:name>Path</maml:name>
-          <command:parameterValue required="true" variableLength="false">string[]</command:parameterValue>
+          <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
         </command:parameter>
-        <command:parameter required="true">
+        <command:parameter required="true" position="1">
           <maml:name>Destination</maml:name>
           <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
         </command:parameter>
-        <command:parameter required="false">
+        <command:parameter required="true" position="2">
           <maml:name>FromLocal</maml:name>
         </command:parameter>
       </command:syntaxItem>
@@ -1858,9 +1860,9 @@
     <command:syntax>
       <command:syntaxItem>
         <maml:name>Remove-ADBItem</maml:name>
-        <command:parameter required="true">
+        <command:parameter required="true" position="0">
           <maml:name>Path</maml:name>
-          <command:parameterValue required="true" variableLength="false">string[]</command:parameterValue>
+          <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
         </command:parameter>
       </command:syntaxItem>
     </command:syntax>
@@ -1961,11 +1963,11 @@
     <command:syntax>
       <command:syntaxItem>
         <maml:name>Rename-ADBItem</maml:name>
-        <command:parameter required="true">
+        <command:parameter required="true" position="0">
           <maml:name>Path</maml:name>
           <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
         </command:parameter>
-        <command:parameter required="true">
+        <command:parameter required="true" position="1">
           <maml:name>NewName</maml:name>
           <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
         </command:parameter>
@@ -2086,11 +2088,11 @@
     <command:syntax>
       <command:syntaxItem>
         <maml:name>Read-ADBFile</maml:name>
-        <command:parameter required="true">
+        <command:parameter required="true" position="0">
           <maml:name>Path</maml:name>
           <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
         </command:parameter>
-        <command:parameter required="false">
+        <command:parameter required="false" position="named">
           <maml:name>Encoding</maml:name>
           <command:parameterValue required="true" variableLength="false">Encoding</command:parameterValue>
         </command:parameter>
@@ -2194,20 +2196,23 @@
     <command:syntax>
       <command:syntaxItem>
         <maml:name>Out-ADBFile</maml:name>
-        <command:parameter required="true">
+        <command:parameter required="true" position="0">
           <maml:name>InputObject</maml:name>
-          <command:parameterValue required="true" variableLength="false">string[]</command:parameterValue>
+          <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
         </command:parameter>
-        <command:parameter required="true">
+        <command:parameter required="true" position="1">
           <maml:name>Path</maml:name>
           <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
         </command:parameter>
-        <command:parameter required="false">
+        <command:parameter required="false" position="2">
           <maml:name>Encoding</maml:name>
           <command:parameterValue required="true" variableLength="false">Encoding</command:parameterValue>
         </command:parameter>
-        <command:parameter required="false">
+        <command:parameter required="true" position="3">
           <maml:name>Append</maml:name>
+        </command:parameter>
+        <command:parameter required="true" position="named">
+          <maml:name>Force</maml:name>
         </command:parameter>
       </command:syntaxItem>
     </command:syntax>
@@ -2347,7 +2352,7 @@
     <command:syntax>
       <command:syntaxItem>
         <maml:name>Save-ADBScreenCapture</maml:name>
-        <command:parameter required="false">
+        <command:parameter required="false" position="named">
           <maml:name>Path</maml:name>
           <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
         </command:parameter>
@@ -2435,19 +2440,19 @@
     <command:syntax>
       <command:syntaxItem>
         <maml:name>Save-ADBScreenRecoder</maml:name>
-        <command:parameter required="false">
+        <command:parameter required="false" position="named">
           <maml:name>Path</maml:name>
           <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
         </command:parameter>
-        <command:parameter required="false">
+        <command:parameter required="false" position="named">
           <maml:name>TimeLimit</maml:name>
           <command:parameterValue required="true" variableLength="false">int</command:parameterValue>
         </command:parameter>
-        <command:parameter required="false">
+        <command:parameter required="false" position="named">
           <maml:name>BitRate</maml:name>
           <command:parameterValue required="true" variableLength="false">int</command:parameterValue>
         </command:parameter>
-        <command:parameter required="false">
+        <command:parameter required="false" position="named">
           <maml:name>Size</maml:name>
           <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
         </command:parameter>
@@ -2574,34 +2579,34 @@
     <command:syntax>
       <command:syntaxItem>
         <maml:name>Send-ADBTap</maml:name>
-        <command:parameter required="true">
+        <command:parameter required="true" position="0">
           <maml:name>Left</maml:name>
           <command:parameterValue required="true" variableLength="false">int</command:parameterValue>
         </command:parameter>
-        <command:parameter required="true">
+        <command:parameter required="true" position="1">
           <maml:name>Top</maml:name>
           <command:parameterValue required="true" variableLength="false">int</command:parameterValue>
         </command:parameter>
-        <command:parameter required="false">
+        <command:parameter required="false" position="named">
           <maml:name>Count</maml:name>
           <command:parameterValue required="true" variableLength="false">int</command:parameterValue>
         </command:parameter>
-        <command:parameter required="false">
+        <command:parameter required="false" position="named">
           <maml:name>Sleep</maml:name>
           <command:parameterValue required="true" variableLength="false">int</command:parameterValue>
         </command:parameter>
       </command:syntaxItem>
       <command:syntaxItem>
         <maml:name>Send-ADBTap</maml:name>
-        <command:parameter required="true">
+        <command:parameter required="true" position="0">
           <maml:name>Pos</maml:name>
           <command:parameterValue required="true" variableLength="false">Pos</command:parameterValue>
         </command:parameter>
-        <command:parameter required="false">
+        <command:parameter required="false" position="named">
           <maml:name>Count</maml:name>
           <command:parameterValue required="true" variableLength="false">int</command:parameterValue>
         </command:parameter>
-        <command:parameter required="false">
+        <command:parameter required="false" position="named">
           <maml:name>Sleep</maml:name>
           <command:parameterValue required="true" variableLength="false">int</command:parameterValue>
         </command:parameter>
@@ -2750,46 +2755,46 @@
     <command:syntax>
       <command:syntaxItem>
         <maml:name>Send-ADBSwipe</maml:name>
-        <command:parameter required="true">
+        <command:parameter required="true" position="0">
           <maml:name>X1</maml:name>
           <command:parameterValue required="true" variableLength="false">int</command:parameterValue>
         </command:parameter>
-        <command:parameter required="true">
+        <command:parameter required="true" position="1">
           <maml:name>Y1</maml:name>
           <command:parameterValue required="true" variableLength="false">int</command:parameterValue>
         </command:parameter>
-        <command:parameter required="true">
+        <command:parameter required="true" position="2">
           <maml:name>X2</maml:name>
           <command:parameterValue required="true" variableLength="false">int</command:parameterValue>
         </command:parameter>
-        <command:parameter required="true">
+        <command:parameter required="true" position="3">
           <maml:name>Y2</maml:name>
           <command:parameterValue required="true" variableLength="false">int</command:parameterValue>
         </command:parameter>
-        <command:parameter required="false">
+        <command:parameter required="false" position="named">
           <maml:name>MilliSeconds</maml:name>
           <command:parameterValue required="true" variableLength="false">int</command:parameterValue>
         </command:parameter>
       </command:syntaxItem>
       <command:syntaxItem>
         <maml:name>Send-ADBSwipe</maml:name>
-        <command:parameter required="true">
+        <command:parameter required="true" position="0">
           <maml:name>X1</maml:name>
           <command:parameterValue required="true" variableLength="false">int</command:parameterValue>
         </command:parameter>
-        <command:parameter required="true">
+        <command:parameter required="true" position="1">
           <maml:name>Y1</maml:name>
           <command:parameterValue required="true" variableLength="false">int</command:parameterValue>
         </command:parameter>
-        <command:parameter required="true">
+        <command:parameter required="true" position="2">
           <maml:name>Degree</maml:name>
           <command:parameterValue required="true" variableLength="false">double</command:parameterValue>
         </command:parameter>
-        <command:parameter required="true">
+        <command:parameter required="true" position="3">
           <maml:name>Radius</maml:name>
           <command:parameterValue required="true" variableLength="false">double</command:parameterValue>
         </command:parameter>
-        <command:parameter required="false">
+        <command:parameter required="false" position="named">
           <maml:name>MilliSeconds</maml:name>
           <command:parameterValue required="true" variableLength="false">int</command:parameterValue>
         </command:parameter>
@@ -2978,7 +2983,7 @@
     <command:syntax>
       <command:syntaxItem>
         <maml:name>Send-ADBKeyEvent</maml:name>
-        <command:parameter required="true">
+        <command:parameter required="true" position="0">
           <maml:name>KeyName</maml:name>
           <command:parameterValueGroup>
             <command:parameterValue required="true" variableLength="false">KEYCODE_UNKNOWN</command:parameterValue>
@@ -2986,7 +2991,7 @@
             <command:parameterValue required="true" variableLength="false">...</command:parameterValue>
           </command:parameterValueGroup>
         </command:parameter>
-        <command:parameter required="false">
+        <command:parameter required="true" position="1">
           <maml:name>LongPress</maml:name>
         </command:parameter>
       </command:syntaxItem>
@@ -3095,10 +3100,10 @@
     <command:syntax>
       <command:syntaxItem>
         <maml:name>Get-ADBEvent</maml:name>
-        <command:parameter required="false">
+        <command:parameter required="true" position="0">
           <maml:name>ToHex</maml:name>
         </command:parameter>
-        <command:parameter required="false">
+        <command:parameter required="true" position="1">
           <maml:name>CN</maml:name>
         </command:parameter>
       </command:syntaxItem>
@@ -3211,15 +3216,15 @@
     <command:syntax>
       <command:syntaxItem>
         <maml:name>New-ADBEvent</maml:name>
-        <command:parameter required="true">
+        <command:parameter required="true" position="0">
           <maml:name>PosList</maml:name>
           <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
         </command:parameter>
-        <command:parameter required="false">
+        <command:parameter required="false" position="named">
           <maml:name>Sleep</maml:name>
           <command:parameterValue required="true" variableLength="false">int</command:parameterValue>
         </command:parameter>
-        <command:parameter required="false">
+        <command:parameter required="true" position="2">
           <maml:name>WriteDefaultBash</maml:name>
         </command:parameter>
       </command:syntaxItem>
@@ -3345,30 +3350,30 @@
     <command:syntax>
       <command:syntaxItem>
         <maml:name>Send-ADBEvent</maml:name>
-        <command:parameter required="true">
+        <command:parameter required="true" position="0">
           <maml:name>PosList</maml:name>
           <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
         </command:parameter>
-        <command:parameter required="false">
+        <command:parameter required="false" position="named">
           <maml:name>Sleep</maml:name>
           <command:parameterValue required="true" variableLength="false">int</command:parameterValue>
         </command:parameter>
-        <command:parameter required="false">
+        <command:parameter required="false" position="named">
           <maml:name>Count</maml:name>
           <command:parameterValue required="true" variableLength="false">int</command:parameterValue>
         </command:parameter>
       </command:syntaxItem>
       <command:syntaxItem>
         <maml:name>Send-ADBEvent</maml:name>
-        <command:parameter required="false">
+        <command:parameter required="false" position="named">
           <maml:name>Sleep</maml:name>
           <command:parameterValue required="true" variableLength="false">int</command:parameterValue>
         </command:parameter>
-        <command:parameter required="false">
+        <command:parameter required="false" position="named">
           <maml:name>Count</maml:name>
           <command:parameterValue required="true" variableLength="false">int</command:parameterValue>
         </command:parameter>
-        <command:parameter required="false">
+        <command:parameter required="true" position="2">
           <maml:name>RunDefaultBash</maml:name>
         </command:parameter>
       </command:syntaxItem>
@@ -3520,11 +3525,11 @@
     <command:syntax>
       <command:syntaxItem>
         <maml:name>Get-ADBDumpsysXml</maml:name>
-        <command:parameter required="false">
+        <command:parameter required="false" position="named">
           <maml:name>Path</maml:name>
           <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
         </command:parameter>
-        <command:parameter required="false">
+        <command:parameter required="true" position="1">
           <maml:name>Compress</maml:name>
         </command:parameter>
       </command:syntaxItem>
@@ -3642,7 +3647,7 @@
     <command:syntax>
       <command:syntaxItem>
         <maml:name>Resolve-ADBUI</maml:name>
-        <command:parameter required="false">
+        <command:parameter required="true" position="0">
           <maml:name>Compress</maml:name>
         </command:parameter>
       </command:syntaxItem>
@@ -3736,15 +3741,15 @@
     <command:syntax>
       <command:syntaxItem>
         <maml:name>Find-ADBUI</maml:name>
-        <command:parameter required="false">
+        <command:parameter required="false" position="named">
           <maml:name>Filter</maml:name>
           <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
         </command:parameter>
-        <command:parameter required="false">
+        <command:parameter required="false" position="named">
           <maml:name>Nodes</maml:name>
-          <command:parameterValue required="true" variableLength="false">AndroidUI[]</command:parameterValue>
+          <command:parameterValue required="true" variableLength="false">AndroidUI</command:parameterValue>
         </command:parameter>
-        <command:parameter required="false">
+        <command:parameter required="false" position="named">
           <maml:name>Bias</maml:name>
           <command:parameterValue required="true" variableLength="false">int</command:parameterValue>
         </command:parameter>
@@ -3894,7 +3899,7 @@
     <command:syntax>
       <command:syntaxItem>
         <maml:name>Get-ADBPackages</maml:name>
-        <command:parameter required="false">
+        <command:parameter required="false" position="named">
           <maml:name>Module</maml:name>
           <command:parameterValueGroup>
             <command:parameterValue required="true" variableLength="false">All</command:parameterValue>
@@ -3904,7 +3909,7 @@
             <command:parameterValue required="true" variableLength="false">Disable</command:parameterValue>
           </command:parameterValueGroup>
         </command:parameter>
-        <command:parameter required="false">
+        <command:parameter required="false" position="named">
           <maml:name>Filter</maml:name>
           <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
         </command:parameter>
@@ -4010,17 +4015,18 @@
     <command:syntax>
       <command:syntaxItem>
         <maml:name>Start-ADBActivity</maml:name>
-        <command:parameter required="false">
+        <command:parameter required="true" position="0">
           <maml:name>NowFocusActivity</maml:name>
+          <command:parameterValue required="true" variableLength="false"></command:parameterValue>
         </command:parameter>
       </command:syntaxItem>
       <command:syntaxItem>
         <maml:name>Start-ADBActivity</maml:name>
-        <command:parameter required="true">
+        <command:parameter required="true" position="0">
           <maml:name>Package</maml:name>
           <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
         </command:parameter>
-        <command:parameter required="false">
+        <command:parameter required="false" position="named">
           <maml:name>Intent</maml:name>
           <command:parameterValueGroup>
             <command:parameterValue required="true" variableLength="false">Action</command:parameterValue>
@@ -4028,18 +4034,18 @@
             <command:parameterValue required="true" variableLength="false">Component</command:parameterValue>
           </command:parameterValueGroup>
         </command:parameter>
-        <command:parameter required="false">
+        <command:parameter required="false" position="named">
           <maml:name>Sleep</maml:name>
           <command:parameterValue required="true" variableLength="false">int</command:parameterValue>
         </command:parameter>
-        <command:parameter required="false">
+        <command:parameter required="false" position="named">
           <maml:name>Restart</maml:name>
           <command:parameterValue required="true" variableLength="false">int</command:parameterValue>
         </command:parameter>
-        <command:parameter required="false">
+        <command:parameter required="true" position="4">
           <maml:name>Force</maml:name>
         </command:parameter>
-        <command:parameter required="false">
+        <command:parameter required="true" position="5">
           <maml:name>Wait</maml:name>
         </command:parameter>
       </command:syntaxItem>
@@ -4222,11 +4228,11 @@
     <command:syntax>
       <command:syntaxItem>
         <maml:name>Stop-ADBActivity</maml:name>
-        <command:parameter required="true">
+        <command:parameter required="true" position="0">
           <maml:name>Package</maml:name>
           <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
         </command:parameter>
-        <command:parameter required="false">
+        <command:parameter required="false" position="named">
           <maml:name>Sleep</maml:name>
           <command:parameterValue required="true" variableLength="false">int</command:parameterValue>
         </command:parameter>
@@ -4321,18 +4327,18 @@
     <command:syntax>
       <command:syntaxItem>
         <maml:name>Install-ADBApk</maml:name>
-        <command:parameter required="true">
+        <command:parameter required="true" position="0">
           <maml:name>Path</maml:name>
           <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
         </command:parameter>
-        <command:parameter required="false">
+        <command:parameter required="false" position="named">
           <maml:name>Filter</maml:name>
           <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
         </command:parameter>
-        <command:parameter required="false">
+        <command:parameter required="true" position="2">
           <maml:name>Replace</maml:name>
         </command:parameter>
-        <command:parameter required="false">
+        <command:parameter required="true" position="3">
           <maml:name>ToSdcard</maml:name>
         </command:parameter>
       </command:syntaxItem>
@@ -4459,7 +4465,7 @@
     <command:syntax>
       <command:syntaxItem>
         <maml:name>Uninstall-ADBApk</maml:name>
-        <command:parameter required="true">
+        <command:parameter required="true" position="0">
           <maml:name>APPName</maml:name>
           <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
         </command:parameter>
@@ -4548,11 +4554,11 @@
     <command:syntax>
       <command:syntaxItem>
         <maml:name>Use-ADB</maml:name>
-        <command:parameter required="false">
+        <command:parameter required="false" position="named">
           <maml:name>Args</maml:name>
           <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
         </command:parameter>
-        <command:parameter required="false">
+        <command:parameter required="true" position="1">
           <maml:name>Async</maml:name>
         </command:parameter>
       </command:syntaxItem>

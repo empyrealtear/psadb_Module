@@ -1,14 +1,5 @@
 ﻿
-<#
-.SYNOPSIS
-    转化为 Help.xml
-.DESCRIPTION
-    转化为 Help.xml
-.EXAMPLE
-    PS C:\> Convert-CmdletHelpXml -Path $Path
-    PS C:\> Convert-CmdletHelpXml -Text $Help
-    转化为对应的格式文件
-#>
+# .ExternalHelp .\CmdletHelp-Help.xml
 function Convert-CmdletHelpXml {
     [CmdletBinding(DefaultParameterSetName = "Load")]
     param(
@@ -34,8 +25,8 @@ function Convert-CmdletHelpXml {
                     & $Path
                 }
                 else {
-                    $(Get-Content $Path -Raw -Encoding $Encoding) -split "^\.Synopsis", 0, "Multiline" |
-                        Where-Object { $_.Trim() } | ForEach-Object { ".Synopsis$_" }
+                    $Text = Get-Content $Path -Raw -Encoding $Encoding
+                    $Text -split "^(?=\.Synopsis)", 0, "Multiline" | Where-Object { $_ }
                 }
             }
             else {
@@ -43,8 +34,7 @@ function Convert-CmdletHelpXml {
             }
         }
         else {
-            $list = $Text -split "^\.Synopsis", 0, "Multiline" |
-                Where-Object { $_.Trim() } | ForEach-Object { ".Synopsis" + $_ }
+            $list = $Text -split "^(?=\.Synopsis)", 0, "Multiline" | Where-Object { $_ }
         }
 
         foreach ($helps in $list) {
@@ -53,23 +43,22 @@ function Convert-CmdletHelpXml {
                 '<command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10"'
                 '  xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10"'
                 '  xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">'
-                foreach ($help in $($helps -split "^\.", 0, "Multiline")) {
-                    if ([string]::IsNullOrWhiteSpace($help)) { continue }
+                foreach ($help in $($helps -split "^(?=\.\S+)", 0, "Multiline" | Where-Object { $_ })) {
                     $block = $help.Trim().Split("`n")
                     switch -Regex ($help) {
-                        "^Synopsis" { Convert-CmdletHelpDetails -Text $block }
-                        "^Description" { Convert-CmdletHelpDescriptions -Text $block }
-                        "^Syntax" { Convert-CmdletHelpSyntax -Text $block }
-                        "^Parameters" { Convert-CmdletHelpParameters -Text $block }
-                        "^Inputs" { Convert-CmdletHelpIOTypes -Text $block }
-                        "^Outputs" { Convert-CmdletHelpIOTypes -Text $block -IsOutput }
-                        "^Examples" {
+                        "^\.Synopsis" { Convert-CmdletHelpDetails -Text $block }
+                        "^\.Description" { Convert-CmdletHelpDescriptions -Text $block }
+                        "^\.Syntax" { Convert-CmdletHelpSyntax -Text $block }
+                        "^\.Parameters" { Convert-CmdletHelpParameters -Text $block }
+                        "^\.Inputs" { Convert-CmdletHelpInputOutput -Text $block }
+                        "^\.Outputs" { Convert-CmdletHelpInputOutput -Text $block -IsOutput }
+                        "^\.Examples" {
                             Add-CmdletHelpIndent @(
                                 '<command:terminatingErrors/>'
                                 '<command:nonTerminatingErrors/>')
                             Convert-CmdletHelpExamples -Text $block
                         }
-                        "^RelatedLinks" { Convert-CmdletHelpRelatedLinks -Text $block }
+                        "^\.RelatedLinks" { Convert-CmdletHelpRelatedLinks -Text $block }
                         Default { Write-Debug "unknow error" }
                     }
                 }
@@ -120,7 +109,7 @@ function Add-CmdletHelpIndent {
 function Convert-CmdletHelpParagraph {
     [CmdletBinding()]
     param(
-        [Parameter()]
+        [Parameter(ValueFromPipeline = $true)]
         [string[]]$Text
     )
 
@@ -207,14 +196,14 @@ function Convert-CmdletHelpDescriptions {
     }
 
     Write-Verbose "add <command:description>"
-    if ($Text.Count -eq 1) {
+    $Text = $Text | Select-Object -Skip 1
+    if ($Text.Count -eq 0) {
         return Add-CmdletHelpIndent "<maml:description />"
     }
 
-    $desc = Convert-CmdletHelpParagraph $Text[1..$($Text.Count - 1)] | Add-CmdletHelpIndent
     return Add-CmdletHelpIndent $(
         "<maml:description>"
-        $desc
+        Convert-CmdletHelpParagraph $Text[1..$($Text.Count - 1)] | Add-CmdletHelpIndent
         "</maml:description>")
 }
 
@@ -233,60 +222,72 @@ function Convert-CmdletHelpSyntax {
         $Text = @(
             ".Syntax"
             "    verb-noun1 [-param1] <type> [-param2 <type>]"
-            "    verb-noun2 [-param3 {A|B|C}] [-switch]")
-    }
-
-    if ($Text.Count -lt 2) {
-        throw "syntax is litter than 1"
-    }
-
-    function typexml ([string]$type) {
-        if ($type -like "<*>") {
-            Add-CmdletHelpIndent "<command:parameterValue required=`"true`" variableLength=`"false`">$($type.Trim('<>'))</command:parameterValue>"
-        }
-        elseif ($type -like "{*}") {
-            Add-CmdletHelpIndent $(
-                "<command:parameterValueGroup>"
-                Add-CmdletHelpIndent $(foreach ($item in $type.Trim("{}").Split("| ", [System.StringSplitOptions]1)) {
-                        "<command:parameterValue required=`"true`" variableLength=`"false`">$item</command:parameterValue>"
-                    })
-                "</command:parameterValueGroup>")
-        }
+            "    verb-noun2 [-param3 {A|B|C}] [-switch]"
+            "    verb-noun3 [[-param3] <type>] -switch")
     }
 
     Write-Verbose "add <command:syntax>"
-    [string[]]$list = $Text.Split("`n", [System.StringSplitOptions]1)
-    $syntaxItem = for ($i = 1; $i -lt $list.Count; $i++) {
-        [string[]]$cmd = $list[$i] -split "\s+\["
-        $name = $cmd[0].Trim()
-        $parameters = for ($j = 1; $j -lt $cmd.Count; $j++) {
-            $required = "false"
-            $type = ""
-            switch -Regex ($cmd[$j].Trim()) {
-                "^-\S+\]\s+.*[}>]$" {
+    $Text = $(($Text -join "`n") -replace "\]\s+\n+\s+\[", "] [").Split("`n", [System.StringSplitOptions]1) |
+        Select-Object -Skip 1
+    if ($Text.Count -lt 1) { return Add-CmdletHelpIndent "<command:syntax />" }
+
+    $syntaxItem = foreach ($syntax in $Text) {
+        [string[]]$list = $syntax -split "\s+(?=\[*-)"
+        $name = $list[0].Trim()
+        $list = $list | Select-Object -Skip 1
+        $parameters = for ($i = 0; $i -lt $list.Count; $i++) {
+            switch -Regex ($list[$i].Trim()) {
+                "^-\S+\s+[<{].*[>}]$" {
                     $required = "true"
-                    $null = $cmd[$j] -match "-(?<param>\S+)\]\s+(?<type>[<{].*[}>])"
-                    $paramName = $Matches.param
-                    $type = typexml -type $Matches.type
+                    $position = "named"
                 }
-                "^-\S+\s+.*\]$" {
-                    $null = $cmd[$j] -match "-(?<param>\S+)\s+(?<type>[<{].*[}>])\]"
-                    $paramName = $Matches.param
-                    $type = typexml -type $Matches.type
+                "^\[-\S+\]\s+[<{].*[>}]$" {
+                    $required = "true"
+                    $position = $i
                 }
-                "^-\S+\]$" {
-                    $paramName = $cmd[$j].Trim().Trim("-]")
-                    $type = $null
+                "^\[-\S+\s+[<{].*[>}]\]$" {
+                    $required = "false"
+                    $position = "named"
                 }
-                Default {
-                    Write-Debug "unkonw error"
+                "^\[{2}-\S+\]\s+[<{].*[>}]\]$" {
+                    $required = "false"
+                    $position = $i
+                }
+                "^-\S+$" {
+                    $required = "true"
+                    $position = "named"
+                }
+                "^\[-\S+\]$" {
+                    $required = "true"
+                    $position = $i
+                }
+                Default { }
+            }
+
+            $param = $list[$i].Trim().Replace(" ", "").Split("-[]{}<>", [System.StringSplitOptions]1)
+            $paramName = $param[0]
+            if ($param.Count -eq 1) {
+                $type = $null
+            }
+            elseif ($param.Count -gt 1) {
+                $values = $param[1].Split("|")
+                $type = $values |
+                    ForEach-Object {
+                        "<command:parameterValue required=`"true`" variableLength=`"false`">$_</command:parameterValue>"
+                    } |
+                    Add-CmdletHelpIndent
+                if ($values.Count -gt 1) {
+                    $type = Add-CmdletHelpIndent $(
+                        "<command:parameterValueGroup>"
+                        $type
+                        "</command:parameterValueGroup>")
                 }
             }
             Add-CmdletHelpIndent $($(
-                "<command:parameter required=`"$required`">"
-                "  <maml:name>$paramName</maml:name>"
-                $type
-                "</command:parameter>") | Where-Object { $_ })
+                    "<command:parameter required=`"$required`" position=`"$position`">"
+                    "  <maml:name>$paramName</maml:name>"
+                    $type
+                    "</command:parameter>") | Where-Object { $_ })
         }
         Add-CmdletHelpIndent $(
             "<command:syntaxItem>"
@@ -294,6 +295,7 @@ function Convert-CmdletHelpSyntax {
             $parameters
             "</command:syntaxItem>")
     }
+
     return Add-CmdletHelpIndent $(
         "<command:syntax>"
         $syntaxItem
@@ -365,17 +367,17 @@ function Convert-CmdletHelpParameters {
             }
         }
 
-        $desc = if ($desc.Count -eq 0) {
-            Add-CmdletHelpIndent "<maml:description />"
-        }
-        else {
-            Add-CmdletHelpIndent $(
+        $desc = Add-CmdletHelpIndent $(
+            if ($desc.Count -eq 0) {
+                "<maml:description />"
+            }
+            else {
                 "<maml:description>"
                 Convert-CmdletHelpParagraph $desc | Add-CmdletHelpIndent
-                "</maml:description>")
-        }
+                "</maml:description>"
+            })
 
-        Add-CmdletHelpIndent @(
+        Add-CmdletHelpIndent $(
             "<command:parameter required=`"$required`" variableLength=`"true`" globbing=`"$isWildcard`""
             "  pipelineInput=`"$isPipeline`" position=`"$position`">"
             "  <maml:name>$paramName</maml:name>"
@@ -388,7 +390,7 @@ function Convert-CmdletHelpParameters {
             "  <dev:defaultValue>$defaultValue</dev:defaultValue>"
             "</command:parameter>")
     }
-    
+
     Write-Verbose "add <command:parameters>"
     [int[]]$indexs = $(
         0..($Text.Count - 1) | Where-Object { $Text[$_] -like "*-*<*>*" }
@@ -409,7 +411,7 @@ function Convert-CmdletHelpParameters {
 .SYNOPSIS
     转化为 Help.xml 输入输出变量类型
 #>
-function Convert-CmdletHelpIOTypes {
+function Convert-CmdletHelpInputOutput {
     [CmdletBinding()]
     param (
         [Parameter()]
@@ -467,7 +469,6 @@ function Convert-CmdletHelpExamples {
             '    Name                           Value'
             '    ----                           -----'
             '    persist.sys.updater.silent     false'
-            '    ro.build.date.utc              1567588151'
             ''
             '    # 列出设备属性'
             ''
@@ -476,13 +477,11 @@ function Convert-CmdletHelpExamples {
             '    Name                           Value'
             '    ----                           -----'
             '    ro.com.android.dateformat      MM-dd-yyyy'
-            '    persist.sys.updater.imei       861467031145518'
-            '    ro.build.date                  2019年09月04日星期三17'
             '    ...'
             ''
             '    # 列出设备所有属性')
     }
-    
+
     Write-Verbose "add <command:examples>"
     $indexs = $(
         0..$($Text.Count - 1) | Where-Object { $Text[$_] -match "^\s+Example\s+\d+:" }
@@ -547,28 +546,25 @@ function Convert-CmdletHelpRelatedLinks {
         return Add-CmdletHelpIndent "<maml:relatedLinks />"
     }
 
-    $link = for ($i = 1; $i -lt $Text.Count; $i++) {
-        $index = $Text[$i].Indexof(":")
-        $mid = if ($index -eq -1) {
-            Add-CmdletHelpIndent @(
-                "<maml:linkText>$($Text[$i].Trim())</maml:linkText>"
-                "<maml:uri />")
-        }
-        else {
-            Add-CmdletHelpIndent @(
-                "<maml:linkText>$($Text[$i].Substring(0, $index).Trim())</maml:linkText>"
-                "<maml:uri>$($Text[$i].Substring($index + 1).Trim())</maml:uri>")
-        }
-        Add-CmdletHelpIndent $(
-            "<maml:navigationLink>"
-            $mid
-            "</maml:navigationLink>")
-    }
-
     return Add-CmdletHelpIndent $(
         "<maml:relatedLinks>"
-        $link
+        for ($i = 1; $i -lt $Text.Count; $i++) {
+            $index = $Text[$i].Indexof(":")
+            Add-CmdletHelpIndent $(
+                "<maml:navigationLink>"
+                Add-CmdletHelpIndent $(
+                    if ($index -eq -1) {
+                        "<maml:linkText>$($Text[$i].Trim())</maml:linkText>"
+                        "<maml:uri />"
+                    }
+                    else {
+                        "<maml:linkText>$($Text[$i].Substring(0, $index).Trim())</maml:linkText>"
+                        "<maml:uri>$($Text[$i].Substring($index + 1).Trim())</maml:uri>"
+                    })
+                "</maml:navigationLink>")
+        }
         "</maml:relatedLinks>")
 }
 
-
+# Set export function
+Export-ModuleMember -Function Convert-CmdletHelpXml

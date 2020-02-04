@@ -170,7 +170,7 @@
     $("Example 1: 断开指定设备
         PS C:\> Disconnect-ADBDevice -Serial 192.168.0.102:5555
         disconnected 192.168.0.102:5555
-    
+
         # 运行 adb disconnect <Serial>
     ")
 .RelatedLinks
@@ -358,7 +358,7 @@
         User    PID Virtual Mem Resident Mem Status Name
         ----    --- ----------- ------------ ------ ----
         shell 12860        5000         1376   R    ps
-    
+
         # 运行 adb shell ps
     ")
 .RelatedLinks
@@ -395,12 +395,12 @@
     $("Example 1: 测试路径是否存在
         PS C:\> Test-ADBPath /sdcard/Download
         True
-    
+
         # 运行 adb shell ls <ParentPath> 查看是否存在该路径
-        
+
         PS C:\> Test-ADBPath /sdcard/Download/test.sh
         True
-    
+
         # 运行 adb shell ls <ParentPath> 查看是否存在该路径
     ")
 .RelatedLinks
@@ -445,12 +445,12 @@
     $("Example 1: 分割设备路径
         PS C:\> Split-ADBPath /sdcard/Download/test.sh
         /sdcard/Download
-    
+
         # 字符串分割拼接
 
         PS C:\> Split-ADBPath /sdcard/Download/test.sh -Leaf
         test.sh
-    
+
         # 字符串分割取最后一项
     ")
 .RelatedLinks
@@ -491,7 +491,7 @@
         -rwxrwx---  2019/9/15     12:20    32789 ADBEvents_NoWindows.zip
         drwxrwx---   2020/1/7      8:10          QQMail
         -rwxrwx---   2020/1/5     23:46       94 test.sh
-    
+
         # 运行 adb shell ls /sdcard/Download -l
     ")
 .RelatedLinks
@@ -549,12 +549,12 @@
         Mode              LastWriteTime Length Name   
         ----              ------------- ------ ----   
         -rwxrwx---  2020/1/31     22:11      0 demo.sh
-    
+
         # 运行 adb shell touch /sdcard/Download/demo.sh
     ")
     $("Example 2: 新建设备目录
         PS C:\> New-ADBItem /sdcard/Download/demo -Directory -PassThru
-    
+
         # 运行 adb shell touch /sdcard/Download/demo
     ")
 .RelatedLinks
@@ -621,7 +621,7 @@
         Mode              LastWriteTime Length Name   
         ----              ------------- ------ ----   
         -rwxrwx---  2020/1/31     22:16      0 demo.sh
-    
+
         # 运行 adb shell cp <SourcePath> <DestPath>
     ")
     $("Example 2: 从设备复制文件到本地
@@ -631,7 +631,7 @@
         Mode                LastWriteTime         Length Name
         ----                -------------         ------ ----
         -a----        2020/1/31     22:27              0 demo.sh
-    
+
         # 运行 adb shell push <Remote> <Local>
     ")
     $("Example 3: 从本地复制文件到设备
@@ -639,7 +639,7 @@
         Mode              LastWriteTime Length Name   
         ----              ------------- ------ ----   
         -rwxrwx---  2020/1/31     22:33      0 demo.sh
-    
+
         # 运行 adb shell pull <Local> <Remote>
     ")
 .RelatedLinks
@@ -706,7 +706,7 @@
         Mode              LastWriteTime Length Name   
         ----              ------------- ------ ----   
         -rwxrwx---  2020/1/31     22:33      0 demo.sh
-    
+
         # 运行 adb shell mv <SourcePath> <DestPath>
     ")
     $("Example 2: 从设备移动文件到本地
@@ -726,7 +726,7 @@
         ----              ------------- ------ ----   
         -rwxrwx---   2020/2/1      6:39      0 demo.sh
         -rwxrwx---   2020/1/5     23:46     94 test.sh
-    
+
         # 运行 adb shell pull <Local> <Remote>
         # 然后删除本地文件
     ")
@@ -813,7 +813,7 @@
         Mode              LastWriteTime Length Name   
         ----              ------------- ------ ----   
         -rwxrwx---   2020/1/5     23:46     94 demo.sh
-    
+
         # 运行 adb cp <SourcePath> <DestPath>
         # 运行 adb rm <SourcePath>
     ")
@@ -862,7 +862,7 @@
     $("Example 1: 读取设备文件
         PS C:\> Read-ADBFile /sdcard/Download/test.sh
         echo It's a test
-    
+
         # 运行 adb shell cat /sdcard/Download/test.sh
     ")
 .RelatedLinks
@@ -878,7 +878,7 @@
 .Description
     输出设备文件
 .Syntax
-    Out-ADBFile [-InputObject] <string[]> [-Path] <string> [-Encoding <Encoding>] [-Append]
+    Out-ADBFile [-InputObject] <string[]> [-Path] <string> [[-Encoding] <Encoding>] [-Append] -Force
 .Parameters
     $("-InputObject <string[]>
     # 输入内容
@@ -920,14 +920,14 @@
     $("Example 1: 输出设备文件
         PS C:\> 'echo `"It is a test`" | Out-ADBFile -Path /sdcard/Download/test.sh; Read-ADBFile /sdcard/Download/test.sh
         echo It is a test
-    
+
         # 运行 adb shell '<string> > <Path>'
     ")
     $("Example 2: 追加内容到设备文件
         PS C:\> `"echo 'It is a another test'`" | Out-ADBFile -Path /sdcard/Download/test.sh -Append; Read-ADBFile /sdcard/Download/test.sh
         echo It is a test
         echo It is a another test
-    
+
         # 运行 adb shell '<string> >> <Path>'
     ")
 .RelatedLinks
@@ -1035,8 +1035,8 @@
 .Description
     发送点击事件
 .Syntax
-Send-ADBTap [-Left] <int> [-Top] <int> [-Count <int>] [-Sleep <int>]
-Send-ADBTap [-Pos] <Pos> [-Count <int>] [-Sleep <int>]
+    Send-ADBTap [-Left] <int> [-Top] <int> [-Count <int>] [-Sleep <int>]
+    Send-ADBTap [-Pos] <Pos> [-Count <int>] [-Sleep <int>]
 .Parameters
     $("-Left <int>
     # 横坐标
@@ -1271,7 +1271,7 @@ Send-ADBTap [-Pos] <Pos> [-Count <int>] [-Sleep <int>]
         sendevent /dev/input/event0 0 0 0       # Syn_Report
         sendevent /dev/input/event0 3 48 6      # Touch_Major 6
         sendevent /dev/input/event0 0 0 0       # Syn_Report
-            
+
         # 运行 adb shell getevent
     ")
 .RelatedLinks
@@ -1332,7 +1332,7 @@ Send-ADBTap [-Pos] <Pos> [-Count <int>] [-Sleep <int>]
         sendevent /dev/input/event0 3 57 -1
         sendevent /dev/input/event0 1 330 0 # Press UP
         sendevent /dev/input/event0 0 0 0
-    
+
         # 生成命令 adb shell sendevent <Event> <Type> <Key> <Value>
     ")
 .RelatedLinks
@@ -1442,7 +1442,7 @@ Send-ADBTap [-Pos] <Pos> [-Count <int>] [-Sleep <int>]
         Mode              LastWriteTime  Length Name
         ----              -------------  ------ ----
         -rwxrwx---   2020/2/2      7:17 1138235 _window_dump.xml
-    
+
         # 运行 adb shell uiautomater <Path>
 
         PS C:\> Get-ADBDumpsysXml -Path D:\Files -Compress; ls D:\Files\_*
@@ -1491,7 +1491,7 @@ Send-ADBTap [-Pos] <Pos> [-Count <int>] [-Sleep <int>]
         [239,0][350,72]  0.2K/s                 False  com.android.systemui
         [888,13][970,58] 98%                    False  com.android.systemui
         [970,0][1056,72] Battery 98 percent.    True   com.android.systemui
-    
+
         # 读取 adb shell uiautomator 获取的xml文件
     ")
 .RelatedLinks
@@ -1546,7 +1546,7 @@ Send-ADBTap [-Pos] <Pos> [-Count <int>] [-Sleep <int>]
         Success                        True
         Pos                            [929,35]
         Text                           98%
-    
+
         # 对当前布局进行文本过滤
 
         PS C:\> `$ui = Resolve-ADBUI; Find-ADBUI '\d+%' -Nodes `$ui
@@ -1555,7 +1555,7 @@ Send-ADBTap [-Pos] <Pos> [-Count <int>] [-Sleep <int>]
         Success                        True
         Pos                            [929,35]
         Text                           98%
-    
+
         # 在 Resolve-ADBUI 的基础上, 进行文本过滤
 
         PS C:\> Find-ADBUI '\d+%' -Bias 1
@@ -1564,7 +1564,7 @@ Send-ADBTap [-Pos] <Pos> [-Count <int>] [-Sleep <int>]
         Success                        True
         Pos                            [1013,36]
         Text                           Battery 98 percent.
-    
+
         # 在 Resolve-ADBUI 的基础上, 满足文本过滤条件的下一个布局对象
     ")
 .RelatedLinks
@@ -1609,7 +1609,7 @@ Send-ADBTap [-Pos] <Pos> [-Count <int>] [-Sleep <int>]
         org.codeaurora.bluetooth
         com.android.bluetoothsettings
         com.android.bluetooth
-    
+
         # 运行 adb shell pm [Options]
     ")
 .RelatedLinks
@@ -1872,7 +1872,7 @@ Send-ADBTap [-Pos] <Pos> [-Count <int>] [-Sleep <int>]
     $("Example 1: 运行adb命令
         PS C:\> Use-ADB 'shell ifconfig wlan0'
         wlan0: ip 192.168.43.1 mask 255.255.255.0 flags [up broadcast running multicast]
-    
+
         # 另外启动一个控制台窗口运行该命令
     ")
 .RelatedLinks
